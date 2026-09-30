@@ -350,6 +350,76 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
   :root:not([data-theme="light"]) .tag-hilly { background: #3a1a17; color: #ff9d92; border-color: #5e2a24; }
 }
 
+/* ---- Calendar ---- */
+
+.cal-now { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
+.cal-card { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.cal-card .eyebrow { margin: 0; }
+.cal-card p { margin: 0; }
+.cal-card .tag { align-self: flex-start; }
+.cal-card-title { font-size: 1.2rem; }
+.cal-card-title a { color: var(--text); text-decoration: none; }
+.cal-card-title a:hover { text-decoration: underline; }
+.cal-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; font-size: 0.9rem; }
+.cal-worlds { display: flex; flex-wrap: wrap; gap: 0.35rem 0.75rem; }
+.cal-portal-row { display: flex; flex-direction: column; padding: 0.35rem 0; border-top: 1px solid var(--border); }
+.cal-portal-row:first-of-type { border-top: none; }
+.cal-portal-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+/* A world name with a colored dot (cards) or stripe (calendar days). */
+.cal-world { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.875rem; font-weight: 600; }
+.cal-world::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--wc); flex: none; }
+
+.cal-month { padding: 1rem; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; }
+.cal-title { font-size: 1.3rem; }
+.icon-button:disabled { opacity: 0.35; cursor: not-allowed; }
+.cal-head .icon-button { font-size: 1.3rem; line-height: 1; }
+.cal-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; margin-bottom: 0.75rem; }
+.cal-key::before { content: ""; display: inline-block; width: 0.8rem; height: 0.6rem; border-radius: 3px; margin-right: 0.35rem; vertical-align: middle; }
+.cal-key-route::before { background: var(--accent); }
+.cal-key-climb::before { background: #2f9e5a; }
+
+.cal-dow { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-bottom: 0.4rem; }
+.cal-week { border-top: 1px solid var(--border); padding-top: 0.4rem; }
+.cal-bars { display: grid; gap: 3px; margin-bottom: 0.3rem; }
+.cal-bar { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.15rem 0.6rem; border-radius: 6px; font-size: 0.8rem; min-width: 0; }
+.cal-bar-route { background: var(--accent-soft); box-shadow: inset 3px 0 var(--accent); }
+.cal-bar-climb { background: color-mix(in srgb, #2f9e5a 16%, transparent); box-shadow: inset 3px 0 #2f9e5a; }
+.cal-bar-kind { font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.cal-bar-name { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cal-bar-name a { color: var(--text); text-decoration: none; }
+.cal-bar-name a:hover { text-decoration: underline; }
+.cal-bar-reward { margin-left: auto; color: var(--muted); white-space: nowrap; }
+
+.cal-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.cal-day { min-height: 5.5rem; padding: 0.35rem 0.4rem 0.5rem; border-left: 1px solid var(--border); min-width: 0; }
+.cal-day:first-child { border-left: none; }
+.cal-day.out { opacity: 0.4; }
+.cal-day.today { background: var(--accent-soft); border-radius: 8px; }
+.cal-date { display: flex; align-items: baseline; gap: 0.4rem; margin-bottom: 0.25rem; }
+.d-num { font-weight: 700; font-size: 0.9rem; }
+.d-long { display: none; }
+.d-today { font-size: 0.7rem; font-weight: 700; color: var(--accent-text); text-transform: uppercase; }
+.cal-day-worlds { display: flex; flex-direction: column; gap: 0.15rem; }
+.cal-day-worlds .cal-world { font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 0.45rem; border-left: 3px solid var(--wc); }
+.cal-day-worlds .cal-world::before { display: none; }
+.cal-day-portal { margin-top: 0.3rem; font-size: 0.72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cal-credit { margin-top: 1rem; }
+
+/* Phones: the same weeks become a list of days. */
+@media (max-width: 40rem) {
+  .cal-dow { display: none; }
+  .cal-days { display: block; }
+  .cal-day { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.1rem 0.75rem; min-height: 0; padding: 0.5rem 0.4rem; border-left: none; border-top: 1px solid var(--border); }
+  .cal-day:first-child { border-top: none; }
+  .cal-day.out { display: none; }
+  .cal-date { grid-row: span 2; flex-direction: column; gap: 0; margin: 0; }
+  .d-num { display: none; }
+  .d-long { display: block; font-weight: 700; font-size: 0.9rem; }
+  .cal-day-portal { margin: 0; grid-column: 2; }
+}
+
 /* ---- Completed routes ---- */
 
 .page-title { font-size: 1.6rem; margin-bottom: 0.25rem; }
@@ -405,6 +475,9 @@ input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem;
 .site-footer { max-width: 44rem; margin: 0 auto; padding: 0 1rem 2rem; font-size: 0.8rem; color: var(--muted); }
 
 @media (max-width: 30rem) {
+  .tabs { gap: 0; }
+  .tabs a { padding: 0.6rem 0.65rem; }
+  .tab-long { display: none; }
   .brand-name { font-size: 1rem; }
   .brand-tagline { font-size: 0.65rem; }
   .header-row { gap: 0.5rem; }

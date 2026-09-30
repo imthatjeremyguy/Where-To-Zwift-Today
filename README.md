@@ -8,6 +8,10 @@ A free static website that randomly picks a Zwift route from the worlds active t
 
 Open the site, choose Ride or Run, optionally set minimum or maximum distance and climbing (in km/m or mi/ft; they apply to the route plus lead-in), and press "Spin". Event-only routes and routes not yet released are left out.
 
+## Calendar
+
+The Calendar tab shows today's worlds, the current Route and Climb of the Week, the climb portals (Watopia's daily climb and France's climb of the month), and a month grid of guest worlds with the weekly challenges across each week. On phones the grid becomes a list. Its code is in `calendar.js`.
+
 ## Completed routes
 
 For badge chasers: tick the routes you have done under "My completed routes" (or press "Mark as done" on a picked route), then set Route badges to "Not done yet". Ride and Run are tracked separately. Progress is saved in the browser on that device; "Copy my progress link" makes a link that loads it on another device or serves as a backup. The link stores one bit per route using the permanent positions in `data/route-order.json`, which is append-only so old links keep working.
@@ -22,7 +26,7 @@ Add `?now=` with a UTC time to the page URL to see what the picker does at that 
 
 ## Updating app.js or styles.css
 
-GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js` or `styles.css`, bump the `?v=` number on its tag in `index.html` in the same commit, so visitors never get the new page with an old script or stylesheet.
+GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js`, `calendar.js` or `styles.css`, bump the `?v=` number on its tag in `index.html` in the same commit, so visitors never get the new page with an old script or stylesheet.
 
 ## Alerts
 

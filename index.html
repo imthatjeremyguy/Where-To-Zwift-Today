@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=15">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -40,7 +40,8 @@
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <a href="#spin" role="tab" id="tab-spin" aria-controls="panel-spin" aria-selected="true">Spin</a>
-      <a href="#completed" role="tab" id="tab-completed" aria-controls="panel-completed" aria-selected="false">Completed routes</a>
+      <a href="#calendar" role="tab" id="tab-calendar" aria-controls="panel-calendar" aria-selected="false">Calendar</a>
+      <a href="#completed" role="tab" id="tab-completed" aria-controls="panel-completed" aria-selected="false">Completed<span class="tab-long"> routes</span></a>
     </nav>
   </header>
 
@@ -116,6 +117,14 @@
       </div>
     </section>
 
+    <section id="panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" hidden>
+      <h1 class="page-title">Calendar</h1>
+      <p class="page-intro muted">Guest worlds change at midnight US Eastern. Route and Climb of the Week change Mondays at noon US Eastern.</p>
+      <div id="cal-now" class="cal-now"><p class="muted">Loading the calendar...</p></div>
+      <div id="cal-month" class="card cal-month"></div>
+      <p class="muted small cal-credit">Route and Climb of the Week from <a href="https://zwiftinsider.com/weekly-challenges/" target="_blank" rel="noopener">Zwift Insider's Ride of the Week calendar</a>. World schedule and climb portal rotation from Zwift.</p>
+    </section>
+
     <section id="panel-completed" role="tabpanel" aria-labelledby="tab-completed" hidden>
       <h1 class="page-title">Completed routes</h1>
       <p class="page-intro muted">Tick the routes you have the badge for, then set Route badges to "Not done yet" on the Spin tab to skip them. Saved on this device only.</p>
@@ -148,6 +157,7 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=14"></script>
+  <script src="calendar.js?v=2"></script>
+  <script src="app.js?v=15"></script>
 </body>
 </html>

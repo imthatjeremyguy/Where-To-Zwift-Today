@@ -26,7 +26,7 @@ const FILTER_IDS = ["min-distance", "max-distance", "min-climbing", "max-climbin
 const SPORT_NAMES = { cycling: "Ride", running: "Run" };
 const PROGRESS_HASH = "progress";
 const PROGRESS_VERSION = "v1";
-const TABS = ["spin", "completed"];
+const TABS = ["spin", "calendar", "completed"];
 
 const els = {
   worlds: document.getElementById("worlds"),
@@ -810,9 +810,12 @@ async function init() {
   restoreSettings();
   loadDone();
   try {
-    const [schedule, routeData] = await Promise.all([
+    // The calendar's extra data is optional: if it fails, spinning still works.
+    const [schedule, routeData, weekly, portal] = await Promise.all([
       loadJson("data/schedule.json"),
       loadJson("data/routes.json"),
+      loadJson("data/weekly.json").catch(() => null),
+      loadJson("data/portal.json").catch(() => null),
     ]);
     routes = routeData.routes;
     const active = findActiveWorlds(schedule, getNow());
@@ -820,6 +823,7 @@ async function init() {
     renderWorlds(active, schedule.alwaysActive);
     renderChecklist();
     updateCount();
+    initCalendar(schedule, weekly, portal);
     handleHash();
   } catch (error) {
     const notice = document.createElement("p");
@@ -874,6 +878,7 @@ async function init() {
       updateUnitLabels();
       saveSettings();
       updateCount();
+      renderCalendar();
     })
   );
 
