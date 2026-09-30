@@ -42,6 +42,8 @@ const els = {
   progressMessage: document.getElementById("progress-message"),
   progressLink: document.getElementById("progress-link"),
   themeToggle: document.getElementById("theme-toggle"),
+  reel: document.getElementById("reel"),
+  reelStrip: document.getElementById("reel-strip"),
   settings: document.getElementById("settings"),
   settingsSummary: document.getElementById("settings-summary"),
 };
@@ -199,7 +201,7 @@ function updateCount() {
     const where = selectedWorlds.size ? ` in ${listNames([...selectedWorlds].map(worldName))}` : "";
     els.count.textContent = `${n} route${n === 1 ? "" : "s"} to choose from${where}.`;
   }
-  els.pick.disabled = n === 0;
+  els.pick.disabled = n === 0 || spinning;
   updateWorldChips(today);
   updateSettingsSummary();
   // Keep the shown route only if it still matches. Marking it done doesn't
@@ -236,10 +238,45 @@ function updateSettingsSummary() {
 function hideResult() {
   shownRoute = null;
   els.result.hidden = true;
-  els.pick.textContent = "Pick a route";
+  els.pick.textContent = "Spin";
+  if (!spinning) setReel(REEL_IDLE);
 }
 
+// ---- Spinner and result card ----
+
+// Terrain from climbing per km of the route itself (lead-in excluded).
+const TERRAIN_BANDS = [[5, "Flat"], [10, "Rolling"], [Infinity, "Hilly"]];
+const SPIN_MS = 1700;
+const SPIN_FILLER = 24; // names that fly past before the pick lands
+let spinning = false;
+
+function terrain(route) {
+  const perKm = route.ascentMeters / Math.max(route.distanceMeters / 1000, 0.1);
+  return TERRAIN_BANDS.find(([limit]) => perKm < limit)[1];
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function reelItem(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  return li;
+}
+
+// Show a name in the middle row, optionally with neighbors above and below.
+function setReel(text, above = "", below = "") {
+  els.reelStrip.getAnimations().forEach((a) => a.cancel());
+  els.reelStrip.style.transform = "";
+  els.reelStrip.replaceChildren(reelItem(above), reelItem(text), reelItem(below));
+  els.reel.classList.toggle("idle", !shownRoute && text === REEL_IDLE);
+}
+
+const REEL_IDLE = "Ready to ride?";
+
 function pickRoute() {
+  if (spinning) return;
   const today = easternDate(getNow());
   const pool = eligibleRoutes(today);
   if (pool.length === 0) return;
@@ -247,63 +284,129 @@ function pickRoute() {
   const choices = pool.length > 1 ? pool.filter((r) => r.id !== lastPickId) : pool;
   const route = choices[Math.floor(Math.random() * choices.length)];
   lastPickId = route.id;
-  renderRoute(route, today);
-  els.pick.textContent = "Pick again";
+
+  if (prefersReducedMotion()) {
+    setReel(route.name);
+    renderRoute(route, today);
+    els.pick.textContent = "Spin again";
+    return;
+  }
+
+  // Build a strip of random names from the pool ending on the pick, then
+  // slide it up so the pick lands in the middle row.
+  const names = [""];
+  for (let i = 0; i < SPIN_FILLER; i++) names.push(pool[Math.floor(Math.random() * pool.length)].name);
+  const after = pool[Math.floor(Math.random() * pool.length)].name;
+  names.push(route.name, after);
+  els.reelStrip.getAnimations().forEach((a) => a.cancel());
+  els.reelStrip.style.transform = "";
+  els.reelStrip.replaceChildren(...names.map(reelItem));
+  els.reel.classList.remove("idle");
+  const rowHeight = els.reelStrip.firstElementChild.getBoundingClientRect().height;
+  const distance = (names.length - 3) * rowHeight;
+
+  spinning = true;
+  els.pick.disabled = true;
+  els.reel.classList.add("spinning");
+  const animation = els.reelStrip.animate(
+    [{ transform: "translateY(0)" }, { transform: `translateY(${-distance}px)` }],
+    { duration: SPIN_MS, easing: "cubic-bezier(0.12, 0.8, 0.22, 1)", fill: "forwards" }
+  );
+  animation.onfinish = () => {
+    spinning = false;
+    els.reel.classList.remove("spinning");
+    // Freeze on the landing position, keeping the neighbors in view.
+    setReel(route.name, names[names.length - 3], after);
+    renderRoute(route, easternDate(getNow()));
+    els.pick.textContent = "Spin again";
+    updateCount();
+  };
+}
+
+// "16.4 km" with "10.2 mi" as the secondary line, in the chosen units first.
+function unitPair(meters, kind) {
+  const metric = kind === "distance" ? `${(meters / METERS_PER_KM).toFixed(1)} km` : `${Math.round(meters)} m`;
+  const imperial = kind === "distance" ? `${(meters / METERS_PER_MILE).toFixed(1)} mi` : `${Math.round(meters * FEET_PER_METER)} ft`;
+  return selectedUnits() === "metric" ? [metric, imperial] : [imperial, metric];
+}
+
+function stat(label, primary, secondary) {
+  const box = document.createElement("div");
+  box.className = "stat";
+  const l = document.createElement("span");
+  l.className = "stat-label";
+  l.textContent = label;
+  const v = document.createElement("span");
+  v.className = "stat-value";
+  v.textContent = primary;
+  const sub = document.createElement("span");
+  sub.className = "stat-sub";
+  sub.textContent = secondary;
+  box.append(l, v, sub);
+  return box;
 }
 
 function renderRoute(route, today) {
-  const tags = [];
-  if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push("New");
-  if (route.levelLocked) tags.push("Level locked");
   const sport = selectedSport();
   const isDone = done[sport].has(route.id);
-  if (isDone) tags.push("Done");
+  const kind = terrain(route);
+  const tags = [[kind, `tag-${kind.toLowerCase()}`], [route.loop ? "Loop" : "Point to point", ""]];
+  if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push(["New", "tag-new"]);
+  if (route.levelLocked) tags.push(["Level locked", ""]);
+  if (isDone) tags.push(["Done", "tag-done"]);
 
-  els.result.replaceChildren();
+  const head = document.createElement("div");
+  head.className = "result-head";
+  const world = document.createElement("p");
+  world.className = "eyebrow result-world";
+  world.textContent = worldName(route.map);
   const title = document.createElement("h2");
   title.textContent = route.name;
-  const world = document.createElement("p");
-  world.textContent = worldName(route.map);
-  for (const tag of tags) {
+  const tagRow = document.createElement("p");
+  tagRow.className = "tags";
+  for (const [text, cls] of tags) {
     const span = document.createElement("span");
-    span.className = "tag";
-    span.textContent = tag;
-    world.append(" ", span);
+    span.className = `tag ${cls}`.trim();
+    span.textContent = text;
+    tagRow.append(span);
   }
+  head.append(world, title, tagRow);
 
-  const details = document.createElement("dl");
-  const rows = [
-    ["Distance", formatDistance(route.distanceMeters)],
-    ["Climbing", formatAscent(route.ascentMeters)],
-    ["Lead-in", `${formatDistance(route.leadinDistanceMeters)}, ${formatAscent(route.leadinAscentMeters)}`],
-    ["Total", `${formatDistance(totalDistance(route))}, ${formatAscent(totalClimbing(route))}`],
-  ];
-  for (const [label, value] of rows) {
-    const dt = document.createElement("dt");
-    dt.textContent = label;
-    const dd = document.createElement("dd");
-    dd.textContent = value;
-    details.append(dt, dd);
-  }
+  const [dist, distAlt] = unitPair(route.distanceMeters, "distance");
+  const [climb, climbAlt] = unitPair(route.ascentMeters, "climbing");
+  const [leadDist, leadDistAlt] = unitPair(route.leadinDistanceMeters, "distance");
+  const [leadClimb, leadClimbAlt] = unitPair(route.leadinAscentMeters, "climbing");
+  const [totDist, totDistAlt] = unitPair(totalDistance(route), "distance");
+  const [totClimb, totClimbAlt] = unitPair(totalClimbing(route), "climbing");
+  const stats = document.createElement("div");
+  stats.className = "stats";
+  stats.append(
+    stat("Distance", dist, distAlt),
+    stat("Climbing", climb, climbAlt),
+    stat("Lead-in", `${leadDist}, ${leadClimb}`, `${leadDistAlt}, ${leadClimbAlt}`),
+    stat("Total", `${totDist}, ${totClimb}`, `${totDistAlt}, ${totClimbAlt}`),
+  );
 
-  els.result.append(title, world, details);
+  const actions = document.createElement("div");
+  actions.className = "result-actions";
   if (route.link) {
-    const more = document.createElement("p");
     const link = document.createElement("a");
+    link.className = "btn";
     link.href = route.link;
     link.target = "_blank";
     link.rel = "noopener";
     link.textContent = "Map and details on Zwift Insider";
-    more.append(link);
-    els.result.append(more);
+    actions.append(link);
   }
   const mark = document.createElement("button");
   mark.type = "button";
   mark.id = "mark-done";
-  mark.className = "btn";
+  mark.className = isDone ? "btn btn-done" : "btn";
   mark.textContent = isDone ? "Marked as done (undo)" : "Mark as done";
   mark.addEventListener("click", () => setDone(sport, [route.id], !isDone));
-  els.result.append(mark);
+  actions.append(mark);
+
+  els.result.replaceChildren(head, stats, actions);
   els.result.hidden = false;
   shownRoute = route;
 }

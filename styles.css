@@ -247,23 +247,94 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
 .btn-big { font-size: 1.35rem; padding: 0.85rem 2.5rem; border-radius: 999px; box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent); }
 #count { margin: 0.6rem 0 0; }
 
-/* ---- Result card (restyled with the spinner in the next part) ---- */
+/* ---- Spinner reel ----
+   Three rows tall; the middle row is the pick. The strip slides up behind a
+   fixed window, and the top and bottom rows fade out. */
 
-#result h2 { font-size: 1.6rem; margin-bottom: 0.2rem; }
-#result dl { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0.9rem 0; }
-#result dt { font-weight: 600; color: var(--muted); }
-#result dd { margin: 0; }
+.reel {
+  --row: 3rem;
+  position: relative;
+  height: calc(var(--row) * 3);
+  max-width: 32rem;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  -webkit-mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent);
+  mask-image: linear-gradient(transparent, #000 30%, #000 70%, transparent);
+}
+/* Highlight band behind the middle row. */
+.reel::before {
+  content: "";
+  position: absolute;
+  inset: var(--row) 0.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+}
+.reel-strip { position: relative; list-style: none; margin: 0; padding: 0; will-change: transform; }
+.reel-strip li {
+  height: var(--row);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reel.spinning .reel-strip li { filter: blur(0.4px); }
+.reel.idle .reel-strip li { color: var(--muted); font-weight: 600; }
+
+/* ---- Result card ---- */
+
+.result-head { margin-bottom: 1rem; }
+.result-world { margin-bottom: 0.2rem; color: var(--accent-text); }
+#result h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; }
 .tag {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.1rem 0.55rem;
+  padding: 0.15rem 0.6rem;
   border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent-text);
-  margin-left: 0.25rem;
+  background: var(--surface-2);
+  color: var(--muted);
+  border: 1px solid var(--border);
 }
-#mark-done { margin-top: 0.25rem; }
+.tag-flat { background: #e3f4e8; color: #1d6b39; border-color: #bfe3cb; }
+.tag-rolling { background: #fdf1d8; color: #8a5a00; border-color: #f3dca6; }
+.tag-hilly { background: #fde4e1; color: #a3261b; border-color: #f5c3bd; }
+.tag-new, .tag-done { background: var(--accent-soft); color: var(--accent-text); border-color: transparent; }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; margin-bottom: 1.1rem; }
+.stat { background: var(--surface-2); border-radius: 10px; padding: 0.7rem 0.8rem; display: flex; flex-direction: column; min-width: 0; }
+.stat-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.stat-sub { font-size: 0.8rem; color: var(--muted); }
+
+.result-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.result-actions a.btn { text-decoration: none; color: var(--text); }
+.btn-done { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+
+@media (max-width: 40rem) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reel { --row: 2.6rem; }
+  .reel-strip li { font-size: 1.2rem; }
+}
+
+:root[data-theme="dark"] .tag-flat { background: #16301f; color: #7fd69d; border-color: #245236; }
+:root[data-theme="dark"] .tag-rolling { background: #33280f; color: #f0c05a; border-color: #574418; }
+:root[data-theme="dark"] .tag-hilly { background: #3a1a17; color: #ff9d92; border-color: #5e2a24; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-flat { background: #16301f; color: #7fd69d; border-color: #245236; }
+  :root:not([data-theme="light"]) .tag-rolling { background: #33280f; color: #f0c05a; border-color: #574418; }
+  :root:not([data-theme="light"]) .tag-hilly { background: #3a1a17; color: #ff9d92; border-color: #5e2a24; }
+}
 
 /* ---- Completed routes ---- */
 

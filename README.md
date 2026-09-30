@@ -6,11 +6,11 @@ A free static website that randomly picks a Zwift route from the worlds active t
 - A scheduled GitHub Action will fetch Zwift's world schedule and route data daily and commit them as JSON.
 - Watopia is always active; two guest worlds rotate. Changeover is midnight US Eastern (4am UTC).
 
-Open the site, choose Ride or Run, optionally set minimum or maximum distance and climbing (in km/m or mi/ft; they apply to the route plus lead-in), and press "Pick a route". Event-only routes and routes not yet released are left out.
+Open the site, choose Ride or Run, optionally set minimum or maximum distance and climbing (in km/m or mi/ft; they apply to the route plus lead-in), and press "Spin". Event-only routes and routes not yet released are left out.
 
 ## Completed routes
 
-For badge chasers: tick the routes you have done under "My completed routes" (or press "Mark as done" on a picked route), then set Route badges to "Only routes I haven't done". Ride and Run are tracked separately. Progress is saved in the browser on that device; "Copy my progress link" makes a link that loads it on another device or serves as a backup. The link stores one bit per route using the permanent positions in `data/route-order.json`, which is append-only so old links keep working.
+For badge chasers: tick the routes you have done under "My completed routes" (or press "Mark as done" on a picked route), then set Route badges to "Not done yet". Ride and Run are tracked separately. Progress is saved in the browser on that device; "Copy my progress link" makes a link that loads it on another device or serves as a backup. The link stores one bit per route using the permanent positions in `data/route-order.json`, which is append-only so old links keep working.
 
 ## Data
 

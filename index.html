@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -54,7 +54,10 @@
       <div class="spin-layout">
         <div class="spin-main">
           <div class="spin-area card">
-            <button id="pick" class="btn-primary btn-big" type="button" disabled>Pick a route</button>
+            <div id="reel" class="reel idle" aria-hidden="true">
+              <ol id="reel-strip" class="reel-strip"><li></li><li>Ready to ride?</li><li></li></ol>
+            </div>
+            <button id="pick" class="btn-primary btn-big" type="button" disabled>Spin</button>
             <p id="count" class="muted small"></p>
             <p class="settings-summary small"><span id="settings-summary"></span> <a href="#settings" class="settings-jump">Change</a></p>
           </div>
@@ -118,6 +121,6 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>
