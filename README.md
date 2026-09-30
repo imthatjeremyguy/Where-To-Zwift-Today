@@ -36,3 +36,10 @@ The daily Action opens a GitHub issue when something needs a look, and closes it
 - **"Daily Zwift data update failed"** (label `update-failed`): the run itself failed. The site keeps working with the last good data.
 
 To test it, run the Action by hand with "Open a test alert issue" ticked; the next normal run closes the test issue.
+
+## Testing
+
+Every push runs the "Tests" GitHub Action:
+
+- **Data script unit tests:** `python3 -m unittest discover -s tests` (no network needed).
+- **Browser tests:** `node tests/run.js` (needs Playwright: `npm install --no-save playwright` and `npx playwright install chromium`). It serves the site locally with a frozen copy of the data from `tests/fixtures/data`, so results don't change as the daily data updates. Run one suite with `node tests/run.js calendar`. If a change needs newer data in the tests, refresh the snapshot with `cp data/*.json tests/fixtures/data/`.
