@@ -325,6 +325,7 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
 .tag-rolling { background: #fdf1d8; color: #8a5a00; border-color: #f3dca6; }
 .tag-hilly { background: #fde4e1; color: #a3261b; border-color: #f5c3bd; }
 .tag-type { background: #e1ecfb; color: #1d4f9c; border-color: #bcd3f3; }
+.tag-xp { background: #efe6fb; color: #5b2a9e; border-color: #d9c6f3; }
 .tag-new, .tag-done { background: var(--accent-soft); color: var(--accent-text); border-color: transparent; }
 .tag-rotw { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 
@@ -348,11 +349,13 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
 :root[data-theme="dark"] .tag-rolling { background: #33280f; color: #f0c05a; border-color: #574418; }
 :root[data-theme="dark"] .tag-hilly { background: #3a1a17; color: #ff9d92; border-color: #5e2a24; }
 :root[data-theme="dark"] .tag-type { background: #152640; color: #8cb8ff; border-color: #22406b; }
+:root[data-theme="dark"] .tag-xp { background: #2a1a40; color: #c9a8ff; border-color: #43296b; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tag-flat { background: #16301f; color: #7fd69d; border-color: #245236; }
   :root:not([data-theme="light"]) .tag-rolling { background: #33280f; color: #f0c05a; border-color: #574418; }
   :root:not([data-theme="light"]) .tag-hilly { background: #3a1a17; color: #ff9d92; border-color: #5e2a24; }
   :root:not([data-theme="light"]) .tag-type { background: #152640; color: #8cb8ff; border-color: #22406b; }
+  :root:not([data-theme="light"]) .tag-xp { background: #2a1a40; color: #c9a8ff; border-color: #43296b; }
 }
 
 /* ---- Calendar ---- */
