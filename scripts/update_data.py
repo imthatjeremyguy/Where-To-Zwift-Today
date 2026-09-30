@@ -25,6 +25,11 @@ USER_AGENT = "Mozilla/5.0 (compatible; WhereToZwiftToday/1.0; +https://github.co
 # data/route-links.json. Misses are rechecked weekly in case a page appears.
 ROUTE_PAGE_URL = "https://zwiftinsider.com/route/{}/"
 LINKS_FILE = "route-links.json"
+
+# Permanent position for every route ID ever seen. New routes are appended and
+# nothing is ever removed or reordered, so progress links made today keep
+# pointing at the same routes after future updates.
+ORDER_FILE = "route-order.json"
 MISS_RECHECK_DAYS = 7
 MAX_LINK_CHECKS_PER_RUN = 50
 LINK_CHECK_DELAY_SECONDS = 1
@@ -180,6 +185,21 @@ def update_links(routes):
     return dict(sorted(cache.items()))
 
 
+def update_order(routes):
+    """Give each route a permanent "index" from the append-only order file."""
+    path = DATA_DIR / ORDER_FILE
+    order = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    known = set(order)
+    new_ids = sorted({r["id"] for r in routes} - known, key=int)
+    order.extend(new_ids)
+    if new_ids:
+        print(f"added {len(new_ids)} new routes to {ORDER_FILE}")
+    position = {route_id: i for i, route_id in enumerate(order)}
+    for route in routes:
+        route["index"] = position[route["id"]]
+    return order
+
+
 def write_json(name, payload):
     path = DATA_DIR / name
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -191,10 +211,14 @@ def main():
     schedule = build_schedule(fetch_xml(SCHEDULE_URL))
     routes = build_routes(fetch_xml(DICTIONARY_URL))
     DATA_DIR.mkdir(exist_ok=True)
+    order = update_order(routes["routes"])
     links = update_links(routes["routes"])
     write_json("schedule.json", schedule)
     write_json("routes.json", routes)
     write_json(LINKS_FILE, links)
+    # One ID per line keeps diffs readable as routes are added.
+    (DATA_DIR / ORDER_FILE).write_text("[\n" + ",\n".join(json.dumps(i) for i in order) + "\n]\n", encoding="utf-8")
+    print(f"wrote data/{ORDER_FILE}")
     print(f"{len(schedule['appointments'])} appointments, {len(routes['routes'])} routes")
 
 
