@@ -1,0 +1,672 @@
+{
+  "climbs": {
+    "10003": {
+      "name": "Cote de Pike",
+      "distanceMeters": 2180.8,
+      "ascentMeters": 216.0,
+      "link": "https://zwiftinsider.com/portal/cote-de-pike/"
+    },
+    "10004": {
+      "name": "Col d'Aspin",
+      "distanceMeters": 13535.8,
+      "ascentMeters": 811.5,
+      "link": "https://zwiftinsider.com/portal/col-daspin/"
+    },
+    "10005": {
+      "name": "Col des Aravis",
+      "distanceMeters": 5199.2,
+      "ascentMeters": 280.1,
+      "link": "https://zwiftinsider.com/portal/col-des-aravis/"
+    },
+    "10006": {
+      "name": "Puy de Dome",
+      "distanceMeters": 12989.3,
+      "ascentMeters": 913.5,
+      "link": "https://zwiftinsider.com/portal/puy-de-dome/"
+    },
+    "10007": {
+      "name": "Cote de Domancy",
+      "distanceMeters": 2978.5,
+      "ascentMeters": 240.6,
+      "link": "https://zwiftinsider.com/portal/cote-de-domancy/"
+    },
+    "10008": {
+      "name": "Col du Platzerwasel",
+      "distanceMeters": 7853.0,
+      "ascentMeters": 596.9,
+      "link": "https://zwiftinsider.com/portal/col-du-platzerwasel/"
+    },
+    "10009": {
+      "name": "Cote de Trebiac",
+      "distanceMeters": 4592.6,
+      "ascentMeters": 207.4,
+      "link": "https://zwiftinsider.com/portal/cote-de-trebiac/"
+    },
+    "10010": {
+      "name": "Col du Tourmalet",
+      "distanceMeters": 17118.2,
+      "ascentMeters": 1217.0,
+      "link": "https://zwiftinsider.com/portal/col-du-tourmalet/"
+    },
+    "10011": {
+      "name": "Bealach na Ba",
+      "distanceMeters": 8992.4,
+      "ascentMeters": 632.7,
+      "link": "https://zwiftinsider.com/portal/bealach-na-ba/"
+    },
+    "10012": {
+      "name": "Crow Road",
+      "distanceMeters": 6956.6,
+      "ascentMeters": 251.5,
+      "link": "https://zwiftinsider.com/portal/crow-road/"
+    },
+    "10013": {
+      "name": "Coll d'Ordino",
+      "distanceMeters": 10320.6,
+      "ascentMeters": 505.3,
+      "link": "https://zwiftinsider.com/portal/coll-dordino/"
+    },
+    "10014": {
+      "name": "La Laguna Negra",
+      "distanceMeters": 9062.0,
+      "ascentMeters": 509.9,
+      "link": "https://zwiftinsider.com/portal/la-laguna-negra/"
+    },
+    "10015": {
+      "name": "Col de la Madone",
+      "distanceMeters": 15914.4,
+      "ascentMeters": 898.4,
+      "link": "https://zwiftinsider.com/portal/col-de-la-madone/"
+    },
+    "10017": {
+      "name": "Rocacorba",
+      "distanceMeters": 11831.2,
+      "ascentMeters": 756.2,
+      "link": "https://zwiftinsider.com/portal/rocacorba/"
+    },
+    "10018": {
+      "name": "Old La Honda",
+      "distanceMeters": 5573.9,
+      "ascentMeters": 395.4,
+      "link": "https://zwiftinsider.com/portal/old-la-honda/"
+    },
+    "10019": {
+      "name": "La Super Planche des Belles Filles",
+      "distanceMeters": 8593.6,
+      "ascentMeters": 603.0,
+      "link": "https://zwiftinsider.com/portal/la-super-planche-des-belles-filles/"
+    },
+    "10020": {
+      "name": "Old Willunga Hill",
+      "distanceMeters": 3986.4,
+      "ascentMeters": 252.2,
+      "link": "https://zwiftinsider.com/portal/old-willunga-hill/"
+    },
+    "10021": {
+      "name": "Cheddar Gorge",
+      "distanceMeters": 4685.3,
+      "ascentMeters": 171.1,
+      "link": "https://zwiftinsider.com/portal/cheddar-gorge/"
+    },
+    "10022": {
+      "name": "Cipressa",
+      "distanceMeters": 6432.6,
+      "ascentMeters": 228.1,
+      "link": "https://zwiftinsider.com/portal/cipressa/"
+    },
+    "10023": {
+      "name": "Col du Rosier",
+      "distanceMeters": 4989.2,
+      "ascentMeters": 222.6,
+      "link": "https://zwiftinsider.com/portal/col-du-rosier/"
+    },
+    "10025": {
+      "name": "Col de la Couillole",
+      "distanceMeters": 18093.2,
+      "ascentMeters": 1202.3,
+      "link": "https://zwiftinsider.com/portal/col-de-la-couillole/"
+    },
+    "10026": {
+      "name": "Mt Fuji",
+      "distanceMeters": 25350.7,
+      "ascentMeters": 1208.6,
+      "link": "https://zwiftinsider.com/portal/mt-fuji/"
+    },
+    "10027": {
+      "name": "Pla d'Adet",
+      "distanceMeters": 12116.6,
+      "ascentMeters": 847.7,
+      "link": "https://zwiftinsider.com/portal/pla-dadet/"
+    },
+    "10028": {
+      "name": "Pas de Peyrol/Puy Mary",
+      "distanceMeters": 10259.4,
+      "ascentMeters": 603.3,
+      "link": "https://zwiftinsider.com/portal/pas-de-peyrol-puy-mary/"
+    },
+    "10029": {
+      "name": "Côte des Forche",
+      "distanceMeters": 2996.5,
+      "ascentMeters": 148.4,
+      "link": "https://zwiftinsider.com/portal/cote-des-forche/"
+    },
+    "10030": {
+      "name": "Isola 2000",
+      "distanceMeters": 18890.9,
+      "ascentMeters": 1145.7,
+      "link": "https://zwiftinsider.com/portal/isola-2000/"
+    },
+    "10031": {
+      "name": "La Turbie + Col d'Eze",
+      "distanceMeters": 15940.9,
+      "ascentMeters": 616.1,
+      "link": "https://zwiftinsider.com/portal/la-turbie-col-deze/"
+    },
+    "10032": {
+      "name": "Col du Galibier (Lautaret)",
+      "distanceMeters": 10355.6,
+      "ascentMeters": 539.3,
+      "link": "https://zwiftinsider.com/portal/col-du-galibier-lautaret/"
+    },
+    "10033": {
+      "name": "Col de Peyresourde (Avajan)",
+      "distanceMeters": 8304.5,
+      "ascentMeters": 559.0,
+      "link": "https://zwiftinsider.com/portal/col-de-peyresourde-avajan/"
+    },
+    "10034": {
+      "name": "Montée du Chinaillon",
+      "distanceMeters": 8115.3,
+      "ascentMeters": 353.8,
+      "link": "https://zwiftinsider.com/portal/montee-du-chinaillon/"
+    },
+    "10035": {
+      "name": "Lagos de Covadonga",
+      "distanceMeters": 14529.8,
+      "ascentMeters": 976.3,
+      "link": "https://zwiftinsider.com/portal/lagos-de-covadonga/"
+    },
+    "10036": {
+      "name": "Mt. Hamilton",
+      "distanceMeters": 31298.4,
+      "ascentMeters": 1259.1,
+      "link": "https://zwiftinsider.com/portal/mt-hamilton/"
+    },
+    "10037": {
+      "name": "Trollstigen",
+      "distanceMeters": 12446.7,
+      "ascentMeters": 784.4,
+      "link": "https://zwiftinsider.com/portal/trollstigen/"
+    },
+    "10038": {
+      "name": "Gotthard Pass",
+      "distanceMeters": 14422.0,
+      "ascentMeters": 909.3,
+      "link": "https://zwiftinsider.com/portal/gotthard-pass/"
+    },
+    "10039": {
+      "name": "Norton Summit",
+      "distanceMeters": 8666.0,
+      "ascentMeters": 363.6,
+      "link": "https://zwiftinsider.com/portal/norton-summit/"
+    },
+    "10040": {
+      "name": "Hardknott Pass",
+      "distanceMeters": 2691.6,
+      "ascentMeters": 306.4,
+      "link": "https://zwiftinsider.com/portal/hardknott-pass/"
+    },
+    "10041": {
+      "name": "Poggio",
+      "distanceMeters": 4312.0,
+      "ascentMeters": 136.4,
+      "link": "https://zwiftinsider.com/portal/poggio/"
+    },
+    "10042": {
+      "name": "Oude Kwaremont",
+      "distanceMeters": 1509.9,
+      "ascentMeters": 63.8,
+      "link": "https://zwiftinsider.com/portal/oude-kwaremont/"
+    },
+    "10044": {
+      "name": "Côte de la Redoute",
+      "distanceMeters": 1542.9,
+      "ascentMeters": 153.1,
+      "link": "https://zwiftinsider.com/portal/cote-de-la-redoute/"
+    },
+    "10045": {
+      "name": "Mûr De Bretagne",
+      "distanceMeters": 1971.2,
+      "ascentMeters": 128.8,
+      "link": "https://zwiftinsider.com/portal/mur-de-bretagne/"
+    },
+    "10046": {
+      "name": "Hautacam",
+      "distanceMeters": 12697.3,
+      "ascentMeters": 1023.0,
+      "link": "https://zwiftinsider.com/portal/hautacam/"
+    },
+    "10047": {
+      "name": "Col de la Croix Saint-Robert",
+      "distanceMeters": 5732.2,
+      "ascentMeters": 345.5,
+      "link": "https://zwiftinsider.com/portal/col-de-la-croix-saint-robert/"
+    },
+    "10048": {
+      "name": "Col de la Madeleine",
+      "distanceMeters": 14308.6,
+      "ascentMeters": 1110.8,
+      "link": "https://zwiftinsider.com/portal/col-de-la-madeleine/"
+    },
+    "10052": {
+      "name": "Alto de Patios",
+      "distanceMeters": 5928.3,
+      "ascentMeters": 376.8,
+      "link": "https://zwiftinsider.com/portal/alto-de-patios/"
+    },
+    "10053": {
+      "name": "Col de la Croix de Fer",
+      "distanceMeters": 27063.0,
+      "ascentMeters": 1557.8,
+      "link": "https://zwiftinsider.com/portal/col-de-la-croix-de-fer/"
+    },
+    "10054": {
+      "name": "Col du Télégraphe",
+      "distanceMeters": 11856.3,
+      "ascentMeters": 844.2,
+      "link": "https://zwiftinsider.com/portal/col-du-telegraphe/"
+    },
+    "10055": {
+      "name": "Col du Galibier (Valloire)",
+      "distanceMeters": 17882.1,
+      "ascentMeters": 1223.5,
+      "link": "https://zwiftinsider.com/portal/col-du-galibier-valloire/"
+    },
+    "10056": {
+      "name": "Col de Sarenne",
+      "distanceMeters": 12804.3,
+      "ascentMeters": 922.7,
+      "link": "https://zwiftinsider.com/portal/col-de-sarenne/"
+    }
+  },
+  "schedule": [
+    {
+      "start": "2026-09-01T04:01:00Z",
+      "world": "FRANCE",
+      "monthly": true,
+      "climbId": "10055"
+    },
+    {
+      "start": "2026-09-01T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10022"
+    },
+    {
+      "start": "2026-09-02T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10038"
+    },
+    {
+      "start": "2026-09-03T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10004"
+    },
+    {
+      "start": "2026-09-04T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10021"
+    },
+    {
+      "start": "2026-09-05T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10005"
+    },
+    {
+      "start": "2026-09-06T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10053"
+    },
+    {
+      "start": "2026-09-07T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10003"
+    },
+    {
+      "start": "2026-09-08T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10027"
+    },
+    {
+      "start": "2026-09-09T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10040"
+    },
+    {
+      "start": "2026-09-10T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10052"
+    },
+    {
+      "start": "2026-09-11T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10030"
+    },
+    {
+      "start": "2026-09-12T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10011"
+    },
+    {
+      "start": "2026-09-13T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10054"
+    },
+    {
+      "start": "2026-09-14T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10045"
+    },
+    {
+      "start": "2026-09-15T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10044"
+    },
+    {
+      "start": "2026-09-16T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10031"
+    },
+    {
+      "start": "2026-09-17T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10013"
+    },
+    {
+      "start": "2026-09-18T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10014"
+    },
+    {
+      "start": "2026-09-19T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10037"
+    },
+    {
+      "start": "2026-09-20T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10056"
+    },
+    {
+      "start": "2026-09-21T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10018"
+    },
+    {
+      "start": "2026-09-22T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10042"
+    },
+    {
+      "start": "2026-09-23T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10047"
+    },
+    {
+      "start": "2026-09-24T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10023"
+    },
+    {
+      "start": "2026-09-25T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10015"
+    },
+    {
+      "start": "2026-09-26T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10035"
+    },
+    {
+      "start": "2026-09-27T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10026"
+    },
+    {
+      "start": "2026-09-28T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10036"
+    },
+    {
+      "start": "2026-09-29T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10010"
+    },
+    {
+      "start": "2026-09-30T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10017"
+    },
+    {
+      "start": "2026-10-01T04:01:00Z",
+      "world": "FRANCE",
+      "monthly": true,
+      "climbId": "10037"
+    },
+    {
+      "start": "2026-10-01T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10029"
+    },
+    {
+      "start": "2026-10-02T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10034"
+    },
+    {
+      "start": "2026-10-03T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10033"
+    },
+    {
+      "start": "2026-10-04T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10009"
+    },
+    {
+      "start": "2026-10-05T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10019"
+    },
+    {
+      "start": "2026-10-06T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10020"
+    },
+    {
+      "start": "2026-10-07T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10039"
+    },
+    {
+      "start": "2026-10-08T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10025"
+    },
+    {
+      "start": "2026-10-09T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10028"
+    },
+    {
+      "start": "2026-10-10T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10008"
+    },
+    {
+      "start": "2026-10-11T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10014"
+    },
+    {
+      "start": "2026-10-12T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10041"
+    },
+    {
+      "start": "2026-10-13T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10004"
+    },
+    {
+      "start": "2026-10-14T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10032"
+    },
+    {
+      "start": "2026-10-15T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10007"
+    },
+    {
+      "start": "2026-10-16T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10038"
+    },
+    {
+      "start": "2026-10-17T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10030"
+    },
+    {
+      "start": "2026-10-18T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10048"
+    },
+    {
+      "start": "2026-10-19T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10035"
+    },
+    {
+      "start": "2026-10-20T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10012"
+    },
+    {
+      "start": "2026-10-21T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10022"
+    },
+    {
+      "start": "2026-10-22T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10011"
+    },
+    {
+      "start": "2026-10-23T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10006"
+    },
+    {
+      "start": "2026-10-24T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10054"
+    },
+    {
+      "start": "2026-10-25T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10053"
+    },
+    {
+      "start": "2026-10-26T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10046"
+    },
+    {
+      "start": "2026-10-27T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10021"
+    },
+    {
+      "start": "2026-10-28T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10031"
+    },
+    {
+      "start": "2026-10-29T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10017"
+    },
+    {
+      "start": "2026-10-30T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10026"
+    },
+    {
+      "start": "2026-10-31T04:01:00Z",
+      "world": "WATOPIA",
+      "monthly": false,
+      "climbId": "10056"
+    }
+  ]
+}

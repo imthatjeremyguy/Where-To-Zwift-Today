@@ -53,6 +53,14 @@ WEEKLY_URL = "https://zwiftinsider.com/weekly-challenges/?grid-list-toggle=grid&
 WEEKLY_FILE = "weekly.json"
 WEEKLY_CATEGORIES = {"Route of the Week": "route", "Climb of the Week": "climb"}
 
+# Climb portal rotation: Watopia's daily portal climb and France's Climb
+# Portal of the Month. Shown on the Calendar only, never in the spinner.
+PORTAL_URL = "https://cdn.zwift.com/gameassets/PortalRoadSchedule_v1.xml"
+PORTAL_FILE = "portal.json"
+PORTAL_PAGE_URL = "https://zwiftinsider.com/portal/{}/"
+# Zwift's world numbers, for the worlds that have climb portals.
+PORTAL_WORLDS = {"1": "WATOPIA", "10": "FRANCE"}
+
 # Alert when the newest schedule entry starts within this many days. A slot
 # lasts about 2 days, so this gives warning before the schedule runs out.
 SCHEDULE_ALERT_DAYS = 2
@@ -184,16 +192,16 @@ def link_candidates(name):
     return names
 
 
-def find_route_page(name):
-    """Return the route's page URL, or None if no guess exists. Raises on network trouble."""
+def find_route_page(name, url_pattern=ROUTE_PAGE_URL, kind="/route/"):
+    """Return the page URL, or None if no guess exists. Raises on network trouble."""
     for candidate in link_candidates(name):
-        url = ROUTE_PAGE_URL.format(slugify(candidate))
+        url = url_pattern.format(slugify(candidate))
         request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         time.sleep(LINK_CHECK_DELAY_SECONDS)
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
                 final_url = response.geturl()
-                if "/route/" in final_url:
+                if kind in final_url:
                     return final_url
         except urllib.error.HTTPError as error:
             if error.code != 404:
@@ -201,21 +209,29 @@ def find_route_page(name):
     return None
 
 
-def update_links(routes):
-    """Add a "link" to each route, checking only routes not already in the cache."""
+def update_links(routes, climbs=()):
+    """Add a "link" to each route and climb, checking only names not already in the cache.
+
+    Climbs are cached under "portal:<name>" and looked up on Zwift Insider's /portal/ pages.
+    """
     path = DATA_DIR / LINKS_FILE
     cache = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     today = datetime.now(timezone.utc).date()
     recheck_before = (today - timedelta(days=MISS_RECHECK_DAYS)).isoformat()
 
     names = sorted({r["name"] for r in routes if not r["eventOnly"]} - LINK_OVERRIDES.keys())
+    names += sorted({f"portal:{c['name']}" for c in climbs})
     for name in LINK_OVERRIDES:
         cache.pop(name, None)
     due = [n for n in names if n not in cache or (cache[n]["url"] is None and cache[n]["checked"] < recheck_before)]
     checked = 0
     for name in due[:MAX_LINK_CHECKS_PER_RUN]:
         try:
-            cache[name] = {"url": find_route_page(name), "checked": today.isoformat()}
+            if name.startswith("portal:"):
+                url = find_route_page(name[len("portal:"):], PORTAL_PAGE_URL, "/portal/")
+            else:
+                url = find_route_page(name)
+            cache[name] = {"url": url, "checked": today.isoformat()}
             checked += 1
         except Exception as error:
             # Zwift Insider trouble should never block the schedule and route update.
@@ -226,6 +242,9 @@ def update_links(routes):
     for route in routes:
         entry = cache.get(route["name"])
         route["link"] = LINK_OVERRIDES.get(route["name"]) or (entry["url"] if entry else None)
+    for climb in climbs:
+        entry = cache.get(f"portal:{climb['name']}")
+        climb["link"] = entry["url"] if entry else None
     return dict(sorted(cache.items()))
 
 
@@ -242,6 +261,46 @@ def update_order(routes):
     for route in routes:
         route["index"] = position[route["id"]]
     return order
+
+
+def build_portal(root):
+    """Climbs by id plus the dated rotation (UTC start times), from PortalRoadSchedule_v1.xml."""
+    climbs = {}
+    for item in root.iter("PortalRoadMetadata"):
+        climbs[item.get("id")] = {
+            "name": item.get("name"),
+            "distanceMeters": round(float(item.get("distanceCentimeters") or 0) / 100, 1),
+            "ascentMeters": round(float(item.get("elevCentimeters") or 0) / 100, 1),
+        }
+    schedule = []
+    for item in root.iter("appointment"):
+        world = PORTAL_WORLDS.get(item.get("world"))
+        if not world:
+            alert(f"The climb portal schedule has an unknown world number {item.get('world')}; add it to PORTAL_WORLDS in scripts/update_data.py.")
+            continue
+        if item.get("road") not in climbs:
+            raise ValueError(f"portal appointment for unknown climb {item.get('road')}")
+        schedule.append({
+            "start": parse_start(item.get("start")).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "world": world,
+            "monthly": item.get("portal_of_month") == "true",
+            "climbId": item.get("road"),
+        })
+    schedule.sort(key=lambda a: (a["start"], a["world"]))
+    if not schedule:
+        raise ValueError("climb portal schedule is empty")
+    # Only keep climbs that are actually scheduled, so the file stays small.
+    used = {a["climbId"] for a in schedule}
+    return {"climbs": {k: v for k, v in sorted(climbs.items()) if k in used}, "schedule": schedule}
+
+
+def load_portal():
+    """Fetch the portal rotation; on trouble return None (the last good file is kept)."""
+    try:
+        return build_portal(fetch_xml(PORTAL_URL))
+    except Exception as error:
+        alert(f"Couldn't update the climb portal rotation ({error}). The site keeps the last good data.")
+        return None
 
 
 def fetch_text(url):
@@ -338,10 +397,13 @@ def main():
     routes = build_routes(fetch_xml(DICTIONARY_URL))
     DATA_DIR.mkdir(exist_ok=True)
     order = update_order(routes["routes"])
-    links = update_links(routes["routes"])
+    portal = load_portal()
+    links = update_links(routes["routes"], portal["climbs"].values() if portal else ())
     write_json("schedule.json", schedule)
     write_json("routes.json", routes)
     write_json(LINKS_FILE, links)
+    if portal:
+        write_json(PORTAL_FILE, portal)
     update_weekly(routes["routes"])
     # One ID per line keeps diffs readable as routes are added.
     (DATA_DIR / ORDER_FILE).write_text("[\n" + ",\n".join(json.dumps(i) for i in order) + "\n]\n", encoding="utf-8")
