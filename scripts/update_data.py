@@ -5,15 +5,29 @@ Exits with an error (and writes nothing) if the data looks wrong.
 """
 
 import json
+import re
 import sys
+import time
+import unicodedata
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 SCHEDULE_URL = "https://cdn.zwift.com/gameassets/MapSchedule_v2.xml"
 DICTIONARY_URL = "https://cdn.zwift.com/gameassets/GameDictionary.xml"
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+USER_AGENT = "Mozilla/5.0 (compatible; WhereToZwiftToday/1.0; +https://github.com/imthatjeremyguy/Where-To-Zwift-Today)"
+
+# Route pages on Zwift Insider. There is no index of them, so we guess each
+# address from the route name, check it once, and remember the answer in
+# data/route-links.json. Misses are rechecked weekly in case a page appears.
+ROUTE_PAGE_URL = "https://zwiftinsider.com/route/{}/"
+LINKS_FILE = "route-links.json"
+MISS_RECHECK_DAYS = 7
+MAX_LINK_CHECKS_PER_RUN = 50
+LINK_CHECK_DELAY_SECONDS = 1
 
 # Bit flags in a route's "sports" attribute.
 SPORT_CYCLING = 1
@@ -33,7 +47,7 @@ GUEST_PAIRS = {
 
 
 def fetch_xml(url):
-    request = urllib.request.Request(url, headers={"User-Agent": "where-to-zwift-today"})
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=60) as response:
         return ET.fromstring(response.read())
 
@@ -98,6 +112,65 @@ def build_routes(root):
     return {"routes": routes}
 
 
+def slugify(name):
+    text = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    text = text.replace("'", "").replace("&", "and")
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
+def link_candidates(name):
+    # Zwift Insider covers run variants on the ride page and drops "Watopia" from some names.
+    names = [name]
+    base = re.sub(r"\s+Run$", "", name)
+    for candidate in (base, re.sub(r"^Watopia\s+", "", base)):
+        if candidate not in names:
+            names.append(candidate)
+    return names
+
+
+def find_route_page(name):
+    """Return the route's page URL, or None if no guess exists. Raises on network trouble."""
+    for candidate in link_candidates(name):
+        url = ROUTE_PAGE_URL.format(slugify(candidate))
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        time.sleep(LINK_CHECK_DELAY_SECONDS)
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                final_url = response.geturl()
+                if "/route/" in final_url:
+                    return final_url
+        except urllib.error.HTTPError as error:
+            if error.code != 404:
+                raise
+    return None
+
+
+def update_links(routes):
+    """Add a "link" to each route, checking only routes not already in the cache."""
+    path = DATA_DIR / LINKS_FILE
+    cache = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    today = datetime.now(timezone.utc).date()
+    recheck_before = (today - timedelta(days=MISS_RECHECK_DAYS)).isoformat()
+
+    names = sorted({r["name"] for r in routes if not r["eventOnly"]})
+    due = [n for n in names if n not in cache or (cache[n]["url"] is None and cache[n]["checked"] < recheck_before)]
+    checked = 0
+    for name in due[:MAX_LINK_CHECKS_PER_RUN]:
+        try:
+            cache[name] = {"url": find_route_page(name), "checked": today.isoformat()}
+            checked += 1
+        except Exception as error:
+            # Zwift Insider trouble should never block the schedule and route update.
+            print(f"::warning::Route link check stopped at {name!r}: {error}")
+            break
+    print(f"checked {checked} route links, {max(len(due) - checked, 0)} left for later runs")
+
+    for route in routes:
+        entry = cache.get(route["name"])
+        route["link"] = entry["url"] if entry else None
+    return dict(sorted(cache.items()))
+
+
 def write_json(name, payload):
     path = DATA_DIR / name
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -109,8 +182,10 @@ def main():
     schedule = build_schedule(fetch_xml(SCHEDULE_URL))
     routes = build_routes(fetch_xml(DICTIONARY_URL))
     DATA_DIR.mkdir(exist_ok=True)
+    links = update_links(routes["routes"])
     write_json("schedule.json", schedule)
     write_json("routes.json", routes)
+    write_json(LINKS_FILE, links)
     print(f"{len(schedule['appointments'])} appointments, {len(routes['routes'])} routes")
 
 

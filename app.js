@@ -225,6 +225,16 @@ function renderRoute(route, today) {
   }
 
   els.result.append(title, world, details);
+  if (route.link) {
+    const more = document.createElement("p");
+    const link = document.createElement("a");
+    link.href = route.link;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Map and details on Zwift Insider";
+    more.append(link);
+    els.result.append(more);
+  }
   els.result.hidden = false;
   shownRoute = route;
 }

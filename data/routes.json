@@ -12,7 +12,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "947394567",
@@ -26,7 +27,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2875658892",
@@ -40,7 +42,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2143464829",
@@ -54,7 +57,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/bon-voyage/"
     },
     {
       "id": "3919912289",
@@ -68,7 +72,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/casse-pattes/"
     },
     {
       "id": "4149936043",
@@ -82,7 +87,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1600198346",
@@ -96,7 +102,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/croissant/"
     },
     {
       "id": "986252325",
@@ -110,7 +117,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/douce-france/"
     },
     {
       "id": "2136907048",
@@ -124,7 +132,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1538375239",
@@ -138,7 +147,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/gentil-8/"
     },
     {
       "id": "1793712753",
@@ -152,7 +162,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/hell-of-the-north/"
     },
     {
       "id": "3974965857",
@@ -166,7 +177,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/knights-of-the-roundabout/"
     },
     {
       "id": "1433431343",
@@ -180,7 +192,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/la-reine/"
     },
     {
       "id": "573843083",
@@ -194,7 +207,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": null
     },
     {
       "id": "941280950",
@@ -208,7 +222,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/peaky-pave/"
     },
     {
       "id": "2852153296",
@@ -222,7 +237,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/petit-boucle/"
     },
     {
       "id": "4159356920",
@@ -236,7 +252,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/petite-douleur/"
     },
     {
       "id": "1776635757",
@@ -250,7 +267,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1409345545",
@@ -264,7 +282,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/rapide-run/"
     },
     {
       "id": "872351836",
@@ -278,7 +297,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/roule-ma-poule/"
     },
     {
       "id": "136140280",
@@ -292,7 +312,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/sacre-bleu/"
     },
     {
       "id": "319138658",
@@ -306,7 +327,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/three-musketeers/"
     },
     {
       "id": "2413440572",
@@ -320,7 +342,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tire-bouchon/"
     },
     {
       "id": "358794394",
@@ -334,7 +357,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/ven-10/"
     },
     {
       "id": "1975694067",
@@ -348,7 +372,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-02"
+      "publishedOn": "2025-04-02",
+      "link": "https://zwiftinsider.com/route/ven-10/"
     },
     {
       "id": "2573468147",
@@ -362,7 +387,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/ven-top/"
     },
     {
       "id": "3687150686",
@@ -376,7 +402,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1295302121",
@@ -390,7 +417,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2273747093",
@@ -404,7 +432,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "434255158",
@@ -418,7 +447,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1437969615",
@@ -432,7 +462,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "967374265",
@@ -446,7 +477,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3114603308",
@@ -460,7 +492,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/2018-worlds-short-lap/"
     },
     {
       "id": "4009235104",
@@ -474,7 +507,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/achterbahn/"
     },
     {
       "id": "3649347250",
@@ -488,7 +522,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/innsbruck-kom-after-party/"
     },
     {
       "id": "3101693166",
@@ -502,7 +537,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2592027600",
@@ -516,7 +552,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/innsbruckring/"
     },
     {
       "id": "156457316",
@@ -530,7 +567,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/lutscher/"
     },
     {
       "id": "3801241714",
@@ -544,7 +582,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/lutscher-ccw/"
     },
     {
       "id": "2694166390",
@@ -558,7 +597,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/london-classique/"
     },
     {
       "id": "3599973269",
@@ -572,7 +612,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "87055383",
@@ -586,7 +627,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/greater-london-8/"
     },
     {
       "id": "928793662",
@@ -600,7 +642,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/greater-london-flat/"
     },
     {
       "id": "3276403604",
@@ -614,7 +657,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/greater-london-loop/"
     },
     {
       "id": "474781994",
@@ -628,7 +672,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1880443431",
@@ -642,7 +687,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/greatest-london-flat/"
     },
     {
       "id": "3853654821",
@@ -656,7 +702,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/greatest-london-loop/"
     },
     {
       "id": "3976402826",
@@ -670,7 +717,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3569674525",
@@ -684,7 +732,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1230300449",
@@ -698,7 +747,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "4012646479",
@@ -712,7 +762,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/london-8/"
     },
     {
       "id": "2165880404",
@@ -726,7 +777,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2836167073",
@@ -740,7 +792,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/london-calling/"
     },
     {
       "id": "3262665065",
@@ -754,7 +807,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/london-flat/"
     },
     {
       "id": "913172163",
@@ -768,7 +822,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/london-loop/"
     },
     {
       "id": "1788889233",
@@ -782,7 +837,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2204461619",
@@ -796,7 +852,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "764532081",
@@ -810,7 +867,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3250904331",
@@ -824,7 +882,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/london-uprising/"
     },
     {
       "id": "3707791029",
@@ -838,7 +897,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/surrey-hills/"
     },
     {
       "id": "163688809",
@@ -852,7 +912,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-london-pretzel/"
     },
     {
       "id": "4210048937",
@@ -866,7 +927,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/triple-loops/"
     },
     {
       "id": "938096831",
@@ -880,7 +942,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1760877317",
@@ -894,7 +957,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/bridges-and-boardwalks/"
     },
     {
       "id": "3706527503",
@@ -908,7 +972,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/castle-crit/"
     },
     {
       "id": "1033940053",
@@ -922,7 +987,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/castle-crit/"
     },
     {
       "id": "3742187716",
@@ -936,7 +1002,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/castle-to-castle/"
     },
     {
       "id": "3691918883",
@@ -950,7 +1017,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/chain-chomper/"
     },
     {
       "id": "2866480562",
@@ -964,7 +1032,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/chasing-the-sun/"
     },
     {
       "id": "576953930",
@@ -978,7 +1047,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/country-to-coastal/"
     },
     {
       "id": "525689100",
@@ -992,7 +1062,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/countryside-tour/"
     },
     {
       "id": "65777922",
@@ -1006,7 +1077,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/electric-break/"
     },
     {
       "id": "910684583",
@@ -1020,7 +1092,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/electric-loop/"
     },
     {
       "id": "2980619755",
@@ -1034,7 +1107,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/farmland-loop/"
     },
     {
       "id": "468624015",
@@ -1048,7 +1122,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/fine-and-sandy/"
     },
     {
       "id": "3282611437",
@@ -1062,7 +1137,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/flatland-loop/"
     },
     {
       "id": "2140131142",
@@ -1076,7 +1152,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/island-hopper/"
     },
     {
       "id": "211138252",
@@ -1090,7 +1167,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/island-outskirts/"
     },
     {
       "id": "1562187590",
@@ -1104,7 +1182,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/kappa-quest/"
     },
     {
       "id": "1454553567",
@@ -1118,7 +1197,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/kappa-quest-reverse/"
     },
     {
       "id": "2833089100",
@@ -1132,7 +1212,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/kaze-kicker/"
     },
     {
       "id": "890800649",
@@ -1146,7 +1227,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/makuri-40/"
     },
     {
       "id": "186601870",
@@ -1160,7 +1242,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/makuri-madness/"
     },
     {
       "id": "2927651296",
@@ -1174,7 +1257,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/makuri-pretzel/"
     },
     {
       "id": "1366943680",
@@ -1188,7 +1272,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mech-isle-loop/"
     },
     {
       "id": "525587103",
@@ -1202,7 +1287,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mech-isle-loop/"
     },
     {
       "id": "2919739330",
@@ -1216,7 +1302,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mech-isle-mayhem/"
     },
     {
       "id": "1453570384",
@@ -1230,7 +1317,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/neokyo-all-nighter/"
     },
     {
       "id": "1127056801",
@@ -1244,7 +1332,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1367364772",
@@ -1258,7 +1347,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-03-18"
+      "publishedOn": "2025-03-18",
+      "link": "https://zwiftinsider.com/route/neon-after-party/"
     },
     {
       "id": "3407362320",
@@ -1272,7 +1362,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/neon-flats/"
     },
     {
       "id": "3600776267",
@@ -1286,7 +1377,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-02-13"
+      "publishedOn": "2026-02-13",
+      "link": "https://zwiftinsider.com/route/neon-shore-loop/"
     },
     {
       "id": "246712730",
@@ -1300,7 +1392,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/railways-and-rooftops/"
     },
     {
       "id": "2892858917",
@@ -1314,7 +1407,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/red-zone-repeats/"
     },
     {
       "id": "3565430790",
@@ -1328,7 +1422,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/rooftop-rendezvous/"
     },
     {
       "id": "3603635554",
@@ -1342,7 +1437,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sea-to-tree/"
     },
     {
       "id": "3330165223",
@@ -1356,7 +1452,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/shisa-shakedown/"
     },
     {
       "id": "3302953739",
@@ -1370,7 +1467,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sleepless-city/"
     },
     {
       "id": "3523806426",
@@ -1384,7 +1482,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/spirit-forest/"
     },
     {
       "id": "3356878261",
@@ -1398,7 +1497,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sprinters-playground/"
     },
     {
       "id": "3367186349",
@@ -1412,7 +1512,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sukis-playground/"
     },
     {
       "id": "2896159042",
@@ -1426,7 +1527,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/temples-and-towers/"
     },
     {
       "id": "3379779247",
@@ -1440,7 +1542,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/three-village-loop/"
     },
     {
       "id": "3636436865",
@@ -1454,7 +1557,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/tropic-rush/"
     },
     {
       "id": "4258943387",
@@ -1468,7 +1572,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/turf-n-surf/"
     },
     {
       "id": "362278484",
@@ -1482,7 +1587,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/twilight-crit/"
     },
     {
       "id": "1457923570",
@@ -1496,7 +1602,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/twilight-harbor/"
     },
     {
       "id": "2653858696",
@@ -1510,7 +1617,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/two-village-loop/"
     },
     {
       "id": "4092230492",
@@ -1524,7 +1632,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/urumaze/"
     },
     {
       "id": "1941800093",
@@ -1538,7 +1647,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/valley-to-mountaintop/"
     },
     {
       "id": "3914529041",
@@ -1552,7 +1662,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/wandering-flats/"
     },
     {
       "id": "811898717",
@@ -1566,7 +1677,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/whatyumeziwerelost/"
     },
     {
       "id": "152965568",
@@ -1580,7 +1692,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/yoru-run/"
     },
     {
       "id": "2521625692",
@@ -1594,7 +1707,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-03-24"
+      "publishedOn": "2026-03-24",
+      "link": "https://zwiftinsider.com/route/yumezi-grit/"
     },
     {
       "id": "2436095601",
@@ -1608,7 +1722,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1509089537",
@@ -1622,7 +1737,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/astoria-line-8/"
     },
     {
       "id": "975408707",
@@ -1636,7 +1752,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/avon-flyer/"
     },
     {
       "id": "494933300",
@@ -1650,7 +1767,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/avon-flyer/"
     },
     {
       "id": "1790569309",
@@ -1664,7 +1782,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/couch-to-sky-k/"
     },
     {
       "id": "2101060245",
@@ -1678,7 +1797,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/double-parked/"
     },
     {
       "id": "1099226581",
@@ -1692,7 +1812,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/double-span-spin/"
     },
     {
       "id": "1671282746",
@@ -1706,7 +1827,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-01-26"
+      "publishedOn": "2026-01-26",
+      "link": "https://zwiftinsider.com/route/empire-elevation/"
     },
     {
       "id": "1327665278",
@@ -1720,7 +1842,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/everything-bagel/"
     },
     {
       "id": "711818913",
@@ -1734,7 +1857,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/flat-irons/"
     },
     {
       "id": "3678866163",
@@ -1748,7 +1872,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/fuhgeddaboudit/"
     },
     {
       "id": "480315274",
@@ -1762,7 +1887,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/gotham-grind/"
     },
     {
       "id": "352245150",
@@ -1776,7 +1902,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2945813240",
@@ -1790,7 +1917,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/grand-central-circuit/"
     },
     {
       "id": "3687251774",
@@ -1804,7 +1932,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1178708985",
@@ -1818,7 +1947,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/green-to-screen/"
     },
     {
       "id": "750613981",
@@ -1832,7 +1962,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/hudson-hustle/"
     },
     {
       "id": "3665959404",
@@ -1846,7 +1977,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/hudson-roll/"
     },
     {
       "id": "112312944",
@@ -1860,7 +1992,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/issendorf-express/"
     },
     {
       "id": "2954366662",
@@ -1874,7 +2007,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/knickerbocker/"
     },
     {
       "id": "2001106885",
@@ -1888,7 +2022,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/knickerbocker-reverse/"
     },
     {
       "id": "3669622170",
@@ -1902,7 +2037,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-03-18"
+      "publishedOn": "2025-03-18",
+      "link": "https://zwiftinsider.com/route/laguardia-after-party/"
     },
     {
       "id": "2422779354",
@@ -1916,7 +2052,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3774003351",
@@ -1930,7 +2067,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "5103974",
@@ -1944,7 +2082,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/lady-liberty/"
     },
     {
       "id": "3872978134",
@@ -1958,7 +2097,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mighty-metropolitan/"
     },
     {
       "id": "2372883204",
@@ -1972,7 +2112,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/nyc-kom-after-party/"
     },
     {
       "id": "104170948",
@@ -1986,7 +2127,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/no-sleep-till-brooklyn/"
     },
     {
       "id": "1919980508",
@@ -2000,7 +2142,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/park-perimeter-loop/"
     },
     {
       "id": "2202609830",
@@ -2014,7 +2157,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1378559127",
@@ -2028,7 +2172,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/park-to-peak/"
     },
     {
       "id": "22757204",
@@ -2042,7 +2187,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/prospect-park-loop/"
     },
     {
       "id": "3835625237",
@@ -2056,7 +2202,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/prospect-park-loop/"
     },
     {
       "id": "3078665969",
@@ -2070,7 +2217,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/rising-empire/"
     },
     {
       "id": "2590569306",
@@ -2084,7 +2232,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/shuman-trail-loop/"
     },
     {
       "id": "274775181",
@@ -2098,7 +2247,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3314406972",
@@ -2112,7 +2262,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/spinfinity/"
     },
     {
       "id": "730052368",
@@ -2126,7 +2277,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/spinfinity-ultra/"
     },
     {
       "id": "3079921742",
@@ -2140,7 +2292,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-11-03"
+      "publishedOn": "2025-11-03",
+      "link": "https://zwiftinsider.com/route/stay-puft-pursuit/"
     },
     {
       "id": "3597939700",
@@ -2154,7 +2307,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-6-train/"
     },
     {
       "id": "274639515",
@@ -2168,7 +2322,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1552189318",
@@ -2182,7 +2337,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-11-03"
+      "publishedOn": "2025-11-03",
+      "link": "https://zwiftinsider.com/route/the-double-borough/"
     },
     {
       "id": "3051823795",
@@ -2196,7 +2352,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/the-greenway/"
     },
     {
       "id": "1732356505",
@@ -2210,7 +2367,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-highline/"
     },
     {
       "id": "1763213625",
@@ -2224,7 +2382,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1942591558",
@@ -2238,7 +2397,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-11-24"
+      "publishedOn": "2025-11-24",
+      "link": "https://zwiftinsider.com/route/times-square-circuit/"
     },
     {
       "id": "2949228237",
@@ -2252,7 +2412,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-11-24"
+      "publishedOn": "2025-11-24",
+      "link": "https://zwiftinsider.com/route/times-square-circuit/"
     },
     {
       "id": "4232620535",
@@ -2266,7 +2427,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/toefield-tornado/"
     },
     {
       "id": "1472166107",
@@ -2280,7 +2442,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/toefield-tornado/"
     },
     {
       "id": "2898229208",
@@ -2294,7 +2457,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/watts-the-limit/"
     },
     {
       "id": "3364574135",
@@ -2308,7 +2472,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/champs-elysees/"
     },
     {
       "id": "2818536273",
@@ -2322,7 +2487,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/champs-elysees/"
     },
     {
       "id": "4234984253",
@@ -2336,7 +2502,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/cirque-du-suffer/"
     },
     {
       "id": "3141079998",
@@ -2350,7 +2517,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/crepe-escape/"
     },
     {
       "id": "1365497350",
@@ -2364,7 +2532,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/double-espresso/"
     },
     {
       "id": "565111133",
@@ -2378,7 +2547,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/heart-of-montmartre/"
     },
     {
       "id": "870135081",
@@ -2392,7 +2562,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/la-boucle/"
     },
     {
       "id": "3381223955",
@@ -2406,7 +2577,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/loop-de-loop-de-loop/"
     },
     {
       "id": "1236439870",
@@ -2420,7 +2592,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/lutece-express/"
     },
     {
       "id": "86621553",
@@ -2434,7 +2607,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/lutece-express/"
     },
     {
       "id": "1247427185",
@@ -2448,7 +2622,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/montmartre-mixer/"
     },
     {
       "id": "2128895616",
@@ -2462,7 +2637,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/paris-pacer/"
     },
     {
       "id": "2805636083",
@@ -2476,7 +2652,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/paris-toujours/"
     },
     {
       "id": "2316916973",
@@ -2490,7 +2667,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-07-06"
+      "publishedOn": "2026-07-06",
+      "link": "https://zwiftinsider.com/route/rues-in-rythme/"
     },
     {
       "id": "1545087483",
@@ -2504,7 +2682,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/cobbled-climbs/"
     },
     {
       "id": "4194352271",
@@ -2518,7 +2697,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3166535632",
@@ -2532,7 +2712,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/cobbled-climbs/"
     },
     {
       "id": "2244765560",
@@ -2546,7 +2727,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/cobbled-crown/"
     },
     {
       "id": "54700404",
@@ -2560,7 +2742,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/libby-hill-after-party/"
     },
     {
       "id": "1039983620",
@@ -2574,7 +2757,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/richmond-2015-worlds-reverse/"
     },
     {
       "id": "3912793970",
@@ -2588,7 +2772,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/richmond-loop-around/"
     },
     {
       "id": "948831673",
@@ -2602,7 +2787,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/richmond-rollercoaster/"
     },
     {
       "id": "2196019512",
@@ -2616,7 +2802,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/2015-worlds-course/"
     },
     {
       "id": "1638640398",
@@ -2630,7 +2817,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-fan-flats/"
     },
     {
       "id": "377566656",
@@ -2644,7 +2832,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/braek-fast-crits-and-grits/"
     },
     {
       "id": "4107749591",
@@ -2658,7 +2847,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/city-and-the-sgurr/"
     },
     {
       "id": "2312882507",
@@ -2672,7 +2862,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/dun-dash/"
     },
     {
       "id": "3765339356",
@@ -2686,7 +2877,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/glasgow-crit-circuit/"
     },
     {
       "id": "3351665212",
@@ -2700,7 +2892,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/glasgow-crit-circuit/"
     },
     {
       "id": "79243399",
@@ -2714,7 +2907,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1258415487",
@@ -2728,7 +2922,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2773927650",
@@ -2742,7 +2937,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/highland-run/"
     },
     {
       "id": "742057576",
@@ -2756,7 +2952,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/loch-loop/"
     },
     {
       "id": "1384155764",
@@ -2770,7 +2967,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/loch-loop/"
     },
     {
       "id": "2826340040",
@@ -2784,7 +2982,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/outer-scotland/"
     },
     {
       "id": "46799750",
@@ -2798,7 +2997,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/rolling-highlands/"
     },
     {
       "id": "4227232797",
@@ -2812,7 +3012,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/scotland-after-party/"
     },
     {
       "id": "172610229",
@@ -2826,7 +3027,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/scotland-smash/"
     },
     {
       "id": "3486338362",
@@ -2840,7 +3042,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/the-epiloch/"
     },
     {
       "id": "3662705581",
@@ -2854,7 +3057,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-muckle-yin/"
     },
     {
       "id": "4240327959",
@@ -2868,7 +3072,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/ocean-blvd/"
     },
     {
       "id": "3819095753",
@@ -2882,7 +3087,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/5k-loop/"
     },
     {
       "id": "1115260805",
@@ -2896,7 +3102,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/accelerate-to-elevate/"
     },
     {
       "id": "2474227587",
@@ -2910,7 +3117,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/beach-island-loop/"
     },
     {
       "id": "3188374033",
@@ -2924,7 +3132,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/beach-island-loop/"
     },
     {
       "id": "1917017591",
@@ -2938,7 +3147,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/big-flat-8/"
     },
     {
       "id": "3921412335",
@@ -2952,7 +3162,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/big-foot-hills/"
     },
     {
       "id": "2947111049",
@@ -2966,7 +3177,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/big-loop/"
     },
     {
       "id": "4107844490",
@@ -2980,7 +3192,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2139708890",
@@ -2994,7 +3207,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/bigger-loop/"
     },
     {
       "id": "2595459121",
@@ -3008,7 +3222,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/canopies-and-coastlines/"
     },
     {
       "id": "1373909093",
@@ -3022,7 +3237,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/chili-pepper/"
     },
     {
       "id": "3694952104",
@@ -3036,7 +3252,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1464561389",
@@ -3050,7 +3267,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/climb-control/"
     },
     {
       "id": "2681889340",
@@ -3064,7 +3282,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3023359358",
@@ -3078,7 +3297,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/climbers-gambit/"
     },
     {
       "id": "2569385980",
@@ -3092,7 +3312,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/coast-crusher/"
     },
     {
       "id": "4199497144",
@@ -3106,7 +3327,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/coast-to-coast/"
     },
     {
       "id": "2768300955",
@@ -3120,7 +3342,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/coastal-crown-loop/"
     },
     {
       "id": "2888820995",
@@ -3134,7 +3357,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/danger-noodle/"
     },
     {
       "id": "454871454",
@@ -3148,7 +3372,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/deca-dash/"
     },
     {
       "id": "1675611962",
@@ -3162,7 +3387,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/downtown-eruption/"
     },
     {
       "id": "5745690",
@@ -3176,7 +3402,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/downtown-titans/"
     },
     {
       "id": "2675063596",
@@ -3190,7 +3417,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/dust-in-the-wind/"
     },
     {
       "id": "2746475460",
@@ -3204,7 +3432,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/eastern-eight/"
     },
     {
       "id": "183635628",
@@ -3218,7 +3447,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/elevation-evaluation/"
     },
     {
       "id": "1695691428",
@@ -3232,7 +3462,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/epic-run/"
     },
     {
       "id": "1258526800",
@@ -3246,7 +3477,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/flat-out-fast/"
     },
     {
       "id": "3811569265",
@@ -3260,7 +3492,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3261621461",
@@ -3274,7 +3507,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/flat-route/"
     },
     {
       "id": "2878180967",
@@ -3288,7 +3522,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/four-horsemen/"
     },
     {
       "id": "1631692097",
@@ -3302,7 +3537,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/glyph-heights/"
     },
     {
       "id": "1635842477",
@@ -3316,7 +3552,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/going-coastal/"
     },
     {
       "id": "3314187922",
@@ -3330,7 +3567,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/going-coastal/"
     },
     {
       "id": "1993374659",
@@ -3344,7 +3582,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2708527018",
@@ -3358,7 +3597,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3961473046",
@@ -3372,7 +3612,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-04-14"
+      "publishedOn": "2025-04-14",
+      "link": "https://zwiftinsider.com/route/hilltop-hustle/"
     },
     {
       "id": "2031173606",
@@ -3386,7 +3627,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/hilltop-hustle/"
     },
     {
       "id": "107363867",
@@ -3400,7 +3642,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1696938496",
@@ -3414,7 +3657,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/hilly-route-reverse/"
     },
     {
       "id": "2251715424",
@@ -3428,7 +3672,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3573087582",
@@ -3442,7 +3687,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2333249368",
@@ -3456,7 +3702,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/itza-climb-finish/"
     },
     {
       "id": "4131664304",
@@ -3470,7 +3717,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/itza-party/"
     },
     {
       "id": "2661047295",
@@ -3484,7 +3732,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/jarvis-seaside-sprint/"
     },
     {
       "id": "136957568",
@@ -3498,7 +3747,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/jons-route/"
     },
     {
       "id": "743730361",
@@ -3512,7 +3762,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/jungle-circuit/"
     },
     {
       "id": "2839057126",
@@ -3526,7 +3777,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2736430813",
@@ -3540,7 +3792,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/jungle-circuit-reverse/"
     },
     {
       "id": "777967780",
@@ -3554,7 +3807,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/jungle-circuit/"
     },
     {
       "id": "4009130866",
@@ -3568,7 +3822,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/jurassic-coast/"
     },
     {
       "id": "3864857876",
@@ -3582,7 +3837,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/legends-and-lava/"
     },
     {
       "id": "243949867",
@@ -3596,7 +3852,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/loop-de-loop/"
     },
     {
       "id": "2455695527",
@@ -3610,7 +3867,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/loop-de-loop/"
     },
     {
       "id": "1092181131",
@@ -3624,7 +3882,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/loopin-lava/"
     },
     {
       "id": "3012588561",
@@ -3638,7 +3897,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/may-field/"
     },
     {
       "id": "4084028627",
@@ -3652,7 +3912,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mayan-8/"
     },
     {
       "id": "1082034232",
@@ -3666,7 +3927,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mayan-bridge-loop/"
     },
     {
       "id": "4280627426",
@@ -3680,7 +3942,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mayan-mash/"
     },
     {
       "id": "226950646",
@@ -3694,7 +3957,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mayan-san-remo/"
     },
     {
       "id": "2953010285",
@@ -3708,7 +3972,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mountain-mash/"
     },
     {
       "id": "136182452",
@@ -3722,7 +3987,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mountain-mash/"
     },
     {
       "id": "2139465450",
@@ -3736,7 +4002,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/muir-and-the-mountain/"
     },
     {
       "id": "806114032",
@@ -3750,7 +4017,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/navig8/"
     },
     {
       "id": "1386460176",
@@ -3764,7 +4032,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/ocean-lava-cliffside-loop/"
     },
     {
       "id": "3532866973",
@@ -3778,7 +4047,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/oh-hill-no/"
     },
     {
       "id": "2181212478",
@@ -3792,7 +4062,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/oh-hill-no/"
     },
     {
       "id": "2748657713",
@@ -3806,7 +4077,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/out-and-back-again/"
     },
     {
       "id": "3558689342",
@@ -3820,7 +4092,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/peak-performance/"
     },
     {
       "id": "1201172818",
@@ -3834,7 +4107,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/power-punches/"
     },
     {
       "id": "3030004732",
@@ -3848,7 +4122,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2064290391",
@@ -3862,7 +4137,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/power-to-the-tower/"
     },
     {
       "id": "2969952077",
@@ -3876,7 +4152,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/quatch-quest/"
     },
     {
       "id": "4102513789",
@@ -3890,7 +4167,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/radio-rendezvous/"
     },
     {
       "id": "762747962",
@@ -3904,7 +4182,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2967612381",
@@ -3918,7 +4197,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3701568815",
@@ -3932,7 +4212,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/road-to-ruins/"
     },
     {
       "id": "2663908549",
@@ -3946,7 +4227,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/road-to-sky/"
     },
     {
       "id": "1140989693",
@@ -3960,7 +4242,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/road-to-sky/"
     },
     {
       "id": "772562418",
@@ -3974,7 +4257,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "604330868",
@@ -3988,7 +4272,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sand-and-sequoias/"
     },
     {
       "id": "3454338139",
@@ -4002,7 +4287,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/seaside-sprint/"
     },
     {
       "id": "3419787979",
@@ -4016,7 +4302,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/seaside-sprint/"
     },
     {
       "id": "2829629527",
@@ -4030,7 +4317,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/serpentine-8/"
     },
     {
       "id": "2328501978",
@@ -4044,7 +4332,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/shorelines-and-summits/"
     },
     {
       "id": "3324272424",
@@ -4058,7 +4347,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/snowman/"
     },
     {
       "id": "3680493479",
@@ -4072,7 +4362,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/southern-coast-cruise/"
     },
     {
       "id": "159415549",
@@ -4086,7 +4377,8 @@
       "running": false,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3261167746",
@@ -4100,7 +4392,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/spiral-into-the-volcano/"
     },
     {
       "id": "1988847319",
@@ -4114,7 +4407,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/splash-and-dash/"
     },
     {
       "id": "240388043",
@@ -4128,7 +4422,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/sugar-cookie/"
     },
     {
       "id": "4232726854",
@@ -4142,7 +4437,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/surfin-safari/"
     },
     {
       "id": "2062126722",
@@ -4156,7 +4452,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-03-04"
+      "publishedOn": "2025-03-04",
+      "link": "https://zwiftinsider.com/route/tair-dringfa-fechan/"
     },
     {
       "id": "2330634655",
@@ -4170,7 +4467,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/temple-trek/"
     },
     {
       "id": "1434769940",
@@ -4184,7 +4482,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/temple-trek/"
     },
     {
       "id": "2128890027",
@@ -4198,7 +4497,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tempus-fugit/"
     },
     {
       "id": "263936293",
@@ -4212,7 +4512,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/thats-amore/"
     },
     {
       "id": "1586193601",
@@ -4226,7 +4527,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1656629976",
@@ -4240,7 +4542,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-big-ring/"
     },
     {
       "id": "2698009951",
@@ -4254,7 +4557,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/the-classic/"
     },
     {
       "id": "3068694512",
@@ -4268,7 +4572,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/the-classic/"
     },
     {
       "id": "2207442179",
@@ -4282,7 +4587,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/the-magnificent-8/"
     },
     {
       "id": "3848492017",
@@ -4296,7 +4602,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-mega-pretzel/"
     },
     {
       "id": "1475638265",
@@ -4310,7 +4617,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-uber-pretzel/"
     },
     {
       "id": "2627606248",
@@ -4324,7 +4632,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/three-little-sisters/"
     },
     {
       "id": "4142772830",
@@ -4338,7 +4647,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/three-sisters/"
     },
     {
       "id": "4263172118",
@@ -4352,7 +4662,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3536020075",
@@ -4366,7 +4677,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2026-04-07"
+      "publishedOn": "2026-04-07",
+      "link": "https://zwiftinsider.com/route/three-step-sisters/"
     },
     {
       "id": "3366225080",
@@ -4380,7 +4692,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tick-tock/"
     },
     {
       "id": "270817258",
@@ -4394,7 +4707,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tides-and-temples/"
     },
     {
       "id": "3099224394",
@@ -4408,7 +4722,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/titans-run/"
     },
     {
       "id": "1766405776",
@@ -4422,7 +4737,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tour-of-fire-and-ice/"
     },
     {
       "id": "3871332877",
@@ -4436,7 +4752,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/track-meet/"
     },
     {
       "id": "3453194200",
@@ -4450,7 +4767,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/triple-flat-loops/"
     },
     {
       "id": "2644664789",
@@ -4464,7 +4782,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/triple-twist/"
     },
     {
       "id": "3312037616",
@@ -4478,7 +4797,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/two-bridges-loop/"
     },
     {
       "id": "482200332",
@@ -4492,7 +4812,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/two-bridges-loop/"
     },
     {
       "id": "686828068",
@@ -4506,7 +4827,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-circuit/"
     },
     {
       "id": "3866241330",
@@ -4520,7 +4842,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-circuit-ccw/"
     },
     {
       "id": "802314860",
@@ -4534,7 +4857,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-circuit-ccw/"
     },
     {
       "id": "764410120",
@@ -4548,7 +4872,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-circuit/"
     },
     {
       "id": "849508252",
@@ -4562,7 +4887,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-climb/"
     },
     {
       "id": "387309391",
@@ -4576,7 +4902,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3994934674",
@@ -4590,7 +4917,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-flat/"
     },
     {
       "id": "1397026382",
@@ -4604,7 +4932,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3297733101",
@@ -4618,7 +4947,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/volcano-flat/"
     },
     {
       "id": "2218409282",
@@ -4632,7 +4962,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3378411990",
@@ -4646,7 +4977,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2024-11-12"
+      "publishedOn": "2024-11-12",
+      "link": "https://zwiftinsider.com/route/waisted-8/"
     },
     {
       "id": "3382019812",
@@ -4660,7 +4992,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/figure-8/"
     },
     {
       "id": "553661379",
@@ -4674,7 +5007,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/figure-8-reverse/"
     },
     {
       "id": "3395698268",
@@ -4688,7 +5022,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/flat-route/"
     },
     {
       "id": "2737483381",
@@ -4702,7 +5037,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/hilly-route/"
     },
     {
       "id": "3219074012",
@@ -4716,7 +5052,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mountain-8/"
     },
     {
       "id": "2966818006",
@@ -4730,7 +5067,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/mountain-route/"
     },
     {
       "id": "2494975884",
@@ -4744,7 +5082,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/the-pretzel/"
     },
     {
       "id": "1064303857",
@@ -4758,7 +5097,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/watopias-waistband/"
     },
     {
       "id": "979250573",
@@ -4772,7 +5112,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-10-27"
+      "publishedOn": "2025-10-27",
+      "link": "https://zwiftinsider.com/route/watts-of-the-wild/"
     },
     {
       "id": "982239385",
@@ -4786,7 +5127,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/whole-lotta-lava/"
     },
     {
       "id": "1468250868",
@@ -4800,7 +5142,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/whole-lotta-lava/"
     },
     {
       "id": "1724903700",
@@ -4814,7 +5157,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-02-18"
+      "publishedOn": "2025-02-18",
+      "link": "https://zwiftinsider.com/route/zg25-queen/"
     },
     {
       "id": "3621162212",
@@ -4828,7 +5172,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3368626651",
@@ -4842,7 +5187,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "762151244",
@@ -4856,7 +5202,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/zwift-games-2024-epic/"
     },
     {
       "id": "242381847",
@@ -4870,7 +5217,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "1327147942",
@@ -4884,7 +5232,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3748780161",
@@ -4898,7 +5247,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2900074211",
@@ -4912,7 +5262,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "2007026433",
@@ -4926,7 +5277,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/2019-worlds-harrogate-circuit/"
     },
     {
       "id": "1233527301",
@@ -4940,7 +5292,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/duchy-estate/"
     },
     {
       "id": "620436060",
@@ -4954,7 +5307,8 @@
       "running": true,
       "eventOnly": true,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": null
     },
     {
       "id": "3007266671",
@@ -4968,7 +5322,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/queens-highway/"
     },
     {
       "id": "87631443",
@@ -4982,7 +5337,8 @@
       "running": false,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-01-06"
+      "publishedOn": "2025-01-06",
+      "link": "https://zwiftinsider.com/route/queens-highway-after-party/"
     },
     {
       "id": "3878295865",
@@ -4996,7 +5352,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/queens-highway/"
     },
     {
       "id": "2905381067",
@@ -5010,7 +5367,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/royal-pump-room-8/"
     },
     {
       "id": "1086718516",
@@ -5024,7 +5382,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": null
+      "publishedOn": null,
+      "link": "https://zwiftinsider.com/route/tour-of-tewit-well/"
     },
     {
       "id": "1788218813",
@@ -5038,7 +5397,8 @@
       "running": true,
       "eventOnly": false,
       "levelLocked": false,
-      "publishedOn": "2025-12-16"
+      "publishedOn": "2025-12-16",
+      "link": "https://zwiftinsider.com/route/yorkshire-double-loop/"
     }
   ]
 }
