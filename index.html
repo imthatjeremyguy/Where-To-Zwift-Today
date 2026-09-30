@@ -19,6 +19,10 @@
     #result dd { margin: 0; }
     .tag { display: inline-block; font-size: 0.8rem; padding: 0 0.4rem; border: 1px solid currentColor; border-radius: 0.25rem; margin-right: 0.25rem; }
     .notice { padding: 0.75rem; border-left: 4px solid currentColor; }
+    #filters { display: grid; grid-template-columns: auto 1fr 1fr; gap: 0.5rem 0.75rem; align-items: center; margin: 1rem 0; }
+    #filters input { width: 100%; box-sizing: border-box; font-size: 1rem; padding: 0.3rem; }
+    #filters .head { font-size: 0.85rem; opacity: 0.7; }
+    #clear { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
   </style>
 </head>
 <body>
@@ -31,6 +35,24 @@
     <label><input type="radio" name="sport" value="cycling" checked> Ride</label>
     <label><input type="radio" name="sport" value="running"> Run</label>
   </fieldset>
+
+  <fieldset>
+    <legend class="muted">Units</legend>
+    <label><input type="radio" name="units" value="metric" checked> km / m</label>
+    <label><input type="radio" name="units" value="imperial"> mi / ft</label>
+  </fieldset>
+
+  <p class="muted">Filters use the total you ride, route plus lead-in. Leave a box empty for no limit.</p>
+  <div id="filters">
+    <span></span><span class="head">Min</span><span class="head">Max</span>
+    <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
+    <input id="min-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance">
+    <input id="max-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" aria-label="Maximum distance">
+    <label for="min-climbing">Climbing (<span class="unit-climbing">m</span>)</label>
+    <input id="min-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing">
+    <input id="max-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" aria-label="Maximum climbing">
+  </div>
+  <p><button id="clear" type="button">Clear filters</button></p>
 
   <button id="pick" type="button" disabled>Pick a route</button>
   <p id="count" class="muted"></p>

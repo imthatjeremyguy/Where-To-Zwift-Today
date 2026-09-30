@@ -6,7 +6,7 @@ A free static website that randomly picks a Zwift route from the worlds active t
 - A scheduled GitHub Action will fetch Zwift's world schedule and route data daily and commit them as JSON.
 - Watopia is always active; two guest worlds rotate. Changeover is midnight US Eastern (4am UTC).
 
-Open the site, choose Ride or Run, and press "Pick a route". Event-only routes and routes not yet released are left out.
+Open the site, choose Ride or Run, optionally set minimum or maximum distance and climbing (in km/m or mi/ft; they apply to the route plus lead-in), and press "Pick a route". Event-only routes and routes not yet released are left out.
 
 ## Data
 
