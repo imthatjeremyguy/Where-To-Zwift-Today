@@ -5,6 +5,7 @@ Exits with an error (and writes nothing) if the data looks wrong.
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -45,6 +46,13 @@ LINK_OVERRIDES = {
 SPORT_CYCLING = 1
 SPORT_RUNNING = 2
 
+# Alert when the newest schedule entry starts within this many days. A slot
+# lasts about 2 days, so this gives warning before the schedule runs out.
+SCHEDULE_ALERT_DAYS = 2
+
+# Problems worth a human look. The workflow turns these into a GitHub issue.
+alerts = []
+
 # The schedule names one guest world per slot; the game always pairs it with a
 # fixed second world that the XML never mentions. Verified against the in-game
 # worlds and Zwift Insider's calendar for September 2026.
@@ -83,17 +91,44 @@ def build_schedule(root):
         if world in GUEST_PAIRS:
             worlds.append(GUEST_PAIRS[world])
         else:
-            # Shows as a warning on the Action run; the picker still gets one world.
-            print(f"::warning::No paired world known for {world}; update GUEST_PAIRS")
+            # The picker still works with one guest world, but someone should add the pair.
+            alert(f"No paired world is known for guest world {world}. Check today's worlds in Zwift and add it to GUEST_PAIRS in scripts/update_data.py.")
         appointments.append({"start": start.strftime("%Y-%m-%dT%H:%M:%SZ"), "map": world, "worlds": worlds})
     appointments.sort(key=lambda a: a["start"])
     if not appointments:
         raise ValueError("schedule has no appointments")
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    current = [a for a in appointments if a["start"] <= now]
+    now = datetime.now(timezone.utc)
+    now_text = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    current = [a for a in appointments if a["start"] <= now_text]
     if current:
         print("Active now: WATOPIA, " + ", ".join(current[-1]["worlds"]))
+    check_schedule_runway(appointments, now)
     return {"alwaysActive": ["WATOPIA"], "appointments": appointments}
+
+
+def alert(message):
+    alerts.append(message)
+    print(f"::warning::{message}")
+
+
+def check_schedule_runway(appointments, now):
+    last_start = datetime.fromisoformat(appointments[-1]["start"].replace("Z", "+00:00"))
+    if last_start - now < timedelta(days=SCHEDULE_ALERT_DAYS):
+        alert(
+            f"Zwift's world schedule runs out soon: the last entry starts {last_start:%Y-%m-%d %H:%M} UTC "
+            "and no newer schedule has been published. The site will fall back to Watopia only about 4 days "
+            "after that. Usually Zwift publishes the next month in time and this closes itself; if not, "
+            "check whether the schedule file moved."
+        )
+
+
+def write_alerts():
+    """Write alerts as Markdown for the workflow, if it asked for them."""
+    path = os.environ.get("ALERTS_FILE")
+    if os.environ.get("TEST_ALERT") == "true":
+        alerts.append("Test alert from a manual run. Nothing is wrong; the next normal run closes this issue.")
+    if path:
+        Path(path).write_text("".join(f"- {a}\n" for a in alerts), encoding="utf-8")
 
 
 def build_routes(root):
@@ -220,6 +255,7 @@ def main():
     (DATA_DIR / ORDER_FILE).write_text("[\n" + ",\n".join(json.dumps(i) for i in order) + "\n]\n", encoding="utf-8")
     print(f"wrote data/{ORDER_FILE}")
     print(f"{len(schedule['appointments'])} appointments, {len(routes['routes'])} routes")
+    write_alerts()
 
 
 if __name__ == "__main__":

@@ -23,3 +23,12 @@ Add `?now=` with a UTC time to the page URL to see what the picker does at that 
 ## Updating app.js
 
 GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js`, bump the `?v=` number on its `<script>` tag in `index.html` in the same commit, so visitors never get the new page with the old script.
+
+## Alerts
+
+The daily Action opens a GitHub issue when something needs a look, and closes it automatically once things are fine again:
+
+- **"Zwift data needs attention"** (label `data-alert`): Zwift's world schedule is about to run out with no newer one published, or a guest world appears with no known partner world (add it to `GUEST_PAIRS` in `scripts/update_data.py`).
+- **"Daily Zwift data update failed"** (label `update-failed`): the run itself failed. The site keeps working with the last good data.
+
+To test it, run the Action by hand with "Open a test alert issue" ticked; the next normal run closes the test issue.

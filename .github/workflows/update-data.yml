@@ -5,13 +5,25 @@ on:
     # Daily at 04:23 UTC, shortly after the midnight US Eastern world changeover.
     - cron: "23 4 * * *"
   workflow_dispatch:
+    inputs:
+      test_alert:
+        description: "Open a test alert issue (the next normal run closes it)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: update-data
   cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  GH_REPO: ${{ github.repository }}
+  RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  ALERTS_FILE: ${{ github.workspace }}/../alerts.md
 
 jobs:
   update:
@@ -21,6 +33,8 @@ jobs:
 
       # The runner's built-in Python 3 is enough; the script uses only the standard library.
       - name: Fetch and convert Zwift data
+        env:
+          TEST_ALERT: ${{ inputs.test_alert }}
         run: python3 scripts/update_data.py
 
       - name: Commit changes, if any
@@ -34,3 +48,49 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update Zwift data"
           git push
+
+      # One open issue per problem type: created when a problem appears, updated
+      # while it lasts, and closed automatically by the first clean run.
+      - name: Open, update or close the data alert issue
+        run: |
+          gh label create data-alert --color D93F0B --description "Daily Zwift data update found a problem" 2>/dev/null || true
+          open=$(gh issue list --label data-alert --state open --json number --jq '.[0].number // empty')
+          if [ -s "$ALERTS_FILE" ]; then
+            {
+              echo "The daily Zwift data update found something that needs a look:"
+              echo
+              cat "$ALERTS_FILE"
+              echo
+              echo "Latest run: $RUN_URL"
+              echo
+              echo "This issue closes itself after a run that finds no problems."
+            } > body.md
+            if [ -n "$open" ]; then
+              gh issue edit "$open" --body-file body.md
+            else
+              gh issue create --title "Zwift data needs attention" --label data-alert --body-file body.md
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "Resolved: this run found no problems. $RUN_URL"
+          fi
+          # A clean run also clears any earlier failure issue.
+          failed=$(gh issue list --label update-failed --state open --json number --jq '.[0].number // empty')
+          if [ -n "$failed" ]; then
+            gh issue close "$failed" --comment "Resolved: the update ran successfully. $RUN_URL"
+          fi
+
+      - name: Open or update the failure issue
+        if: failure()
+        run: |
+          gh label create update-failed --color B60205 --description "Daily Zwift data update failed" 2>/dev/null || true
+          open=$(gh issue list --label update-failed --state open --json number --jq '.[0].number // empty')
+          body="The daily Zwift data update failed. The site keeps working with the last good data.
+
+          Latest failed run: $RUN_URL
+
+          Open the run and check the step marked with a red X for the error. This issue closes itself after the next successful run."
+          if [ -n "$open" ]; then
+            gh issue edit "$open" --body "$body"
+          else
+            gh issue create --title "Daily Zwift data update failed" --label update-failed --body "$body"
+          fi
