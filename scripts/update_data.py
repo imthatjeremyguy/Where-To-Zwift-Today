@@ -4,6 +4,7 @@ Uses only the Python standard library so the GitHub Action needs no installs.
 Exits with an error (and writes nothing) if the data looks wrong.
 """
 
+import html
 import json
 import os
 import re
@@ -13,7 +14,7 @@ import unicodedata
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 SCHEDULE_URL = "https://cdn.zwift.com/gameassets/MapSchedule_v2.xml"
@@ -45,6 +46,12 @@ LINK_OVERRIDES = {
 # Bit flags in a route's "sports" attribute.
 SPORT_CYCLING = 1
 SPORT_RUNNING = 2
+
+# Route and Climb of the Week, from Zwift Insider's Ride of the Week calendar
+# (Zwift publishes no data file for these). One page per month.
+WEEKLY_URL = "https://zwiftinsider.com/weekly-challenges/?grid-list-toggle=grid&month={month}&yr={year}"
+WEEKLY_FILE = "weekly.json"
+WEEKLY_CATEGORIES = {"Route of the Week": "route", "Climb of the Week": "climb"}
 
 # Alert when the newest schedule entry starts within this many days. A slot
 # lasts about 2 days, so this gives warning before the schedule runs out.
@@ -237,6 +244,88 @@ def update_order(routes):
     return order
 
 
+def fetch_text(url):
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return response.read().decode("utf-8", errors="replace")
+
+
+def parse_weekly_month(page, year, month):
+    """Return {date: {"route": (title, link), "climb": (title, link)}} for one month page."""
+    # The legend maps category numbers to names, e.g. 367 -> Route of the Week.
+    categories = {}
+    for number, label in re.findall(r'data-category="(\d+)">(?:&nbsp;|\s)*([^<]+)</td>', page):
+        kind = WEEKLY_CATEGORIES.get(html.unescape(label).strip())
+        if kind:
+            categories[number] = kind
+    if set(categories.values()) != set(WEEKLY_CATEGORIES.values()):
+        raise ValueError("category legend not found")
+    days = {}
+    for day, body in re.findall(r'<td class="spiffy-day-(\d+)[^"]*"[^>]*>(.*?)</td>', page, re.S):
+        entries = {}
+        for number, link, title in re.findall(
+            r'class="calnk category_(\d+)[^"]*".*?<a href="([^"]*)"[^>]*>\s*<span class="spiffy-title">(.*?)</span>', body, re.S
+        ):
+            if number in categories:
+                entries[categories[number]] = (html.unescape(title).strip(), link)
+        if entries:
+            days[date(year, month, int(day))] = entries
+    return days
+
+
+def split_reward(title):
+    """'Volcano Flat (250 XP)' -> ('Volcano Flat', '250 XP')."""
+    match = re.match(r"^(.*?)\s*\(([^()]*(?:XP|Drops))\)$", title)
+    return (match.group(1), match.group(2)) if match else (title, None)
+
+
+def build_weekly(routes):
+    """Route and Climb of the Week by week (weeks start Monday), for last, this and next month."""
+    today = datetime.now(timezone.utc).date()
+    first = today.replace(day=1)
+    months = [(first - timedelta(days=1)).replace(day=1), first, (first + timedelta(days=32)).replace(day=1)]
+    days = {}
+    for m in months:
+        page = fetch_text(WEEKLY_URL.format(month=m.strftime("%b").lower(), year=m.year))
+        days.update(parse_weekly_month(page, m.year, m.month))
+    if not any(d.month == first.month for d in days):
+        raise ValueError(f"no weekly challenges found for {first:%B %Y}")
+
+    by_name = {r["name"].lower(): r for r in routes}
+    weeks = {}
+    for day in sorted(days):
+        start = day - timedelta(days=day.weekday())
+        week = weeks.setdefault(start.isoformat(), {"start": start.isoformat()})
+        for kind, (title, link) in days[day].items():
+            if kind in week:
+                continue
+            name, reward = split_reward(title)
+            entry = {"name": name, "reward": reward, "link": link or None}
+            if kind == "route":
+                # Zwift Insider drops the "Watopia" prefix some route names carry.
+                match = by_name.get(name.lower()) or by_name.get(f"watopia {name.lower()}")
+                entry["routeId"] = match["id"] if match else None
+            week[kind] = entry
+    return {"switchesAt": "Mondays 12:00 US Eastern", "weeks": [weeks[k] for k in sorted(weeks)]}
+
+
+def update_weekly(routes):
+    """Refresh weekly.json; on trouble keep the last good file and raise an alert."""
+    try:
+        weekly = build_weekly(routes)
+    except Exception as error:
+        alert(f"Couldn't update Route and Climb of the Week from Zwift Insider ({error}). The site keeps the last good data; the page layout may have changed.")
+        return
+    this_week = (datetime.now(timezone.utc).date() - timedelta(days=datetime.now(timezone.utc).date().weekday())).isoformat()
+    current = next((w for w in weekly["weeks"] if w["start"] == this_week), None)
+    if not current or "route" not in current or "climb" not in current:
+        alert("Zwift Insider's calendar has no Route or Climb of the Week for this week.")
+    unmatched = [w["route"]["name"] for w in weekly["weeks"] if "route" in w and not w["route"]["routeId"]]
+    if unmatched:
+        print(f"::notice::Weekly routes not matched to routes.json: {', '.join(unmatched)}")
+    write_json(WEEKLY_FILE, weekly)
+
+
 def write_json(name, payload):
     path = DATA_DIR / name
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -253,6 +342,7 @@ def main():
     write_json("schedule.json", schedule)
     write_json("routes.json", routes)
     write_json(LINKS_FILE, links)
+    update_weekly(routes["routes"])
     # One ID per line keeps diffs readable as routes are added.
     (DATA_DIR / ORDER_FILE).write_text("[\n" + ",\n".join(json.dumps(i) for i in order) + "\n]\n", encoding="utf-8")
     print(f"wrote data/{ORDER_FILE}")

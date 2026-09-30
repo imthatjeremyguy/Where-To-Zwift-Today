@@ -1,0 +1,201 @@
+{
+  "switchesAt": "Mondays 12:00 US Eastern",
+  "weeks": [
+    {
+      "start": "2026-07-27",
+      "climb": {
+        "name": "Cheddar Gorge",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cheddar-gorge/"
+      },
+      "route": {
+        "name": "Triple Flat Loops",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/triple-flat-loops/",
+        "routeId": "3453194200"
+      }
+    },
+    {
+      "start": "2026-08-03",
+      "climb": {
+        "name": "Col du Platzerwasel",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/col-du-platzerwasel/"
+      },
+      "route": {
+        "name": "Whole Lotta Lava",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/whole-lotta-lava/",
+        "routeId": "982239385"
+      }
+    },
+    {
+      "start": "2026-08-10",
+      "climb": {
+        "name": "Poggio",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/poggio/"
+      },
+      "route": {
+        "name": "Tair Dringfa Fechan",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/tair-dringfa-fechan/",
+        "routeId": "2062126722"
+      }
+    },
+    {
+      "start": "2026-08-17",
+      "climb": {
+        "name": "La Super Planche des Belles Filles",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/la-super-planche-des-belles-filles/"
+      },
+      "route": {
+        "name": "Flat Route",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/flat-route/",
+        "routeId": "3395698268"
+      }
+    },
+    {
+      "start": "2026-08-24",
+      "climb": {
+        "name": "Cote de Domancy",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cote-de-domancy/"
+      },
+      "route": {
+        "name": "Ocean Lava Cliffside Loop",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/ocean-lava-cliffside-loop/",
+        "routeId": "1386460176"
+      }
+    },
+    {
+      "start": "2026-08-31",
+      "climb": {
+        "name": "Col de Peyresourde (Avajan)",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/col-de-peyresourde-avajan/"
+      },
+      "route": {
+        "name": "Hilly Route",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/hilly-route/",
+        "routeId": "2737483381"
+      }
+    },
+    {
+      "start": "2026-09-07",
+      "climb": {
+        "name": "Cote de Trebiac",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cote-de-trebiac/"
+      },
+      "route": {
+        "name": "Sand and Sequoias",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/sand-and-sequoias/",
+        "routeId": "604330868"
+      }
+    },
+    {
+      "start": "2026-09-14",
+      "climb": {
+        "name": "Col du Galibier (Lautaret)",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/col-du-galibier-lautaret/"
+      },
+      "route": {
+        "name": "Volcano Flat",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/volcano-flat/",
+        "routeId": "3994934674"
+      }
+    },
+    {
+      "start": "2026-09-21",
+      "climb": {
+        "name": "Crow Road",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/portal/crow-road/"
+      },
+      "route": {
+        "name": "Flat Out Fast",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/route/flat-out-fast/",
+        "routeId": "1258526800"
+      }
+    },
+    {
+      "start": "2026-09-28",
+      "climb": {
+        "name": "Col du Rosier",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/col-du-rosier/"
+      },
+      "route": {
+        "name": "Beach Island Loop",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/beach-island-loop/",
+        "routeId": "2474227587"
+      }
+    },
+    {
+      "start": "2026-10-05",
+      "climb": {
+        "name": "Mûr de Bretagne",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/portal/mur-de-bretagne/"
+      },
+      "route": {
+        "name": "Loop de Loop",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/route/loop-de-loop/",
+        "routeId": "243949867"
+      }
+    },
+    {
+      "start": "2026-10-12",
+      "climb": {
+        "name": "Cote des Forche",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cote-des-forche/"
+      },
+      "route": {
+        "name": "Tick Tock",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/tick-tock/",
+        "routeId": "3366225080"
+      }
+    },
+    {
+      "start": "2026-10-19",
+      "climb": {
+        "name": "Cote de Pike",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/portal/cote-de-pike/"
+      },
+      "route": {
+        "name": "Hilly Route",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/route/hilly-route/",
+        "routeId": "2737483381"
+      }
+    },
+    {
+      "start": "2026-10-26",
+      "climb": {
+        "name": "Old Willunga Hill",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/old-willunga-hill/"
+      },
+      "route": {
+        "name": "Mountain Mash",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/mountain-mash/",
+        "routeId": "2953010285"
+      }
+    }
+  ]
+}
