@@ -23,6 +23,9 @@ env:
   GH_TOKEN: ${{ github.token }}
   GH_REPO: ${{ github.repository }}
   RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  # Issues are assigned to the repo owner so GitHub emails them even when they
+  # aren't watching the repo.
+  ALERT_ASSIGNEE: ${{ github.repository_owner }}
   ALERTS_FILE: ${{ github.workspace }}/../alerts.md
 
 jobs:
@@ -68,7 +71,7 @@ jobs:
             if [ -n "$open" ]; then
               gh issue edit "$open" --body-file body.md
             else
-              gh issue create --title "Zwift data needs attention" --label data-alert --body-file body.md
+              gh issue create --assignee "$ALERT_ASSIGNEE" --title "Zwift data needs attention" --label data-alert --body-file body.md
             fi
           elif [ -n "$open" ]; then
             gh issue close "$open" --comment "Resolved: this run found no problems. $RUN_URL"
@@ -92,5 +95,5 @@ jobs:
           if [ -n "$open" ]; then
             gh issue edit "$open" --body "$body"
           else
-            gh issue create --title "Daily Zwift data update failed" --label update-failed --body "$body"
+            gh issue create --assignee "$ALERT_ASSIGNEE" --title "Daily Zwift data update failed" --label update-failed --body "$body"
           fi
