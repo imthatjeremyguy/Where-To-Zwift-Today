@@ -569,6 +569,9 @@ function renderWorlds(active, alwaysActive) {
     li.append(chip);
     list.append(li);
   }
+  // Reset link at the end of the row, shown only while worlds are selected.
+  const allItem = document.createElement("li");
+  allItem.className = "all-worlds-item";
   const all = document.createElement("button");
   all.type = "button";
   all.id = "all-worlds";
@@ -579,11 +582,9 @@ function renderWorlds(active, alwaysActive) {
     selectedWorlds.clear();
     worldsChanged();
   });
-  const hint = document.createElement("p");
-  hint.className = "muted small world-hint";
-  hint.textContent = "Tap worlds to spin only their routes. Worlds change at midnight US Eastern.";
-  els.worlds.replaceChildren(list, hint);
-  hint.append(" ", all);
+  allItem.append(all);
+  list.append(allItem);
+  els.worlds.replaceChildren(list);
 }
 
 function toggleWorld(world) {
