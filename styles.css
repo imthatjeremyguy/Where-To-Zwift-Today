@@ -95,7 +95,8 @@ button, input { font: inherit; color: inherit; }
 .brand img { flex: none; border-radius: 8px; object-fit: contain; background: #010f1d; }
 .brand-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.15; }
 .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.brand-tagline { font-family: var(--font-display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Shrinks to its text so app.js can spread the letters to the name's width. */
+.brand-tagline { align-self: flex-start; font-family: var(--font-display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-text); white-space: nowrap; }
 
 .segmented {
   display: inline-flex;
@@ -523,4 +524,11 @@ input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem;
 /* Very small phones (320px). */
 @media (max-width: 21rem) {
   .tabs a { padding: 0.6rem 0.35rem; font-size: 0.875rem; }
+  .brand-name { font-size: 0.9rem; }
+  .brand-tagline { font-size: 0.6rem; }
+  .brand img { width: 28px; height: 28px; }
+  .header-row { padding: 0 0.75rem; gap: 0.4rem; }
+  .brand { gap: 0.35rem; }
+  .header-row .segmented label { padding: 0.25rem 0.45rem; }
+  .icon-button { width: 1.85rem; height: 1.85rem; }
 }

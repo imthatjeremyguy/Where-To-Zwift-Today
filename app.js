@@ -468,6 +468,28 @@ function handleHash() {
   }
 }
 
+// ---- Header tagline ----
+// Spread "Randomize. Ride. Discover." so it starts and ends exactly under the
+// site name. The name's width depends on the font and screen size, so this
+// re-runs when the font loads and when the window is resized.
+
+function fitTagline() {
+  const name = document.querySelector(".brand-name");
+  const tagline = document.querySelector(".brand-tagline");
+  if (!name || !tagline) return;
+  tagline.style.letterSpacing = "0px";
+  tagline.style.marginRight = "0px";
+  const gap = name.getBoundingClientRect().width - tagline.getBoundingClientRect().width;
+  const letters = tagline.textContent.length;
+  if (letters < 2) return;
+  // Letter spacing is added after every letter, including the last, so pull
+  // the right edge back by one spacing to keep both ends flush.
+  // Never squeeze letters together; if the name is narrower, leave the tagline as is.
+  const spacing = Math.max(0, gap / (letters - 1));
+  tagline.style.letterSpacing = `${spacing}px`;
+  tagline.style.marginRight = `${-spacing}px`;
+}
+
 // ---- Light and dark theme ----
 // No saved choice means "follow the device". The toggle saves an explicit choice.
 
@@ -804,6 +826,13 @@ async function loadJson(path) {
 }
 
 async function init() {
+  fitTagline();
+  if (document.fonts) document.fonts.ready.then(fitTagline);
+  let resizeFrame = 0;
+  window.addEventListener("resize", () => {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(fitTagline);
+  });
   updateThemeButton();
   els.themeToggle.addEventListener("click", toggleTheme);
   // Tab links and pasted progress links only change the hash, which doesn't
