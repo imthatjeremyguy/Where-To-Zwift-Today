@@ -29,6 +29,13 @@ MISS_RECHECK_DAYS = 7
 MAX_LINK_CHECKS_PER_RUN = 50
 LINK_CHECK_DELAY_SECONDS = 1
 
+# Routes whose Zwift Insider address can't be guessed from the name.
+LINK_OVERRIDES = {
+    "R.G.V.": "https://zwiftinsider.com/route/rgv/",
+    "London PRL FULL": "https://zwiftinsider.com/route/the-prl-full/",
+    "London PRL Half": "https://zwiftinsider.com/route/the-prl-half/",
+}
+
 # Bit flags in a route's "sports" attribute.
 SPORT_CYCLING = 1
 SPORT_RUNNING = 2
@@ -152,7 +159,9 @@ def update_links(routes):
     today = datetime.now(timezone.utc).date()
     recheck_before = (today - timedelta(days=MISS_RECHECK_DAYS)).isoformat()
 
-    names = sorted({r["name"] for r in routes if not r["eventOnly"]})
+    names = sorted({r["name"] for r in routes if not r["eventOnly"]} - LINK_OVERRIDES.keys())
+    for name in LINK_OVERRIDES:
+        cache.pop(name, None)
     due = [n for n in names if n not in cache or (cache[n]["url"] is None and cache[n]["checked"] < recheck_before)]
     checked = 0
     for name in due[:MAX_LINK_CHECKS_PER_RUN]:
@@ -167,7 +176,7 @@ def update_links(routes):
 
     for route in routes:
         entry = cache.get(route["name"])
-        route["link"] = entry["url"] if entry else None
+        route["link"] = LINK_OVERRIDES.get(route["name"]) or (entry["url"] if entry else None)
     return dict(sorted(cache.items()))
 
 

@@ -491,14 +491,6 @@
     "url": "https://zwiftinsider.com/route/london-loop/",
     "checked": "2026-09-30"
   },
-  "London PRL FULL": {
-    "url": null,
-    "checked": "2026-09-30"
-  },
-  "London PRL Half": {
-    "url": null,
-    "checked": "2026-09-30"
-  },
   "London Uprising": {
     "url": "https://zwiftinsider.com/route/london-uprising/",
     "checked": "2026-09-30"
@@ -709,10 +701,6 @@
   },
   "Queen's Highway Run": {
     "url": "https://zwiftinsider.com/route/queens-highway/",
-    "checked": "2026-09-30"
-  },
-  "R.G.V.": {
-    "url": null,
     "checked": "2026-09-30"
   },
   "Radio Rendezvous": {
