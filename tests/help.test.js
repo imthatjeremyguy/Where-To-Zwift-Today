@@ -12,9 +12,12 @@ let fails = 0; const check = (ok, m) => { console.log((ok ? 'PASS ' : 'FAIL ') +
   await page.goto(BASE + '/?now=2026-09-30T15:00Z#help'); await page.waitForSelector('.faq');
   check(await page.isVisible('#panel-help') && await page.title() === 'Help · Where to Zwift Today', 'Help tab opens with its title');
   const n = await page.$$eval('.faq details', d => d.length);
-  check(n === 10 && await page.$$eval('.faq details', d => d.every(x => !x.open)), `${n} questions, all collapsed`);
+  check(n === 11 && await page.$$eval('.faq details', d => d.every(x => !x.open)), `${n} questions, all collapsed`);
   await page.click('.faq details:nth-of-type(2) summary');
   check(await page.isVisible('.faq details:nth-of-type(2) p'), 'tapping a question shows its answer');
+  const ai = page.locator('.faq details', { hasText: 'Was AI used to build this site?' });
+  await ai.locator('summary').click();
+  check(await ai.locator('p').isVisible() && (await ai.locator('p').textContent()).includes('Claude Code'), 'AI disclosure question present and opens');
   check(await page.getAttribute('.faq a[href*="/issues"]', 'target') === '_blank', 'report link opens GitHub issues in a new tab');
   check((await page.textContent('.site-footer')).includes('Source on GitHub') && (await page.textContent('.site-footer')).includes('Route and Climb of the Week'), 'footer credits updated');
   check(await page.getAttribute('meta[property="og:title"]', 'content') === 'Where to Zwift Today' && await page.$('meta[name="twitter:card"]') !== null, 'share preview tags present');
