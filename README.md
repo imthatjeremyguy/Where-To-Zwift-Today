@@ -15,3 +15,7 @@ Open the site, choose Ride or Run, optionally set minimum or maximum distance an
 ## Testing a date
 
 Add `?now=` with a UTC time to the page URL to see what the picker does at that moment, for example `?now=2026-10-05T04:02Z`.
+
+## Updating app.js
+
+GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js`, bump the `?v=` number on its `<script>` tag in `index.html` in the same commit, so visitors never get the new page with the old script.
