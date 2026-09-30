@@ -83,6 +83,15 @@ let fails = 0; const check = (ok, m) => { console.log((ok ? 'PASS ' : 'FAIL ') +
     check(expected ? tg[0] === expected : !tg.some(t => t.startsWith('Route of the Week')), `Beach Island Loop on ${now}: ${tg.join(', ')}`);
     await p3.close();
   }
+  // Badge XP tag: shown when Zwift gives one, absent otherwise.
+  for (const [route, expected] of [[byName['Tempus Fugit'], '380 XP badge'], [{ ...byName['Tempus Fugit'], id: 'noxp', badgeXp: null }, null]]) {
+    const p4 = await b.newPage({ reducedMotion: 'reduce' });
+    await p4.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: [route] } }));
+    await p4.goto(B); await p4.waitForSelector('.world-chip'); await p4.click('#pick');
+    const xpTags = await p4.$$eval('#result .tag-xp', t => t.map(x => x.textContent));
+    check(expected ? xpTags.length === 1 && xpTags[0] === expected : xpTags.length === 0, `badge XP tag: ${xpTags.join(', ') || 'none'}`);
+    await p4.close();
+  }
   const other = await b.newPage({ reducedMotion: 'reduce' });
   await other.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: [byName['Tempus Fugit']] } }));
   await other.goto(B); await other.waitForSelector('.world-chip'); await other.click('#pick');

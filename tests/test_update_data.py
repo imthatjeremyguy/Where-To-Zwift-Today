@@ -77,7 +77,7 @@ class Routes(Base):
         extra = (
             '<ROUTE name="Road to Sky" map="WATOPIA" signature="5" distanceInMeters="17495.6" ascentInMeters="1044.3" '
             'leadinDistanceInMeters="103.4" leadinAscentInMeters="0" sports="3" eventOnly="0" levelLocked="1" '
-            'supportedLaps="0" publishedOn="2026-07-06" />'
+            'supportedLaps="0" publishedOn="2026-07-06" xp="380" />'
             '<ROUTE name="Portal Climb" map="" signature="6" sports="7" />'
         )
         routes = u.build_routes(self.dictionary(extra))["routes"]
@@ -88,6 +88,8 @@ class Routes(Base):
         self.assertFalse(sky["loop"])
         self.assertEqual(sky["publishedOn"], "2026-07-06")
         self.assertEqual(sky["ascentMeters"], 1044.3)
+        self.assertEqual(sky["badgeXp"], 380)
+        self.assertIsNone(next(r for r in routes if r["name"] == "Route 1")["badgeXp"])
 
     def test_too_few_routes_is_an_error(self):
         with self.assertRaises(ValueError):

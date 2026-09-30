@@ -385,6 +385,7 @@ function renderRoute(route, today) {
   if (week && week.route && week.route.routeId === route.id) {
     tags.unshift([`Route of the Week${week.route.reward ? ` +${week.route.reward}` : ""}`, "tag-rotw"]);
   }
+  if (route.badgeXp) tags.push([`${route.badgeXp} XP badge`, "tag-xp"]);
   if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push(["New", "tag-new"]);
   if (route.levelLocked) tags.push(["Level locked", ""]);
   if (isDone) tags.push(["Done", "tag-done"]);

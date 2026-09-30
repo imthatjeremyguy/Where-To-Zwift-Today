@@ -165,6 +165,8 @@ def build_routes(root):
             "running": bool(sports & SPORT_RUNNING),
             "eventOnly": item.get("eventOnly") == "1",
             "levelLocked": item.get("levelLocked") == "1",
+            # XP for earning the route badge; missing on a few (mostly run-only) routes.
+            "badgeXp": int(item.get("xp")) if (item.get("xp") or "").isdigit() else None,
             # Laps are only offered on routes that finish where they start.
             "loop": item.get("supportedLaps") == "1",
             # YYYY-MM-DD; only set on newer routes. May be in the future for unreleased routes.
