@@ -42,6 +42,8 @@ const els = {
   progressMessage: document.getElementById("progress-message"),
   progressLink: document.getElementById("progress-link"),
   themeToggle: document.getElementById("theme-toggle"),
+  settings: document.getElementById("settings"),
+  settingsSummary: document.getElementById("settings-summary"),
 };
 
 let routes = [];
@@ -199,11 +201,36 @@ function updateCount() {
   }
   els.pick.disabled = n === 0;
   updateWorldChips(today);
+  updateSettingsSummary();
   // Keep the shown route only if it still matches. Marking it done doesn't
   // count against it, so the card stays up after pressing "Mark as done".
   const keep = eligibleRoutes(today, { ignoreDone: true });
   if (shownRoute && !keep.some((r) => r.id === shownRoute.id)) hideResult();
   else if (shownRoute) renderRoute(shownRoute, today);
+}
+
+// One line under the Pick button, e.g. "Ride · Not done yet · 20 to 40 km".
+// Shown on phones, where the settings sit below the spin area.
+function updateSettingsSummary() {
+  const limits = readFilters();
+  const units = selectedUnits();
+  const unit = (kind) => (kind === "distance" ? (units === "metric" ? "km" : "mi") : (units === "metric" ? "m" : "ft"));
+  const show = (meters, kind) => {
+    const value = fromMeters(meters, kind, units);
+    return kind === "distance" ? String(Math.round(value * 10) / 10) : String(Math.round(value));
+  };
+  const range = (kind, suffix = "") => {
+    const min = limits[`min-${kind}`];
+    const max = limits[`max-${kind}`];
+    if (min != null && max != null) return `${show(min, kind)} to ${show(max, kind)} ${unit(kind)}${suffix}`;
+    if (min != null) return `at least ${show(min, kind)} ${unit(kind)}${suffix}`;
+    if (max != null) return `up to ${show(max, kind)} ${unit(kind)}${suffix}`;
+    return null;
+  };
+  const parts = [SPORT_NAMES[selectedSport()], badgeMode() === "undone" ? "Not done yet" : "Any route"];
+  const filters = [range("distance"), range("climbing", " climbing")].filter(Boolean);
+  parts.push(filters.length ? filters.join(", ") : "no limits");
+  els.settingsSummary.textContent = parts.join(" · ");
 }
 
 function hideResult() {
@@ -647,6 +674,12 @@ async function init() {
     })
   );
 
+
+  // Jump to the settings without changing the URL hash, which drives the tabs.
+  document.querySelector(".settings-jump").addEventListener("click", (event) => {
+    event.preventDefault();
+    els.settings.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
   els.copyProgress.addEventListener("click", copyProgressLink);
   els.clearProgress.addEventListener("click", clearProgress);

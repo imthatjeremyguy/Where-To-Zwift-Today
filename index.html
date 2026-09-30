@@ -6,12 +6,13 @@
   <title>Where to Zwift Today</title>
   <meta name="description" content="Spin for a random Zwift route from the worlds active today.">
   <meta name="theme-color" content="#f26722">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f26722'/%3E%3Cpath d='M8 25c0-7 16-5 16-13' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='8' r='3.2' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -21,11 +22,7 @@
   <header class="site-header">
     <div class="header-row">
       <a class="brand" href="#spin" aria-label="Where to Zwift Today, home">
-        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="var(--accent)"/>
-          <path d="M8 25c0-7 16-5 16-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="24" cy="8" r="3.2" fill="#fff"/>
-        </svg>
+        <img src="assets/icon.png" width="36" height="36" alt="">
         <span class="brand-name">Where to Zwift Today</span>
       </a>
       <div class="segmented" role="radiogroup" aria-label="Units">
@@ -46,49 +43,60 @@
 
   <main>
     <section id="panel-spin" role="tabpanel" aria-labelledby="tab-spin">
-      <div class="today">
-        <p class="eyebrow">Today's worlds</p>
-        <div id="worlds"><p class="muted">Loading today's worlds...</p></div>
-        <p class="muted small">Worlds change at midnight US Eastern.</p>
-      </div>
+      <picture class="banner">
+        <source srcset="assets/banner.webp" type="image/webp">
+        <img src="assets/banner.png" width="1153" height="168" alt="Where to Zwift Today: randomize, ride, discover">
+      </picture>
 
-      <div class="card">
-        <div class="control-row">
-          <span class="eyebrow">Sport</span>
-          <div class="segmented" role="radiogroup" aria-label="Sport">
-            <input type="radio" name="sport" value="cycling" id="sport-cycling" checked><label for="sport-cycling">Ride</label>
-            <input type="radio" name="sport" value="running" id="sport-running"><label for="sport-running">Run</label>
+      <div class="spin-layout">
+        <div class="spin-main">
+          <div class="today">
+            <p class="eyebrow">Today's worlds</p>
+            <div id="worlds"><p class="muted">Loading today's worlds...</p></div>
+            <p class="muted small">Worlds change at midnight US Eastern.</p>
           </div>
-        </div>
-        <div class="control-row">
-          <span class="eyebrow">Route badges</span>
-          <div class="segmented" role="radiogroup" aria-label="Route badges">
-            <input type="radio" name="badges" value="any" id="badges-any" checked><label for="badges-any">Any route</label>
-            <input type="radio" name="badges" value="undone" id="badges-undone"><label for="badges-undone">Not done yet</label>
+
+          <div class="spin-area card">
+            <button id="pick" class="btn-primary btn-big" type="button" disabled>Pick a route</button>
+            <p id="count" class="muted small"></p>
+            <p class="settings-summary small"><span id="settings-summary"></span> <a href="#settings" class="settings-jump">Change</a></p>
           </div>
+
+          <section id="result" class="card" hidden aria-live="polite"></section>
         </div>
 
-        <div id="filters">
-          <span></span><span class="head">Min</span><span class="head">Max</span>
-          <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
-          <input id="min-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any">
-          <input id="max-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any" aria-label="Maximum distance">
-          <label for="min-climbing">Climbing (<span class="unit-climbing">m</span>)</label>
-          <input id="min-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any">
-          <input id="max-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any" aria-label="Maximum climbing">
-        </div>
-        <div class="filters-foot">
-          <span class="muted small">Filters use route plus lead-in.</span>
-          <button id="clear" class="btn" type="button">Clear filters</button>
-        </div>
+        <aside id="settings" class="card settings" aria-labelledby="settings-title">
+          <h2 id="settings-title" class="card-title">Spin settings</h2>
+          <div class="control-row">
+            <span class="eyebrow">Sport</span>
+            <div class="segmented" role="radiogroup" aria-label="Sport">
+              <input type="radio" name="sport" value="cycling" id="sport-cycling" checked><label for="sport-cycling">Ride</label>
+              <input type="radio" name="sport" value="running" id="sport-running"><label for="sport-running">Run</label>
+            </div>
+          </div>
+          <div class="control-row">
+            <span class="eyebrow">Route badges</span>
+            <div class="segmented" role="radiogroup" aria-label="Route badges">
+              <input type="radio" name="badges" value="any" id="badges-any" checked><label for="badges-any">Any route</label>
+              <input type="radio" name="badges" value="undone" id="badges-undone"><label for="badges-undone">Not done yet</label>
+            </div>
+          </div>
+
+          <div id="filters">
+            <span></span><span class="head">Min</span><span class="head">Max</span>
+            <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
+            <input id="min-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any">
+            <input id="max-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any" aria-label="Maximum distance">
+            <label for="min-climbing">Climbing (<span class="unit-climbing">m</span>)</label>
+            <input id="min-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any">
+            <input id="max-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any" aria-label="Maximum climbing">
+          </div>
+          <div class="filters-foot">
+            <span class="muted small">Filters use route plus lead-in.</span>
+            <button id="clear" class="btn" type="button">Clear filters</button>
+          </div>
+        </aside>
       </div>
-
-      <div class="spin-area">
-        <button id="pick" class="btn-primary btn-big" type="button" disabled>Pick a route</button>
-        <p id="count" class="muted small"></p>
-      </div>
-
-      <section id="result" class="card" hidden aria-live="polite"></section>
     </section>
 
     <section id="panel-completed" role="tabpanel" aria-labelledby="tab-completed" hidden>
@@ -113,6 +121,6 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
