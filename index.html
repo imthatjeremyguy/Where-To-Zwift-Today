@@ -6,13 +6,20 @@
   <title>Where to Zwift Today</title>
   <meta name="description" content="Spin for a random Zwift route from the worlds active today.">
   <meta name="theme-color" content="#f26722">
+  <!-- Link previews in chat apps and social media. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Where to Zwift Today">
+  <meta property="og:description" content="Randomize. Ride. Discover. Spin for a random Zwift route from today's worlds.">
+  <meta property="og:url" content="https://imthatjeremyguy.github.io/Where-To-Zwift-Today/">
+  <meta property="og:image" content="https://imthatjeremyguy.github.io/Where-To-Zwift-Today/assets/icon-180.png">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=19">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -42,10 +49,12 @@
       <a href="#spin" role="tab" id="tab-spin" aria-controls="panel-spin" aria-selected="true">Spin</a>
       <a href="#calendar" role="tab" id="tab-calendar" aria-controls="panel-calendar" aria-selected="false">Calendar</a>
       <a href="#completed" role="tab" id="tab-completed" aria-controls="panel-completed" aria-selected="false">Completed<span class="tab-long"> routes</span></a>
+      <a href="#help" role="tab" id="tab-help" aria-controls="panel-help" aria-selected="false">Help</a>
     </nav>
   </header>
 
   <main>
+    <noscript><p class="notice">Where to Zwift Today needs JavaScript to pick routes. Please turn it on and reload.</p></noscript>
     <section id="panel-spin" role="tabpanel" aria-labelledby="tab-spin">
       <div class="today">
         <p class="eyebrow">Today's worlds</p>
@@ -151,13 +160,61 @@
         <p class="muted small">The progress link moves your ticks to another device, or keeps a backup if you bookmark it.</p>
       </div>
     </section>
+
+    <section id="panel-help" role="tabpanel" aria-labelledby="tab-help" hidden>
+      <h1 class="page-title">Help</h1>
+      <p class="page-intro muted">Quick answers about how Where to Zwift Today works.</p>
+
+      <div class="card faq">
+        <details>
+          <summary>How does the spin pick a route?</summary>
+          <p>It picks at random from the routes in today's worlds that match your Spin settings: sport, route badges, terrain, route type, distance and climbing. Tap world chips to spin from only those worlds. Event-only routes and routes Zwift hasn't released yet are never picked, and the same route won't come up twice in a row.</p>
+        </details>
+        <details>
+          <summary>Why do the worlds change?</summary>
+          <p>Watopia is always available. Two guest worlds rotate on Zwift's schedule, changing at midnight US Eastern (4am UTC in summer, 5am in winter). The site reads Zwift's own schedule every day. If Zwift hasn't published the next part of the schedule yet, spins come from Watopia only until it does.</p>
+        </details>
+        <details>
+          <summary>What do Flat, Rolling and Hilly mean?</summary>
+          <p>They come from climbing per kilometer on the route itself, not counting the lead-in: Flat is under 5 m/km, Rolling is 5 to 10 m/km, and Hilly is 10 m/km or more. Loop and Point to point come from Zwift's own data: Loop routes finish where they start and can be ridden in laps.</p>
+        </details>
+        <details>
+          <summary>Do the distance and climbing filters include the lead-in?</summary>
+          <p>Yes. Filters use the total you actually ride: the route plus its lead-in from the start pen. The result card shows the route, the lead-in and the total separately.</p>
+        </details>
+        <details>
+          <summary>How do completed routes work?</summary>
+          <p>On the Completed routes tab, tick the routes you have the badge for, or press Mark as done on a spun route. Then set Route badges to "Not done yet" and spins will skip them. Ride and Run are tracked separately, like Zwift's badges. The site can't read your Zwift account, so ticks are entered by you.</p>
+        </details>
+        <details>
+          <summary>Where is my progress saved, and how do I move it to another device?</summary>
+          <p>Progress and settings are saved in your browser on this device only. There are no accounts. To move progress, press "Copy my progress link" and open that link on the other device; it asks before replacing anything. Bookmarking the link also works as a backup. Clearing your browser's site data or using private browsing will lose progress that hasn't been saved as a link.</p>
+        </details>
+        <details>
+          <summary>What are Route of the Week and Climb of the Week?</summary>
+          <p>Zwift features one route and one climb each week, with bonus XP or Drops for completing them. They switch every Monday at noon US Eastern. The Calendar tab shows the current pair and the upcoming weeks.</p>
+        </details>
+        <details>
+          <summary>What are the climb portals on the Calendar?</summary>
+          <p>Watopia's climb portal features a different climb each day. France's portal has a climb of the month, which you can only ride on days France is a guest world, so the Calendar shows the next France day. Portal climbs are not routes, so they never come up in a spin.</p>
+        </details>
+        <details>
+          <summary>Where does the data come from?</summary>
+          <p>The world schedule, routes and climb portal rotation come from Zwift's public game files. Route and Climb of the Week come from Zwift Insider's Ride of the Week calendar, and route pages link to Zwift Insider. Everything refreshes automatically every day, so new routes appear on their own.</p>
+        </details>
+        <details>
+          <summary>Something looks wrong. How do I report it?</summary>
+          <p>Please <a href="https://github.com/imthatjeremyguy/Where-To-Zwift-Today/issues" target="_blank" rel="noopener">open an issue on GitHub</a> with what you saw and the date. This site isn't affiliated with Zwift, so for problems in the game itself, contact Zwift support.</p>
+        </details>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
+    <p>Not affiliated with Zwift. World schedule, routes and climb portals from Zwift's public game files; Route and Climb of the Week and route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>. <a href="https://github.com/imthatjeremyguy/Where-To-Zwift-Today" target="_blank" rel="noopener">Source on GitHub</a>.</p>
   </footer>
 
   <script src="calendar.js?v=2"></script>
-  <script src="app.js?v=16"></script>
+  <script src="app.js?v=18"></script>
 </body>
 </html>

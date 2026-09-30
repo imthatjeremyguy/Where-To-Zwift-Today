@@ -26,7 +26,7 @@ const FILTER_IDS = ["min-distance", "max-distance", "min-climbing", "max-climbin
 const SPORT_NAMES = { cycling: "Ride", running: "Run" };
 const PROGRESS_HASH = "progress";
 const PROGRESS_VERSION = "v1";
-const TABS = ["spin", "calendar", "completed"];
+const TABS = ["spin", "calendar", "completed", "help"];
 
 const els = {
   worlds: document.getElementById("worlds"),
@@ -444,8 +444,11 @@ function renderRoute(route, today) {
 // Tabs live in the URL hash (#spin, #completed) so back and bookmarks work.
 // Progress links also use the hash (#progress=...); those open Completed.
 
+const TAB_TITLES = { spin: "", calendar: "Calendar", completed: "Completed routes", help: "Help" };
+
 function showTab(name) {
   const tab = TABS.includes(name) ? name : "spin";
+  document.title = TAB_TITLES[tab] ? `${TAB_TITLES[tab]} · Where to Zwift Today` : "Where to Zwift Today";
   for (const t of TABS) {
     const selected = t === tab;
     document.getElementById(`tab-${t}`).setAttribute("aria-selected", String(selected));
@@ -806,6 +809,17 @@ async function init() {
   // Tab links and pasted progress links only change the hash, which doesn't
   // reload the page.
   window.addEventListener("hashchange", handleHash);
+  // Arrow keys, Home and End move between tabs, as screen reader users expect.
+  document.querySelector(".tabs").addEventListener("keydown", (event) => {
+    const current = TABS.indexOf(document.activeElement.id.replace("tab-", ""));
+    if (current < 0) return;
+    const moves = { ArrowRight: current + 1, ArrowLeft: current - 1, Home: 0, End: TABS.length - 1 };
+    if (!(event.key in moves)) return;
+    event.preventDefault();
+    const next = TABS[(moves[event.key] + TABS.length) % TABS.length];
+    document.getElementById(`tab-${next}`).focus();
+    location.hash = next;
+  });
   showTab(location.hash.startsWith(`#${PROGRESS_HASH}=`) ? "completed" : location.hash.slice(1));
   restoreSettings();
   loadDone();

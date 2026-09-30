@@ -423,6 +423,29 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
   .cal-day-portal { margin: 0; grid-column: 2; }
 }
 
+/* ---- Help ---- */
+
+#panel-help { max-width: 48rem; margin: 0 auto; }
+.faq { padding: 0.25rem 1.25rem; }
+.faq details { border-top: 1px solid var(--border); }
+.faq details:first-child { border-top: none; }
+.faq summary { padding: 0.9rem 1.75rem 0.9rem 0; font-weight: 700; cursor: pointer; list-style: none; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "";
+  position: absolute;
+  right: 0.3rem;
+  top: 1.15rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.15s;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); top: 1.35rem; }
+.faq details p { margin: 0 0 1rem; color: var(--muted); }
+
 /* ---- Completed routes ---- */
 
 .page-title { font-size: 1.6rem; margin-bottom: 0.25rem; }
@@ -479,7 +502,7 @@ input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem;
 
 @media (max-width: 30rem) {
   .tabs { gap: 0; }
-  .tabs a { padding: 0.6rem 0.65rem; }
+  .tabs a { padding: 0.6rem 0.55rem; }
   .tab-long { display: none; }
   .brand-name { font-size: 1rem; }
   .brand-tagline { font-size: 0.65rem; }
@@ -490,8 +513,14 @@ input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem;
 
 /* Small phones (360px): tighten the header controls so the name and tagline fit. */
 @media (max-width: 24rem) {
+  .tabs a { padding: 0.6rem 0.45rem; font-size: 0.95rem; }
   .header-row .segmented label { padding: 0.25rem 0.55rem; }
   .icon-button { width: 2rem; height: 2rem; }
   .brand img { width: 32px; height: 32px; }
   .brand { gap: 0.45rem; }
+}
+
+/* Very small phones (320px). */
+@media (max-width: 21rem) {
+  .tabs a { padding: 0.6rem 0.35rem; font-size: 0.875rem; }
 }
