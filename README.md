@@ -1,4 +1,4 @@
-# Zwift Route Picker
+# Where to Zwift Today
 
 A free static website that randomly picks a Zwift route from the worlds active that day.
 
