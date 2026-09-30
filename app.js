@@ -36,6 +36,7 @@ const els = {
   clear: document.getElementById("clear"),
   filters: FILTER_IDS.map((id) => document.getElementById(id)),
   progressSummary: document.getElementById("progress-summary"),
+  progressBar: document.getElementById("progress-bar"),
   checklist: document.getElementById("checklist"),
   copyProgress: document.getElementById("copy-progress"),
   clearProgress: document.getElementById("clear-progress"),
@@ -516,13 +517,29 @@ function worldOrder(a, b) {
   return worldName(a).localeCompare(worldName(b));
 }
 
+// Worlds the rider has expanded; kept across re-renders (e.g. after a tick).
+const openWorlds = new Set();
+
+function progressBar(fraction) {
+  const bar = document.createElement("span");
+  bar.className = "bar";
+  bar.setAttribute("aria-hidden", "true");
+  const fill = document.createElement("span");
+  fill.style.width = `${Math.round(fraction * 100)}%`;
+  bar.append(fill);
+  return bar;
+}
+
 function renderChecklist() {
   const sport = selectedSport();
   const today = easternDate(getNow());
   const list = badgeRoutes(sport, today);
   const doneCount = list.filter((r) => done[sport].has(r.id)).length;
-  els.progressSummary.textContent = `${doneCount} of ${list.length} ${SPORT_NAMES[sport]}`;
+  els.progressSummary.textContent = `${doneCount} of ${list.length} ${SPORT_NAMES[sport]} routes`;
+  els.progressBar.style.width = `${list.length ? Math.round((doneCount / list.length) * 100) : 0}%`;
   document.querySelectorAll(".sport-name").forEach((el) => { el.textContent = SPORT_NAMES[sport]; });
+  const mirror = document.querySelector(`input[name="sport-completed"][value="${sport}"]`);
+  if (mirror) mirror.checked = true;
 
   const byWorld = new Map();
   for (const route of list) {
@@ -536,18 +553,36 @@ function renderChecklist() {
     const ids = worldRoutes.map((r) => r.id);
     const worldDone = ids.filter((id) => done[sport].has(id)).length;
 
-    const group = document.createElement("fieldset");
+    const group = document.createElement("details");
     group.className = "world";
-    const legend = document.createElement("legend");
+    group.dataset.world = world;
+    group.open = openWorlds.has(world);
+    group.classList.toggle("complete", worldDone === ids.length);
+    group.addEventListener("toggle", () => {
+      if (group.open) openWorlds.add(world);
+      else openWorlds.delete(world);
+    });
+
+    const summary = document.createElement("summary");
+    const name = document.createElement("span");
+    name.className = "world-name";
+    name.textContent = worldName(world);
+    const count = document.createElement("span");
+    count.className = "world-count";
+    count.textContent = `${worldDone} of ${ids.length}`;
+    summary.append(name, count, progressBar(worldDone / ids.length));
+
+    const body = document.createElement("div");
+    body.className = "world-body";
     const allLabel = document.createElement("label");
+    allLabel.className = "all-row";
     const all = document.createElement("input");
     all.type = "checkbox";
     all.checked = worldDone === ids.length;
     all.indeterminate = worldDone > 0 && worldDone < ids.length;
     all.setAttribute("aria-label", `All ${worldName(world)} routes`);
     all.addEventListener("change", () => setDone(sport, ids, all.checked));
-    allLabel.append(all, ` ${worldName(world)} (${worldDone} of ${ids.length})`);
-    legend.append(allLabel);
+    allLabel.append(all, ` All ${worldName(world)} routes`);
 
     const ul = document.createElement("ul");
     for (const route of worldRoutes) {
@@ -562,7 +597,8 @@ function renderChecklist() {
       li.append(label);
       ul.append(li);
     }
-    group.append(legend, ul);
+    body.append(allLabel, ul);
+    group.append(summary, body);
     els.checklist.append(group);
   }
 }
@@ -795,14 +831,20 @@ async function init() {
   }
 
   els.pick.addEventListener("click", pickRoute);
-  document.querySelectorAll('input[name="sport"]').forEach((input) =>
+  const sportChanged = () => {
+    saveSettings();
+    hideResult();
+    renderChecklist();
+    els.progressLink.hidden = true;
+    els.progressMessage.textContent = "";
+    updateCount();
+  };
+  document.querySelectorAll('input[name="sport"]').forEach((input) => input.addEventListener("change", sportChanged));
+  // The Completed tab's switch drives the main Sport setting.
+  document.querySelectorAll('input[name="sport-completed"]').forEach((input) =>
     input.addEventListener("change", () => {
-      saveSettings();
-      hideResult();
-      renderChecklist();
-      els.progressLink.hidden = true;
-      els.progressMessage.textContent = "";
-      updateCount();
+      document.querySelector(`input[name="sport"][value="${input.value}"]`).checked = true;
+      sportChanged();
     })
   );
 

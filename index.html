@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=12">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -118,10 +118,20 @@
 
     <section id="panel-completed" role="tabpanel" aria-labelledby="tab-completed" hidden>
       <h1 class="page-title">Completed routes</h1>
-      <p class="page-intro muted">Tick the routes you have the badge for, then set Route badges to "Not done yet" on the Spin tab to skip them. Ride and Run are tracked separately; this shows <span class="sport-name">Ride</span> routes. Progress is saved on this device only.</p>
+      <p class="page-intro muted">Tick the routes you have the badge for, then set Route badges to "Not done yet" on the Spin tab to skip them. Saved on this device only.</p>
 
       <div id="progress" class="card">
-        <p id="progress-summary">0 of 0</p>
+        <div class="progress-overall">
+          <div class="progress-top">
+            <p id="progress-summary">0 of 0</p>
+            <!-- Mirrors the Sport switch in Spin settings; the two stay in sync. -->
+            <div class="segmented" role="radiogroup" aria-label="Sport for completed routes">
+              <input type="radio" name="sport-completed" value="cycling" id="completed-cycling" checked><label for="completed-cycling">Ride</label>
+              <input type="radio" name="sport-completed" value="running" id="completed-running"><label for="completed-running">Run</label>
+            </div>
+          </div>
+          <span class="bar" aria-hidden="true"><span id="progress-bar"></span></span>
+        </div>
         <div id="checklist"></div>
         <div class="progress-actions">
           <button id="copy-progress" class="btn" type="button">Copy my progress link</button>
@@ -138,6 +148,6 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=13"></script>
+  <script src="app.js?v=14"></script>
 </body>
 </html>
