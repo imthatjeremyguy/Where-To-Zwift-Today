@@ -379,7 +379,7 @@ function renderRoute(route, today) {
   const sport = selectedSport();
   const isDone = done[sport].has(route.id);
   const kind = terrain(route);
-  const tags = [[kind, `tag-${kind.toLowerCase()}`], [route.loop ? "Loop" : "Point to point", ""]];
+  const tags = [[kind, `tag-${kind.toLowerCase()}`], [route.loop ? "Loop" : "Point to point", "tag-type"]];
   if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push(["New", "tag-new"]);
   if (route.levelLocked) tags.push(["Level locked", ""]);
   if (isDone) tags.push(["Done", "tag-done"]);
