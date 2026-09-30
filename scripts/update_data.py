@@ -19,6 +19,18 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 SPORT_CYCLING = 1
 SPORT_RUNNING = 2
 
+# The schedule names one guest world per slot; the game always pairs it with a
+# fixed second world that the XML never mentions. Verified against the in-game
+# worlds and Zwift Insider's calendar for September 2026.
+GUEST_PAIRS = {
+    "FRANCE": "PARIS",
+    "INNSBRUCK": "RICHMOND",
+    "RICHMOND": "LONDON",
+    "LONDON": "YORKSHIRE",
+    "MAKURIISLANDS": "NEWYORK",
+    "SCOTLAND": "MAKURIISLANDS",
+}
+
 
 def fetch_xml(url):
     request = urllib.request.Request(url, headers={"User-Agent": "where-to-zwift-today"})
@@ -39,11 +51,22 @@ def parse_start(value):
 def build_schedule(root):
     appointments = []
     for item in root.iter("appointment"):
+        world = item.get("map")
         start = parse_start(item.get("start"))
-        appointments.append({"map": item.get("map"), "start": start.strftime("%Y-%m-%dT%H:%M:%SZ")})
+        worlds = [world]
+        if world in GUEST_PAIRS:
+            worlds.append(GUEST_PAIRS[world])
+        else:
+            # Shows as a warning on the Action run; the picker still gets one world.
+            print(f"::warning::No paired world known for {world}; update GUEST_PAIRS")
+        appointments.append({"start": start.strftime("%Y-%m-%dT%H:%M:%SZ"), "map": world, "worlds": worlds})
     appointments.sort(key=lambda a: a["start"])
     if not appointments:
         raise ValueError("schedule has no appointments")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    current = [a for a in appointments if a["start"] <= now]
+    if current:
+        print("Active now: WATOPIA, " + ", ".join(current[-1]["worlds"]))
     return {"alwaysActive": ["WATOPIA"], "appointments": appointments}
 
 
