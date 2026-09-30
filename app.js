@@ -51,7 +51,9 @@ const els = {
 
 let routes = [];
 let activeWorlds = [];
-let lastPickId = null;
+// Recent picks on this device, newest first, so spins stay varied day to day.
+const RECENT_LIMIT = 10;
+let recentPicks = [];
 let shownRoute = null;
 // Today's worlds picked on the chips; empty means all of them. Not saved,
 // since the worlds change daily.
@@ -308,10 +310,14 @@ function pickRoute() {
   const today = easternDate(getNow());
   const pool = eligibleRoutes(today);
   if (pool.length === 0) return;
-  // Avoid showing the same route twice in a row when there is a choice.
-  const choices = pool.length > 1 ? pool.filter((r) => r.id !== lastPickId) : pool;
+  // Skip recent picks, but never hold back more than half the pool, so a
+  // small pool (say one world with 11 routes) still has real choices.
+  const skip = new Set(recentPicks.slice(0, Math.min(RECENT_LIMIT, Math.floor(pool.length / 2))));
+  const fresh = pool.filter((r) => !skip.has(r.id));
+  const choices = fresh.length ? fresh : pool;
   const route = choices[Math.floor(Math.random() * choices.length)];
-  lastPickId = route.id;
+  recentPicks = [route.id, ...recentPicks.filter((id) => id !== route.id)].slice(0, RECENT_LIMIT);
+  try { localStorage.setItem("recent", JSON.stringify(recentPicks)); } catch (e) { /* ignore */ }
 
   if (prefersReducedMotion()) {
     setReel(route.name);
@@ -518,6 +524,13 @@ function toggleTheme() {
 }
 
 // ---- Completed routes ----
+
+function loadRecent() {
+  try {
+    const saved = JSON.parse(localStorage.getItem("recent") || "[]");
+    if (Array.isArray(saved)) recentPicks = saved.slice(0, RECENT_LIMIT);
+  } catch (e) { /* start fresh */ }
+}
 
 function loadDone() {
   try {
@@ -858,6 +871,7 @@ async function init() {
   showTab(location.hash.startsWith(`#${PROGRESS_HASH}=`) ? "completed" : location.hash.slice(1));
   restoreSettings();
   loadDone();
+  loadRecent();
   try {
     // The calendar's extra data is optional: if it fails, spinning still works.
     const [schedule, routeData, weekly, portal] = await Promise.all([

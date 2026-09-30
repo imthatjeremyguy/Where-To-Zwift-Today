@@ -92,6 +92,37 @@ let fails = 0; const check = (ok, m) => { console.log((ok ? 'PASS ' : 'FAIL ') +
     check(expected ? xpTags.length === 1 && xpTags[0] === expected : xpTags.length === 0, `badge XP tag: ${xpTags.join(', ') || 'none'}`);
     await p4.close();
   }
+  // Recent picks are skipped, up to 10 and never more than half the pool.
+  {
+    const p5 = await b.newPage({ reducedMotion: 'reduce' });
+    await p5.goto(B); await p5.waitForSelector('.world-chip');
+    await p5.evaluate(() => localStorage.removeItem('recent')); await p5.reload(); await p5.waitForSelector('.world-chip');
+    const spinN = async n => { const out = []; for (let i = 0; i < n; i++) { await p5.click('#pick'); out.push(await p5.textContent('#result h2')); } return out; };
+    const first10 = await spinN(10);
+    check(new Set(first10).size === 10, '10 spins from 148 routes: all different');
+    await p5.reload(); await p5.waitForSelector('.world-chip');
+    const next5 = await spinN(5);
+    check(next5.every(n => !first10.includes(n)), 'after a reload, the previous 10 picks are still skipped');
+    await p5.click('.world-chip[data-world="SCOTLAND"]');
+    const scot = await spinN(24);
+    const windowsOk = scot.every((n, i) => !scot.slice(Math.max(0, i - 5), i).includes(n));
+    check(windowsOk && new Set(scot).size >= 8, `Scotland (11 routes): no repeat within 5 spins, ${new Set(scot).size} different routes seen`);
+    await p5.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: ['Tempus Fugit', 'Volcano Circuit', 'Big Foot Hills'].map(n => byName[n]) } }));
+    await p5.reload(); await p5.waitForSelector('.world-chip');
+    const three = await spinN(20);
+    check(three.every((n, i) => i === 0 || n !== three[i - 1]) && new Set(three).size === 3, '3-route pool: never twice in a row, all 3 still come up');
+    await p5.evaluate(() => localStorage.clear()); await p5.close();
+  }
+  {
+    // Deterministic version: with Math.random pinned to 0, a spin without the
+    // recent-picks memory would bounce between the same two routes.
+    const p6 = await b.newPage({ reducedMotion: 'reduce' });
+    await p6.addInitScript(() => { Math.random = () => 0; try { localStorage.removeItem('recent'); } catch (e) {} });
+    await p6.goto(B); await p6.waitForSelector('.world-chip');
+    const picks = []; for (let i = 0; i < 8; i++) { await p6.click('#pick'); picks.push(await p6.textContent('#result h2')); }
+    check(new Set(picks).size === 8, `pinned randomness: 8 different picks (${new Set(picks).size})`);
+    await p6.close();
+  }
   const other = await b.newPage({ reducedMotion: 'reduce' });
   await other.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: [byName['Tempus Fugit']] } }));
   await other.goto(B); await other.waitForSelector('.world-chip'); await other.click('#pick');
