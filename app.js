@@ -576,7 +576,7 @@ function renderWorlds(active, alwaysActive) {
   all.type = "button";
   all.id = "all-worlds";
   all.className = "link-button";
-  all.textContent = "All worlds";
+  all.textContent = "All active worlds";
   all.hidden = true;
   all.addEventListener("click", () => {
     selectedWorlds.clear();
