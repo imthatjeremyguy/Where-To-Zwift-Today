@@ -93,7 +93,9 @@ button, input { font: inherit; color: inherit; }
 
 .brand { display: flex; align-items: center; gap: 0.6rem; margin-right: auto; text-decoration: none; color: var(--text); min-width: 0; }
 .brand img { flex: none; border-radius: 8px; object-fit: contain; background: #010f1d; }
+.brand-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.15; }
 .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-tagline { font-family: var(--font-display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .segmented {
   display: inline-flex;
@@ -144,17 +146,9 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
 #panel-completed { max-width: 48rem; margin: 0 auto; }
 
 /* ---- Spin tab layout ----
-   Phones: one column (banner, worlds, spin, result, settings).
+   Phones: one column (worlds, spin, result, settings).
    Wide screens: the spin area is the main column; settings sit beside it. */
 
-.banner { display: block; margin-bottom: 1.25rem; }
-.banner img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  background: #010f1d;
-}
 
 .spin-layout { display: grid; gap: 1.25rem; align-items: start; }
 .spin-main { display: grid; gap: 1.25rem; min-width: 0; }
@@ -166,10 +160,6 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
   .settings-summary { display: none; }
 }
 
-/* Phones: keep the signpost and title readable by cropping the rider side. */
-@media (max-width: 40rem) {
-  .banner img { height: 5.5rem; object-fit: cover; object-position: left center; }
-}
 
 .card-title { font-size: 1.1rem; margin-bottom: 1rem; }
 .settings .control-row .eyebrow { min-width: 100%; }
@@ -291,8 +281,17 @@ input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem;
 .site-footer { max-width: 44rem; margin: 0 auto; padding: 0 1rem 2rem; font-size: 0.8rem; color: var(--muted); }
 
 @media (max-width: 30rem) {
-  /* The banner below already shows the name; the icon is enough up here. */
-  .brand-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .brand-name { font-size: 1rem; }
+  .brand-tagline { font-size: 0.65rem; }
+  .header-row { gap: 0.5rem; }
   .card { padding: 1rem; }
   .control-row .eyebrow { min-width: 100%; }
+}
+
+/* Small phones (360px): tighten the header controls so the name and tagline fit. */
+@media (max-width: 24rem) {
+  .header-row .segmented label { padding: 0.25rem 0.55rem; }
+  .icon-button { width: 2rem; height: 2rem; }
+  .brand img { width: 32px; height: 32px; }
+  .brand { gap: 0.45rem; }
 }

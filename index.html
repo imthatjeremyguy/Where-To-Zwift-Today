@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -23,7 +23,10 @@
     <div class="header-row">
       <a class="brand" href="#spin" aria-label="Where to Zwift Today, home">
         <img src="assets/icon.png" width="36" height="36" alt="">
-        <span class="brand-name">Where to Zwift Today</span>
+        <span class="brand-text">
+          <span class="brand-name">Where to Zwift Today</span>
+          <span class="brand-tagline">Randomize. Ride. Discover.</span>
+        </span>
       </a>
       <div class="segmented" role="radiogroup" aria-label="Units">
         <input type="radio" name="units" value="metric" id="units-metric" checked><label for="units-metric">km</label>
@@ -43,17 +46,11 @@
 
   <main>
     <section id="panel-spin" role="tabpanel" aria-labelledby="tab-spin">
-      <picture class="banner">
-        <source srcset="assets/banner.webp" type="image/webp">
-        <img src="assets/banner.png" width="1153" height="168" alt="Where to Zwift Today: randomize, ride, discover">
-      </picture>
-
       <div class="spin-layout">
         <div class="spin-main">
           <div class="today">
             <p class="eyebrow">Today's worlds</p>
             <div id="worlds"><p class="muted">Loading today's worlds...</p></div>
-            <p class="muted small">Worlds change at midnight US Eastern.</p>
           </div>
 
           <div class="spin-area card">
@@ -121,6 +118,6 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

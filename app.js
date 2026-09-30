@@ -581,7 +581,7 @@ function renderWorlds(active, alwaysActive) {
   });
   const hint = document.createElement("p");
   hint.className = "muted small world-hint";
-  hint.textContent = "Tap worlds to spin only their routes.";
+  hint.textContent = "Tap worlds to spin only their routes. Worlds change at midnight US Eastern.";
   els.worlds.replaceChildren(list, hint);
   hint.append(" ", all);
 }
