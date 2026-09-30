@@ -48,6 +48,9 @@ let routes = [];
 let activeWorlds = [];
 let lastPickId = null;
 let shownRoute = null;
+// One of today's worlds to spin from, or null for all of them. Not saved,
+// since the worlds change daily.
+let worldFocus = null;
 // Completed route IDs per sport; Zwift awards separate Ride and Run badges.
 let done = { cycling: new Set(), running: new Set() };
 
@@ -150,13 +153,14 @@ function badgeRoutes(sport, today) {
   return routes.filter((r) => r[sport] && !r.eventOnly && (!r.publishedOn || r.publishedOn <= today));
 }
 
-// ignoreDone: include completed routes even in "Only routes I haven't done" mode.
-function eligibleRoutes(today, { ignoreDone = false } = {}) {
+// ignoreDone: include completed routes even in "Not done yet" mode.
+// world: count for one world instead of the current focus (used by the chips).
+function eligibleRoutes(today, { ignoreDone = false, world = worldFocus } = {}) {
   const sport = selectedSport();
   const limits = readFilters();
   const skipDone = !ignoreDone && badgeMode() === "undone";
   return badgeRoutes(sport, today).filter((r) =>
-    activeWorlds.includes(r.map) &&
+    (world ? r.map === world : activeWorlds.includes(r.map)) &&
     withinLimits(r, limits) &&
     !(skipDone && done[sport].has(r.id))
   );
@@ -190,9 +194,11 @@ function updateCount() {
   } else if (n === 0) {
     els.count.textContent = "No routes match. Try widening the filters.";
   } else {
-    els.count.textContent = `${n} route${n === 1 ? "" : "s"} to choose from.`;
+    const where = worldFocus ? ` in ${worldName(worldFocus)}` : "";
+    els.count.textContent = `${n} route${n === 1 ? "" : "s"} to choose from${where}.`;
   }
   els.pick.disabled = n === 0;
+  updateWorldChips(today);
   // Keep the shown route only if it still matches. Marking it done doesn't
   // count against it, so the card stays up after pressing "Mark as done".
   const keep = eligibleRoutes(today, { ignoreDone: true });
@@ -521,14 +527,53 @@ function renderWorlds(active, alwaysActive) {
   list.className = "world-chips";
   for (const world of active.worlds) {
     const li = document.createElement("li");
-    li.textContent = worldName(world);
-    if (alwaysActive.includes(world)) {
-      li.className = "always";
-      li.title = "Always available";
-    }
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "world-chip";
+    chip.dataset.world = world;
+    chip.setAttribute("aria-pressed", "false");
+    const name = document.createElement("span");
+    name.textContent = worldName(world);
+    const count = document.createElement("span");
+    count.className = "chip-count";
+    chip.append(name, count);
+    if (alwaysActive.includes(world)) chip.title = "Always available";
+    chip.addEventListener("click", () => setWorldFocus(worldFocus === world ? null : world));
+    li.append(chip);
     list.append(li);
   }
-  els.worlds.replaceChildren(list);
+  const all = document.createElement("button");
+  all.type = "button";
+  all.id = "all-worlds";
+  all.className = "link-button";
+  all.textContent = "All worlds";
+  all.hidden = true;
+  all.addEventListener("click", () => setWorldFocus(null));
+  const hint = document.createElement("p");
+  hint.className = "muted small world-hint";
+  hint.textContent = "Tap a world to spin only its routes.";
+  els.worlds.replaceChildren(list, hint);
+  hint.append(" ", all);
+}
+
+function setWorldFocus(world) {
+  worldFocus = world;
+  hideResult();
+  updateCount();
+}
+
+// Pressed state plus a live count of matching routes on each chip.
+function updateWorldChips(today) {
+  for (const chip of els.worlds.querySelectorAll(".world-chip")) {
+    const world = chip.dataset.world;
+    const n = eligibleRoutes(today, { world }).length;
+    chip.querySelector(".chip-count").textContent = String(n);
+    chip.setAttribute("aria-pressed", String(worldFocus === world));
+    chip.setAttribute("aria-label", `${worldName(world)}, ${n} route${n === 1 ? "" : "s"}`);
+    chip.classList.toggle("dimmed", worldFocus !== null && worldFocus !== world);
+  }
+  const all = document.getElementById("all-worlds");
+  if (all) all.hidden = worldFocus === null;
 }
 
 async function loadJson(path) {
