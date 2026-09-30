@@ -23,6 +23,14 @@
     #filters input { width: 100%; box-sizing: border-box; font-size: 1rem; padding: 0.3rem; }
     #filters .head { font-size: 0.85rem; opacity: 0.7; }
     #clear { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
+    #progress { margin: 1rem 0; }
+    #progress summary { cursor: pointer; }
+    #progress button { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
+    #progress-link { width: 100%; box-sizing: border-box; font-size: 0.85rem; }
+    .world { border: none; padding: 0; margin: 0.75rem 0; }
+    .world legend { font-weight: 600; padding: 0; }
+    .world ul { list-style: none; margin: 0.25rem 0 0; padding: 0 0 0 1.5rem; columns: 2 12rem; }
+    .world li { break-inside: avoid; }
   </style>
 </head>
 <body>
@@ -42,6 +50,24 @@
     <label><input type="radio" name="units" value="imperial"> mi / ft</label>
   </fieldset>
 
+  <fieldset>
+    <legend class="muted">Route badges</legend>
+    <label><input type="radio" name="badges" value="any" checked> Any route</label>
+    <label><input type="radio" name="badges" value="undone"> Only routes I haven't done</label>
+  </fieldset>
+
+  <details id="progress">
+    <summary>My completed routes (<span id="progress-summary">0 of 0</span>)</summary>
+    <p class="muted">Showing <span class="sport-name">Ride</span> routes. Tick each route you have the badge for. This is saved on this device only; use the progress link to move it to another device or keep a backup.</p>
+    <div id="checklist"></div>
+    <p>
+      <button id="copy-progress" type="button">Copy my progress link</button>
+      <button id="clear-progress" type="button">Clear my <span class="sport-name">Ride</span> progress</button>
+    </p>
+    <p id="progress-message" class="muted" aria-live="polite"></p>
+    <input id="progress-link" type="text" readonly hidden aria-label="Progress link">
+  </details>
+
   <p class="muted">Filters use the total you ride, route plus lead-in. Leave a box empty for no limit.</p>
   <div id="filters">
     <span></span><span class="head">Min</span><span class="head">Max</span>
@@ -60,6 +86,6 @@
   <section id="result" hidden aria-live="polite"></section>
 
   <!-- Bump ?v= whenever app.js changes so browsers never pair this page with a cached old script. -->
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>

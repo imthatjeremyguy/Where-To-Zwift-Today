@@ -23,6 +23,9 @@ const METERS_PER_KM = 1000;
 const METERS_PER_MILE = 1609.344;
 const FEET_PER_METER = 3.28084;
 const FILTER_IDS = ["min-distance", "max-distance", "min-climbing", "max-climbing"];
+const SPORT_NAMES = { cycling: "Ride", running: "Run" };
+const PROGRESS_HASH = "progress";
+const PROGRESS_VERSION = "v1";
 
 const els = {
   worlds: document.getElementById("worlds"),
@@ -31,12 +34,21 @@ const els = {
   result: document.getElementById("result"),
   clear: document.getElementById("clear"),
   filters: FILTER_IDS.map((id) => document.getElementById(id)),
+  progressSummary: document.getElementById("progress-summary"),
+  checklist: document.getElementById("checklist"),
+  copyProgress: document.getElementById("copy-progress"),
+  clearProgress: document.getElementById("clear-progress"),
+  progressMessage: document.getElementById("progress-message"),
+  progressLink: document.getElementById("progress-link"),
+  progress: document.getElementById("progress"),
 };
 
 let routes = [];
 let activeWorlds = [];
 let lastPickId = null;
 let shownRoute = null;
+// Completed route IDs per sport; Zwift awards separate Ride and Run badges.
+let done = { cycling: new Set(), running: new Set() };
 
 function worldName(code) {
   if (WORLD_NAMES[code]) return WORLD_NAMES[code];
@@ -69,6 +81,10 @@ function findActiveWorlds(schedule, now) {
 
 function selectedSport() {
   return document.querySelector('input[name="sport"]:checked').value;
+}
+
+function badgeMode() {
+  return document.querySelector('input[name="badges"]:checked').value;
 }
 
 function selectedUnits() {
@@ -128,15 +144,20 @@ function withinLimits(route, limits) {
     inRange(totalClimbing(route), "min-climbing", "max-climbing");
 }
 
-function eligibleRoutes(today) {
+// Routes that can earn a badge for this sport today, in any world.
+function badgeRoutes(sport, today) {
+  return routes.filter((r) => r[sport] && !r.eventOnly && (!r.publishedOn || r.publishedOn <= today));
+}
+
+// ignoreDone: include completed routes even in "Only routes I haven't done" mode.
+function eligibleRoutes(today, { ignoreDone = false } = {}) {
   const sport = selectedSport();
   const limits = readFilters();
-  return routes.filter((r) =>
+  const skipDone = !ignoreDone && badgeMode() === "undone";
+  return badgeRoutes(sport, today).filter((r) =>
     activeWorlds.includes(r.map) &&
-    r[sport] &&
-    !r.eventOnly &&
-    (!r.publishedOn || r.publishedOn <= today) &&
-    withinLimits(r, limits)
+    withinLimits(r, limits) &&
+    !(skipDone && done[sport].has(r.id))
   );
 }
 
@@ -163,14 +184,18 @@ function updateCount() {
   const n = pool.length;
   if (limitsConflict(readFilters())) {
     els.count.textContent = "A minimum is higher than its maximum.";
+  } else if (n === 0 && eligibleRoutes(today, { ignoreDone: true }).length > 0) {
+    els.count.textContent = "You've done every route that fits. Nice work! Widen the filters or switch to Any route.";
   } else if (n === 0) {
     els.count.textContent = "No routes match. Try widening the filters.";
   } else {
     els.count.textContent = `${n} route${n === 1 ? "" : "s"} to choose from.`;
   }
   els.pick.disabled = n === 0;
-  // Keep the shown route only if it still matches.
-  if (shownRoute && !pool.some((r) => r.id === shownRoute.id)) hideResult();
+  // Keep the shown route only if it still matches. Marking it done doesn't
+  // count against it, so the card stays up after pressing "Mark as done".
+  const keep = eligibleRoutes(today, { ignoreDone: true });
+  if (shownRoute && !keep.some((r) => r.id === shownRoute.id)) hideResult();
   else if (shownRoute) renderRoute(shownRoute, today);
 }
 
@@ -196,6 +221,9 @@ function renderRoute(route, today) {
   const tags = [];
   if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push("New");
   if (route.levelLocked) tags.push("Level locked");
+  const sport = selectedSport();
+  const isDone = done[sport].has(route.id);
+  if (isDone) tags.push("Done");
 
   els.result.replaceChildren();
   const title = document.createElement("h2");
@@ -235,14 +263,181 @@ function renderRoute(route, today) {
     more.append(link);
     els.result.append(more);
   }
+  const mark = document.createElement("button");
+  mark.type = "button";
+  mark.id = "mark-done";
+  mark.textContent = isDone ? "Marked as done (undo)" : "Mark as done";
+  mark.addEventListener("click", () => setDone(sport, [route.id], !isDone));
+  els.result.append(mark);
   els.result.hidden = false;
   shownRoute = route;
+}
+
+// ---- Completed routes ----
+
+function loadDone() {
+  try {
+    const saved = JSON.parse(localStorage.getItem("done") || "null");
+    if (saved) done = { cycling: new Set(saved.cycling || []), running: new Set(saved.running || []) };
+  } catch (e) { /* start empty */ }
+}
+
+function saveDone() {
+  try {
+    localStorage.setItem("done", JSON.stringify({ cycling: [...done.cycling], running: [...done.running] }));
+  } catch (e) { /* ignore */ }
+}
+
+function setDone(sport, ids, value) {
+  for (const id of ids) {
+    if (value) done[sport].add(id);
+    else done[sport].delete(id);
+  }
+  saveDone();
+  renderChecklist();
+  updateCount();
+}
+
+function worldOrder(a, b) {
+  if (a === "WATOPIA") return -1;
+  if (b === "WATOPIA") return 1;
+  return worldName(a).localeCompare(worldName(b));
+}
+
+function renderChecklist() {
+  const sport = selectedSport();
+  const today = easternDate(getNow());
+  const list = badgeRoutes(sport, today);
+  const doneCount = list.filter((r) => done[sport].has(r.id)).length;
+  els.progressSummary.textContent = `${doneCount} of ${list.length} ${SPORT_NAMES[sport]}`;
+  document.querySelectorAll(".sport-name").forEach((el) => { el.textContent = SPORT_NAMES[sport]; });
+
+  const byWorld = new Map();
+  for (const route of list) {
+    if (!byWorld.has(route.map)) byWorld.set(route.map, []);
+    byWorld.get(route.map).push(route);
+  }
+
+  els.checklist.replaceChildren();
+  for (const world of [...byWorld.keys()].sort(worldOrder)) {
+    const worldRoutes = byWorld.get(world).sort((a, b) => a.name.localeCompare(b.name));
+    const ids = worldRoutes.map((r) => r.id);
+    const worldDone = ids.filter((id) => done[sport].has(id)).length;
+
+    const group = document.createElement("fieldset");
+    group.className = "world";
+    const legend = document.createElement("legend");
+    const allLabel = document.createElement("label");
+    const all = document.createElement("input");
+    all.type = "checkbox";
+    all.checked = worldDone === ids.length;
+    all.indeterminate = worldDone > 0 && worldDone < ids.length;
+    all.setAttribute("aria-label", `All ${worldName(world)} routes`);
+    all.addEventListener("change", () => setDone(sport, ids, all.checked));
+    allLabel.append(all, ` ${worldName(world)} (${worldDone} of ${ids.length})`);
+    legend.append(allLabel);
+
+    const ul = document.createElement("ul");
+    for (const route of worldRoutes) {
+      const li = document.createElement("li");
+      const label = document.createElement("label");
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.checked = done[sport].has(route.id);
+      box.dataset.id = route.id;
+      box.addEventListener("change", () => setDone(sport, [route.id], box.checked));
+      label.append(box, ` ${route.name}`);
+      li.append(label);
+      ul.append(li);
+    }
+    group.append(legend, ul);
+    els.checklist.append(group);
+  }
+}
+
+// Progress links pack one bit per route, using each route's permanent index
+// from data/route-order.json, then base64url-encode the bytes.
+function encodeDone(ids) {
+  const indexes = routes.filter((r) => ids.has(r.id)).map((r) => r.index);
+  const bytes = new Uint8Array(indexes.length ? Math.max(...indexes) + 8 >> 3 : 0);
+  for (const i of indexes) bytes[i >> 3] |= 1 << (i & 7);
+  let text = "";
+  bytes.forEach((b) => { text += String.fromCharCode(b); });
+  return btoa(text).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function decodeDone(code) {
+  const text = atob(code.replace(/-/g, "+").replace(/_/g, "/"));
+  const byIndex = new Map(routes.map((r) => [r.index, r.id]));
+  const ids = new Set();
+  for (let byte = 0; byte < text.length; byte++) {
+    const bits = text.charCodeAt(byte);
+    for (let bit = 0; bit < 8; bit++) {
+      const id = (bits & (1 << bit)) && byIndex.get(byte * 8 + bit);
+      if (id) ids.add(id);
+    }
+  }
+  return ids;
+}
+
+function progressLink() {
+  const code = `${PROGRESS_VERSION}.${encodeDone(done.cycling)}.${encodeDone(done.running)}`;
+  return `${location.origin}${location.pathname}#${PROGRESS_HASH}=${code}`;
+}
+
+// Loads progress from a "#progress=v1.<ride>.<run>" link, asking before it replaces anything.
+function loadProgressFromLink() {
+  const match = location.hash.match(new RegExp(`^#${PROGRESS_HASH}=([^&]*)`));
+  if (!match) return;
+  history.replaceState(null, "", location.pathname + location.search);
+  let incoming;
+  try {
+    const [version, ride, run] = match[1].split(".");
+    if (version !== PROGRESS_VERSION) throw new Error("unknown version");
+    incoming = { cycling: decodeDone(ride || ""), running: decodeDone(run || "") };
+  } catch (e) {
+    els.progress.open = true;
+    els.progressMessage.textContent = "That progress link looks damaged, so nothing was loaded.";
+    return;
+  }
+  const hasExisting = done.cycling.size + done.running.size > 0;
+  const question = `Load progress from this link? It has ${incoming.cycling.size} Ride and ${incoming.running.size} Run routes, ` +
+    "and will replace the progress saved on this device.";
+  if (hasExisting && !window.confirm(question)) return;
+  done = incoming;
+  saveDone();
+  els.progress.open = true;
+  els.progressMessage.textContent = `Progress loaded: ${done.cycling.size} Ride and ${done.running.size} Run routes.`;
+}
+
+async function copyProgressLink() {
+  const link = progressLink();
+  els.progressLink.value = link;
+  try {
+    await navigator.clipboard.writeText(link);
+    els.progressLink.hidden = true;
+    els.progressMessage.textContent = "Link copied. Open it on another device, or bookmark it as a backup.";
+  } catch (e) {
+    // Clipboard blocked: show the link so it can be copied by hand.
+    els.progressLink.hidden = false;
+    els.progressLink.select();
+    els.progressMessage.textContent = "Copy this link, then open it on another device or bookmark it:";
+  }
+}
+
+function clearProgress() {
+  const sport = selectedSport();
+  const n = done[sport].size;
+  if (n === 0) return;
+  if (!window.confirm(`Clear all ${n} completed ${SPORT_NAMES[sport]} routes on this device?`)) return;
+  setDone(sport, [...done[sport]], false);
+  els.progressMessage.textContent = `${SPORT_NAMES[sport]} progress cleared.`;
 }
 
 // Per-device settings. Storage can be unavailable (private mode), so failures are ignored.
 function restoreSettings() {
   try {
-    for (const name of ["sport", "units"]) {
+    for (const name of ["sport", "units", "badges"]) {
       const saved = localStorage.getItem(name);
       const input = saved && document.querySelector(`input[name="${name}"][value="${saved}"]`);
       if (input) input.checked = true;
@@ -257,6 +452,7 @@ function saveSettings() {
   try {
     localStorage.setItem("sport", selectedSport());
     localStorage.setItem("units", selectedUnits());
+    localStorage.setItem("badges", badgeMode());
     localStorage.setItem("filters", JSON.stringify(readFilters()));
   } catch (e) { /* ignore */ }
 }
@@ -275,12 +471,14 @@ async function loadJson(path) {
 
 async function init() {
   restoreSettings();
+  loadDone();
   try {
     const [schedule, routeData] = await Promise.all([
       loadJson("data/schedule.json"),
       loadJson("data/routes.json"),
     ]);
     routes = routeData.routes;
+    loadProgressFromLink();
     const active = findActiveWorlds(schedule, getNow());
     activeWorlds = active.worlds;
     const names = activeWorlds.map(worldName).join(", ");
@@ -290,6 +488,7 @@ async function init() {
       els.worlds.className = "notice";
       els.worlds.textContent = `Zwift hasn't published today's guest worlds yet, so picks come from ${names} only.`;
     }
+    renderChecklist();
     updateCount();
   } catch (error) {
     els.worlds.className = "notice";
@@ -303,9 +502,30 @@ async function init() {
     input.addEventListener("change", () => {
       saveSettings();
       hideResult();
+      renderChecklist();
+      els.progressLink.hidden = true;
+      els.progressMessage.textContent = "";
       updateCount();
     })
   );
+
+  document.querySelectorAll('input[name="badges"]').forEach((input) =>
+    input.addEventListener("change", () => {
+      saveSettings();
+      updateCount();
+    })
+  );
+
+  // Pasting a progress link into a tab already on the site only changes the
+  // hash, which doesn't reload the page.
+  window.addEventListener("hashchange", () => {
+    loadProgressFromLink();
+    renderChecklist();
+    updateCount();
+  });
+
+  els.copyProgress.addEventListener("click", copyProgressLink);
+  els.clearProgress.addEventListener("click", clearProgress);
 
   // Remember the units the boxes were in, so switching converts the typed values.
   let previousUnits = selectedUnits();
