@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
   <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script>
     // Apply a saved light/dark choice before the page paints, to avoid a flash.
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -82,6 +82,23 @@
             </div>
           </div>
 
+          <div class="control-row">
+            <span class="eyebrow">Terrain</span>
+            <div class="pill-group" role="group" aria-label="Terrain">
+              <button type="button" class="pill-toggle" data-shape="terrain" data-value="Flat" aria-pressed="false">Flat</button>
+              <button type="button" class="pill-toggle" data-shape="terrain" data-value="Rolling" aria-pressed="false">Rolling</button>
+              <button type="button" class="pill-toggle" data-shape="terrain" data-value="Hilly" aria-pressed="false">Hilly</button>
+            </div>
+          </div>
+          <div class="control-row">
+            <span class="eyebrow">Route type</span>
+            <div class="pill-group" role="group" aria-label="Route type">
+              <button type="button" class="pill-toggle" data-shape="type" data-value="loop" aria-pressed="false">Loop</button>
+              <button type="button" class="pill-toggle" data-shape="type" data-value="p2p" aria-pressed="false">Point to point</button>
+            </div>
+          </div>
+          <p class="muted small shape-hint">No terrain or type picked means any.</p>
+
           <div id="filters">
             <span></span><span class="head">Min</span><span class="head">Max</span>
             <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
@@ -121,6 +138,6 @@
     <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
   </footer>
 
-  <script src="app.js?v=12"></script>
+  <script src="app.js?v=13"></script>
 </body>
 </html>

@@ -163,6 +163,20 @@ main { padding-top: 1.25rem; padding-bottom: 3rem; }
 
 
 .card-title { font-size: 1.1rem; margin-bottom: 1rem; }
+.pill-group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pill-toggle {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pill-toggle:hover { border-color: var(--accent); }
+.pill-toggle[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.shape-hint { margin: -0.4rem 0 1rem; }
 .settings .control-row .eyebrow { min-width: 100%; }
 #settings { scroll-margin-top: 7rem; }
 .settings-summary { margin: 0.5rem 0 0; color: var(--muted); }

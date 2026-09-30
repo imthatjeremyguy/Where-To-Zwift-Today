@@ -55,6 +55,8 @@ let shownRoute = null;
 // Today's worlds picked on the chips; empty means all of them. Not saved,
 // since the worlds change daily.
 let selectedWorlds = new Set();
+// Terrain (Flat/Rolling/Hilly) and route type (loop/p2p) pills; empty means any.
+const shape = { terrain: new Set(), type: new Set() };
 // Completed route IDs per sport; Zwift awards separate Ride and Run badges.
 let done = { cycling: new Set(), running: new Set() };
 
@@ -166,8 +168,20 @@ function eligibleRoutes(today, { ignoreDone = false, world = null } = {}) {
   return badgeRoutes(sport, today).filter((r) =>
     (world ? r.map === world : selectedWorlds.size ? selectedWorlds.has(r.map) : activeWorlds.includes(r.map)) &&
     withinLimits(r, limits) &&
+    matchesShape(r) &&
     !(skipDone && done[sport].has(r.id))
   );
+}
+
+function matchesShape(route) {
+  return (shape.terrain.size === 0 || shape.terrain.has(terrain(route))) &&
+    (shape.type.size === 0 || shape.type.has(route.loop ? "loop" : "p2p"));
+}
+
+function updatePills() {
+  document.querySelectorAll(".pill-toggle").forEach((pill) => {
+    pill.setAttribute("aria-pressed", String(shape[pill.dataset.shape].has(pill.dataset.value)));
+  });
 }
 
 function daysBetween(fromDate, toDate) {
@@ -230,7 +244,14 @@ function updateSettingsSummary() {
     return null;
   };
   const parts = [SPORT_NAMES[selectedSport()], badgeMode() === "undone" ? "Not done yet" : "Any route"];
-  const filters = [range("distance"), range("climbing", " climbing")].filter(Boolean);
+  const typeNames = { loop: "Loop", p2p: "Point to point" };
+  const filters = [
+    // Fixed order so the summary reads the same whichever pill was tapped first.
+    shape.terrain.size ? ["Flat", "Rolling", "Hilly"].filter((t) => shape.terrain.has(t)).join(" or ") : null,
+    shape.type.size ? ["loop", "p2p"].filter((t) => shape.type.has(t)).map((t) => typeNames[t]).join(" or ") : null,
+    range("distance"),
+    range("climbing", " climbing"),
+  ].filter(Boolean);
   parts.push(filters.length ? filters.join(", ") : "no limits");
   els.settingsSummary.textContent = parts.join(" · ");
 }
@@ -246,8 +267,14 @@ function hideResult() {
 
 // Terrain from climbing per km of the route itself (lead-in excluded).
 const TERRAIN_BANDS = [[5, "Flat"], [10, "Rolling"], [Infinity, "Hilly"]];
-const SPIN_MS = 1700;
-const SPIN_FILLER = 24; // names that fly past before the pick lands
+// Bigger pools spin longer and show more names, within limits.
+function spinLength(poolSize) {
+  const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+  return {
+    ms: clamp(1300 + poolSize * 8, 1300, 3000),
+    filler: clamp(12 + Math.round(poolSize / 3), 12, 70), // names that fly past before the pick lands
+  };
+}
 let spinning = false;
 
 function terrain(route) {
@@ -294,8 +321,9 @@ function pickRoute() {
 
   // Build a strip of random names from the pool ending on the pick, then
   // slide it up so the pick lands in the middle row.
+  const { ms, filler } = spinLength(pool.length);
   const names = [""];
-  for (let i = 0; i < SPIN_FILLER; i++) names.push(pool[Math.floor(Math.random() * pool.length)].name);
+  for (let i = 0; i < filler; i++) names.push(pool[Math.floor(Math.random() * pool.length)].name);
   const after = pool[Math.floor(Math.random() * pool.length)].name;
   names.push(route.name, after);
   els.reelStrip.getAnimations().forEach((a) => a.cancel());
@@ -310,7 +338,7 @@ function pickRoute() {
   els.reel.classList.add("spinning");
   const animation = els.reelStrip.animate(
     [{ transform: "translateY(0)" }, { transform: `translateY(${-distance}px)` }],
-    { duration: SPIN_MS, easing: "cubic-bezier(0.12, 0.8, 0.22, 1)", fill: "forwards" }
+    { duration: ms, easing: "cubic-bezier(0.12, 0.8, 0.22, 1)", fill: "forwards" }
   );
   animation.onfinish = () => {
     spinning = false;
@@ -626,8 +654,14 @@ function restoreSettings() {
     }
     const limits = JSON.parse(localStorage.getItem("filters") || "null");
     if (limits) writeFilters(limits);
+    const savedShape = JSON.parse(localStorage.getItem("shape") || "null");
+    if (savedShape) {
+      shape.terrain = new Set(savedShape.terrain || []);
+      shape.type = new Set(savedShape.type || []);
+    }
   } catch (e) { /* keep the defaults */ }
   updateUnitLabels();
+  updatePills();
 }
 
 function saveSettings() {
@@ -636,6 +670,7 @@ function saveSettings() {
     localStorage.setItem("units", selectedUnits());
     localStorage.setItem("badges", badgeMode());
     localStorage.setItem("filters", JSON.stringify(readFilters()));
+    localStorage.setItem("shape", JSON.stringify({ terrain: [...shape.terrain], type: [...shape.type] }));
   } catch (e) { /* ignore */ }
 }
 
@@ -807,7 +842,21 @@ async function init() {
     });
   }
 
+  document.querySelectorAll(".pill-toggle").forEach((pill) =>
+    pill.addEventListener("click", () => {
+      const set = shape[pill.dataset.shape];
+      if (set.has(pill.dataset.value)) set.delete(pill.dataset.value);
+      else set.add(pill.dataset.value);
+      updatePills();
+      saveSettings();
+      updateCount();
+    })
+  );
+
   els.clear.addEventListener("click", () => {
+    shape.terrain.clear();
+    shape.type.clear();
+    updatePills();
     writeFilters({});
     saveSettings();
     updateCount();
