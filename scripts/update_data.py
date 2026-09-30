@@ -89,6 +89,8 @@ def build_routes(root):
             "running": bool(sports & SPORT_RUNNING),
             "eventOnly": item.get("eventOnly") == "1",
             "levelLocked": item.get("levelLocked") == "1",
+            # YYYY-MM-DD; only set on newer routes. May be in the future for unreleased routes.
+            "publishedOn": item.get("publishedOn") or None,
         })
     routes.sort(key=lambda r: (r["map"], r["name"]))
     if len(routes) < 100:

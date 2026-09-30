@@ -11,7 +11,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "947394567",
@@ -24,7 +25,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2875658892",
@@ -37,7 +39,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2143464829",
@@ -50,7 +53,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "3919912289",
@@ -63,7 +67,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4149936043",
@@ -76,7 +81,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1600198346",
@@ -89,7 +95,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "986252325",
@@ -102,7 +109,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2136907048",
@@ -115,7 +123,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1538375239",
@@ -128,7 +137,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "1793712753",
@@ -141,7 +151,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "3974965857",
@@ -154,7 +165,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "1433431343",
@@ -167,7 +179,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "573843083",
@@ -180,7 +193,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "941280950",
@@ -193,7 +207,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "2852153296",
@@ -206,7 +221,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4159356920",
@@ -219,7 +235,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "1776635757",
@@ -232,7 +249,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1409345545",
@@ -245,7 +263,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "872351836",
@@ -258,7 +277,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "136140280",
@@ -271,7 +291,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "319138658",
@@ -284,7 +305,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "2413440572",
@@ -297,7 +319,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "358794394",
@@ -310,7 +333,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "1975694067",
@@ -323,7 +347,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-02"
     },
     {
       "id": "2573468147",
@@ -336,7 +361,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3687150686",
@@ -349,7 +375,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1295302121",
@@ -362,7 +389,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2273747093",
@@ -375,7 +403,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "434255158",
@@ -388,7 +417,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1437969615",
@@ -401,7 +431,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "967374265",
@@ -414,7 +445,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3114603308",
@@ -427,7 +459,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4009235104",
@@ -440,7 +473,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3649347250",
@@ -453,7 +487,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     },
     {
       "id": "3101693166",
@@ -466,7 +501,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2592027600",
@@ -479,7 +515,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "156457316",
@@ -492,7 +529,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3801241714",
@@ -505,7 +543,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2694166390",
@@ -518,7 +557,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3599973269",
@@ -531,7 +571,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "87055383",
@@ -544,7 +585,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "928793662",
@@ -557,7 +599,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3276403604",
@@ -570,7 +613,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "474781994",
@@ -583,7 +627,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1880443431",
@@ -596,7 +641,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3853654821",
@@ -609,7 +655,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3976402826",
@@ -622,7 +669,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3569674525",
@@ -635,7 +683,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1230300449",
@@ -648,7 +697,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4012646479",
@@ -661,7 +711,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2165880404",
@@ -674,7 +725,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2836167073",
@@ -687,7 +739,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3262665065",
@@ -700,7 +753,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "913172163",
@@ -713,7 +767,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1788889233",
@@ -726,7 +781,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2204461619",
@@ -739,7 +795,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "764532081",
@@ -752,7 +809,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3250904331",
@@ -765,7 +823,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "3707791029",
@@ -778,7 +837,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "163688809",
@@ -791,7 +851,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4210048937",
@@ -804,7 +865,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "938096831",
@@ -817,7 +879,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1760877317",
@@ -830,7 +893,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3706527503",
@@ -843,7 +907,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1033940053",
@@ -856,7 +921,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3742187716",
@@ -869,7 +935,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3691918883",
@@ -882,7 +949,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2866480562",
@@ -895,7 +963,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "576953930",
@@ -908,7 +977,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "525689100",
@@ -921,7 +991,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "65777922",
@@ -934,7 +1005,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "910684583",
@@ -947,7 +1019,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2980619755",
@@ -960,7 +1033,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "468624015",
@@ -973,7 +1047,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3282611437",
@@ -986,7 +1061,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2140131142",
@@ -999,7 +1075,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "211138252",
@@ -1012,7 +1089,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1562187590",
@@ -1025,7 +1103,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1454553567",
@@ -1038,7 +1117,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2833089100",
@@ -1051,7 +1131,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "890800649",
@@ -1064,7 +1145,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "186601870",
@@ -1077,7 +1159,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "2927651296",
@@ -1090,7 +1173,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1366943680",
@@ -1103,7 +1187,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "525587103",
@@ -1116,7 +1201,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2919739330",
@@ -1129,7 +1215,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1453570384",
@@ -1142,7 +1229,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1127056801",
@@ -1155,7 +1243,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1367364772",
@@ -1168,7 +1257,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-03-18"
     },
     {
       "id": "3407362320",
@@ -1181,7 +1271,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3600776267",
@@ -1194,7 +1285,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-02-13"
     },
     {
       "id": "246712730",
@@ -1207,7 +1299,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2892858917",
@@ -1220,7 +1313,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3565430790",
@@ -1233,7 +1327,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3603635554",
@@ -1246,7 +1341,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3330165223",
@@ -1259,7 +1355,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "3302953739",
@@ -1272,7 +1369,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3523806426",
@@ -1285,7 +1383,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3356878261",
@@ -1298,7 +1397,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3367186349",
@@ -1311,7 +1411,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2896159042",
@@ -1324,7 +1425,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3379779247",
@@ -1337,7 +1439,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3636436865",
@@ -1350,7 +1453,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "4258943387",
@@ -1363,7 +1467,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "362278484",
@@ -1376,7 +1481,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1457923570",
@@ -1389,7 +1495,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2653858696",
@@ -1402,7 +1509,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4092230492",
@@ -1415,7 +1523,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1941800093",
@@ -1428,7 +1537,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3914529041",
@@ -1441,7 +1551,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "811898717",
@@ -1454,7 +1565,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "152965568",
@@ -1467,7 +1579,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "2521625692",
@@ -1480,7 +1593,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-03-24"
     },
     {
       "id": "2436095601",
@@ -1493,7 +1607,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1509089537",
@@ -1506,7 +1621,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "975408707",
@@ -1519,7 +1635,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "494933300",
@@ -1532,7 +1649,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "1790569309",
@@ -1545,7 +1663,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2101060245",
@@ -1558,7 +1677,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "1099226581",
@@ -1571,7 +1691,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "1671282746",
@@ -1584,7 +1705,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-01-26"
     },
     {
       "id": "1327665278",
@@ -1597,7 +1719,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "711818913",
@@ -1610,7 +1733,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3678866163",
@@ -1623,7 +1747,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "480315274",
@@ -1636,7 +1761,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "352245150",
@@ -1649,7 +1775,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2945813240",
@@ -1662,7 +1789,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3687251774",
@@ -1675,7 +1803,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1178708985",
@@ -1688,7 +1817,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "750613981",
@@ -1701,7 +1831,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "3665959404",
@@ -1714,7 +1845,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "112312944",
@@ -1727,7 +1859,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "2954366662",
@@ -1740,7 +1873,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2001106885",
@@ -1753,7 +1887,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3669622170",
@@ -1766,7 +1901,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-03-18"
     },
     {
       "id": "2422779354",
@@ -1779,7 +1915,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3774003351",
@@ -1792,7 +1929,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "5103974",
@@ -1805,7 +1943,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3872978134",
@@ -1818,7 +1957,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2372883204",
@@ -1831,7 +1971,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "104170948",
@@ -1844,7 +1985,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     },
     {
       "id": "1919980508",
@@ -1857,7 +1999,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2202609830",
@@ -1870,7 +2013,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1378559127",
@@ -1883,7 +2027,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "22757204",
@@ -1896,7 +2041,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3835625237",
@@ -1909,7 +2055,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3078665969",
@@ -1922,7 +2069,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2590569306",
@@ -1935,7 +2083,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "274775181",
@@ -1948,7 +2097,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3314406972",
@@ -1961,7 +2111,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "730052368",
@@ -1974,7 +2125,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3079921742",
@@ -1987,7 +2139,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-11-03"
     },
     {
       "id": "3597939700",
@@ -2000,7 +2153,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "274639515",
@@ -2013,7 +2167,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1552189318",
@@ -2026,7 +2181,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-11-03"
     },
     {
       "id": "3051823795",
@@ -2039,7 +2195,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "1732356505",
@@ -2052,7 +2209,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1763213625",
@@ -2065,7 +2223,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1942591558",
@@ -2078,7 +2237,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-11-24"
     },
     {
       "id": "2949228237",
@@ -2091,7 +2251,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-11-24"
     },
     {
       "id": "4232620535",
@@ -2104,7 +2265,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "1472166107",
@@ -2117,7 +2279,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "2898229208",
@@ -2130,7 +2293,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3364574135",
@@ -2143,7 +2307,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2818536273",
@@ -2156,7 +2321,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4234984253",
@@ -2169,7 +2335,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "3141079998",
@@ -2182,7 +2349,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "1365497350",
@@ -2195,7 +2363,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "565111133",
@@ -2208,7 +2377,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "870135081",
@@ -2221,7 +2391,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "3381223955",
@@ -2234,7 +2405,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "1236439870",
@@ -2247,7 +2419,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "86621553",
@@ -2260,7 +2433,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1247427185",
@@ -2273,7 +2447,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "2128895616",
@@ -2286,7 +2461,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "2805636083",
@@ -2299,7 +2475,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "2316916973",
@@ -2312,7 +2489,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-07-06"
     },
     {
       "id": "1545087483",
@@ -2325,7 +2503,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4194352271",
@@ -2338,7 +2517,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3166535632",
@@ -2351,7 +2531,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2244765560",
@@ -2364,7 +2545,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "54700404",
@@ -2377,7 +2559,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1039983620",
@@ -2390,7 +2573,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3912793970",
@@ -2403,7 +2587,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "948831673",
@@ -2416,7 +2601,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     },
     {
       "id": "2196019512",
@@ -2429,7 +2615,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1638640398",
@@ -2442,7 +2629,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "377566656",
@@ -2455,7 +2643,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4107749591",
@@ -2468,7 +2657,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2312882507",
@@ -2481,7 +2671,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3765339356",
@@ -2494,7 +2685,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3351665212",
@@ -2507,7 +2699,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "79243399",
@@ -2520,7 +2713,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1258415487",
@@ -2533,7 +2727,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2773927650",
@@ -2546,7 +2741,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "742057576",
@@ -2559,7 +2755,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1384155764",
@@ -2572,7 +2769,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2826340040",
@@ -2585,7 +2783,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "46799750",
@@ -2598,7 +2797,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4227232797",
@@ -2611,7 +2811,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "172610229",
@@ -2624,7 +2825,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "3486338362",
@@ -2637,7 +2839,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "3662705581",
@@ -2650,7 +2853,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4240327959",
@@ -2663,7 +2867,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3819095753",
@@ -2676,7 +2881,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1115260805",
@@ -2689,7 +2895,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2474227587",
@@ -2702,7 +2909,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3188374033",
@@ -2715,7 +2923,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1917017591",
@@ -2728,7 +2937,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3921412335",
@@ -2741,7 +2951,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2947111049",
@@ -2754,7 +2965,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4107844490",
@@ -2767,7 +2979,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2139708890",
@@ -2780,7 +2993,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2595459121",
@@ -2793,7 +3007,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1373909093",
@@ -2806,7 +3021,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3694952104",
@@ -2819,7 +3035,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1464561389",
@@ -2832,7 +3049,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "2681889340",
@@ -2845,7 +3063,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3023359358",
@@ -2858,7 +3077,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2569385980",
@@ -2871,7 +3091,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4199497144",
@@ -2884,7 +3105,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "2768300955",
@@ -2897,7 +3119,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2888820995",
@@ -2910,7 +3133,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "454871454",
@@ -2923,7 +3147,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "1675611962",
@@ -2936,7 +3161,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "5745690",
@@ -2949,7 +3175,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2675063596",
@@ -2962,7 +3189,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2746475460",
@@ -2975,7 +3203,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "183635628",
@@ -2988,7 +3217,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1695691428",
@@ -3001,7 +3231,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1258526800",
@@ -3014,7 +3245,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3811569265",
@@ -3027,7 +3259,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3261621461",
@@ -3040,7 +3273,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2878180967",
@@ -3053,7 +3287,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1631692097",
@@ -3066,7 +3301,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1635842477",
@@ -3079,7 +3315,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3314187922",
@@ -3092,7 +3329,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1993374659",
@@ -3105,7 +3343,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2708527018",
@@ -3118,7 +3357,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3961473046",
@@ -3131,7 +3371,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-04-14"
     },
     {
       "id": "2031173606",
@@ -3144,7 +3385,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "107363867",
@@ -3157,7 +3399,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1696938496",
@@ -3170,7 +3413,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2251715424",
@@ -3183,7 +3427,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3573087582",
@@ -3196,7 +3441,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2333249368",
@@ -3209,7 +3455,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4131664304",
@@ -3222,7 +3469,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2661047295",
@@ -3235,7 +3483,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     },
     {
       "id": "136957568",
@@ -3248,7 +3497,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "743730361",
@@ -3261,7 +3511,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2839057126",
@@ -3274,7 +3525,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2736430813",
@@ -3287,7 +3539,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "777967780",
@@ -3300,7 +3553,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4009130866",
@@ -3313,7 +3567,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3864857876",
@@ -3326,7 +3581,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "243949867",
@@ -3339,7 +3595,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2455695527",
@@ -3352,7 +3609,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1092181131",
@@ -3365,7 +3623,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "3012588561",
@@ -3378,7 +3637,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4084028627",
@@ -3391,7 +3651,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1082034232",
@@ -3404,7 +3665,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4280627426",
@@ -3417,7 +3679,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "226950646",
@@ -3430,7 +3693,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2953010285",
@@ -3443,7 +3707,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "136182452",
@@ -3456,7 +3721,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2139465450",
@@ -3469,7 +3735,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "806114032",
@@ -3482,7 +3749,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1386460176",
@@ -3495,7 +3763,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3532866973",
@@ -3508,7 +3777,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2181212478",
@@ -3521,7 +3791,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2748657713",
@@ -3534,7 +3805,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3558689342",
@@ -3547,7 +3819,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1201172818",
@@ -3560,7 +3833,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3030004732",
@@ -3573,7 +3847,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2064290391",
@@ -3586,7 +3861,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2969952077",
@@ -3599,7 +3875,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4102513789",
@@ -3612,7 +3889,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "762747962",
@@ -3625,7 +3903,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2967612381",
@@ -3638,7 +3917,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3701568815",
@@ -3651,7 +3931,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2663908549",
@@ -3664,7 +3945,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1140989693",
@@ -3677,7 +3959,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "772562418",
@@ -3690,7 +3973,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "604330868",
@@ -3703,7 +3987,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3454338139",
@@ -3716,7 +4001,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3419787979",
@@ -3729,7 +4015,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2829629527",
@@ -3742,7 +4029,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2328501978",
@@ -3755,7 +4043,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3324272424",
@@ -3768,7 +4057,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3680493479",
@@ -3781,7 +4071,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     },
     {
       "id": "159415549",
@@ -3794,7 +4085,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3261167746",
@@ -3807,7 +4099,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1988847319",
@@ -3820,7 +4113,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "240388043",
@@ -3833,7 +4127,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4232726854",
@@ -3846,7 +4141,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2062126722",
@@ -3859,7 +4155,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-03-04"
     },
     {
       "id": "2330634655",
@@ -3872,7 +4169,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1434769940",
@@ -3885,7 +4183,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2128890027",
@@ -3898,7 +4197,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "263936293",
@@ -3911,7 +4211,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1586193601",
@@ -3924,7 +4225,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1656629976",
@@ -3937,7 +4239,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2698009951",
@@ -3950,7 +4253,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "3068694512",
@@ -3963,7 +4267,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "2207442179",
@@ -3976,7 +4281,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "3848492017",
@@ -3989,7 +4295,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1475638265",
@@ -4002,7 +4309,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2627606248",
@@ -4015,7 +4323,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4142772830",
@@ -4028,7 +4337,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "4263172118",
@@ -4041,7 +4351,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3536020075",
@@ -4054,7 +4365,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2026-04-07"
     },
     {
       "id": "3366225080",
@@ -4067,7 +4379,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "270817258",
@@ -4080,7 +4393,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3099224394",
@@ -4093,7 +4407,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1766405776",
@@ -4106,7 +4421,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3871332877",
@@ -4119,7 +4435,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "3453194200",
@@ -4132,7 +4449,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2644664789",
@@ -4145,7 +4463,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "3312037616",
@@ -4158,7 +4477,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "482200332",
@@ -4171,7 +4491,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "686828068",
@@ -4184,7 +4505,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3866241330",
@@ -4197,7 +4519,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "802314860",
@@ -4210,7 +4533,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "764410120",
@@ -4223,7 +4547,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "849508252",
@@ -4236,7 +4561,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "387309391",
@@ -4249,7 +4575,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3994934674",
@@ -4262,7 +4589,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1397026382",
@@ -4275,7 +4603,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3297733101",
@@ -4288,7 +4617,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2218409282",
@@ -4301,7 +4631,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3378411990",
@@ -4314,7 +4645,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2024-11-12"
     },
     {
       "id": "3382019812",
@@ -4327,7 +4659,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "553661379",
@@ -4340,7 +4673,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3395698268",
@@ -4353,7 +4687,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2737483381",
@@ -4366,7 +4701,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3219074012",
@@ -4379,7 +4715,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2966818006",
@@ -4392,7 +4729,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2494975884",
@@ -4405,7 +4743,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1064303857",
@@ -4418,7 +4757,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "979250573",
@@ -4431,7 +4771,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-10-27"
     },
     {
       "id": "982239385",
@@ -4444,7 +4785,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1468250868",
@@ -4457,7 +4799,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1724903700",
@@ -4470,7 +4813,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-02-18"
     },
     {
       "id": "3621162212",
@@ -4483,7 +4827,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3368626651",
@@ -4496,7 +4841,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "762151244",
@@ -4509,7 +4855,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "242381847",
@@ -4522,7 +4869,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1327147942",
@@ -4535,7 +4883,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3748780161",
@@ -4548,7 +4897,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2900074211",
@@ -4561,7 +4911,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2007026433",
@@ -4574,7 +4925,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1233527301",
@@ -4587,7 +4939,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "620436060",
@@ -4600,7 +4953,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": true,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "3007266671",
@@ -4613,7 +4967,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "87631443",
@@ -4626,7 +4981,8 @@
       "cycling": true,
       "running": false,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-01-06"
     },
     {
       "id": "3878295865",
@@ -4639,7 +4995,8 @@
       "cycling": false,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "2905381067",
@@ -4652,7 +5009,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1086718516",
@@ -4665,7 +5023,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": null
     },
     {
       "id": "1788218813",
@@ -4678,7 +5037,8 @@
       "cycling": true,
       "running": true,
       "eventOnly": false,
-      "levelLocked": false
+      "levelLocked": false,
+      "publishedOn": "2025-12-16"
     }
   ]
 }
