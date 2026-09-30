@@ -20,9 +20,9 @@ For badge chasers: tick the routes you have done under "My completed routes" (or
 
 Add `?now=` with a UTC time to the page URL to see what the picker does at that moment, for example `?now=2026-10-05T04:02Z`.
 
-## Updating app.js
+## Updating app.js or styles.css
 
-GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js`, bump the `?v=` number on its `<script>` tag in `index.html` in the same commit, so visitors never get the new page with the old script.
+GitHub Pages lets browsers cache files for 10 minutes. When you change `app.js` or `styles.css`, bump the `?v=` number on its tag in `index.html` in the same commit, so visitors never get the new page with an old script or stylesheet.
 
 ## Alerts
 

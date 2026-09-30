@@ -4,88 +4,115 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Where to Zwift Today</title>
-  <meta name="description" content="Randomly picks a Zwift route from the worlds active today.">
-  <style>
-    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.5; }
-    body { max-width: 36rem; margin: 0 auto; padding: 1.5rem 1rem; }
-    h1 { margin-top: 0; }
-    .muted { opacity: 0.7; font-size: 0.9rem; }
-    fieldset { border: none; padding: 0; margin: 1rem 0; display: flex; gap: 1rem; }
-    button { font-size: 1.1rem; padding: 0.6rem 1.2rem; cursor: pointer; }
-    #result { margin-top: 1.5rem; padding: 1rem; border: 1px solid currentColor; border-radius: 0.5rem; }
-    #result h2 { margin: 0 0 0.25rem; }
-    #result dl { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; margin: 0.75rem 0 0; }
-    #result dt { font-weight: 600; }
-    #result dd { margin: 0; }
-    .tag { display: inline-block; font-size: 0.8rem; padding: 0 0.4rem; border: 1px solid currentColor; border-radius: 0.25rem; margin-right: 0.25rem; }
-    .notice { padding: 0.75rem; border-left: 4px solid currentColor; }
-    #filters { display: grid; grid-template-columns: auto 1fr 1fr; gap: 0.5rem 0.75rem; align-items: center; margin: 1rem 0; }
-    #filters input { width: 100%; box-sizing: border-box; font-size: 1rem; padding: 0.3rem; }
-    #filters .head { font-size: 0.85rem; opacity: 0.7; }
-    #clear { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
-    #progress { margin: 1rem 0; }
-    #progress summary { cursor: pointer; }
-    #progress button { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
-    #progress-link { width: 100%; box-sizing: border-box; font-size: 0.85rem; }
-    .world { border: none; padding: 0; margin: 0.75rem 0; }
-    .world legend { font-weight: 600; padding: 0; }
-    .world ul { list-style: none; margin: 0.25rem 0 0; padding: 0 0 0 1.5rem; columns: 2 12rem; }
-    .world li { break-inside: avoid; }
-  </style>
+  <meta name="description" content="Spin for a random Zwift route from the worlds active today.">
+  <meta name="theme-color" content="#f26722">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f26722'/%3E%3Cpath d='M8 25c0-7 16-5 16-13' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='8' r='3.2' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap">
+  <!-- Bump ?v= whenever styles.css or app.js change so browsers never mix old and new files. -->
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script>
+    // Apply a saved light/dark choice before the page paints, to avoid a flash.
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
 <body>
-  <h1>Where to Zwift Today</h1>
-  <p id="worlds">Loading today's worlds...</p>
-  <p class="muted">Worlds change at midnight US Eastern.</p>
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand" href="#spin" aria-label="Where to Zwift Today, home">
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--accent)"/>
+          <path d="M8 25c0-7 16-5 16-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="8" r="3.2" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Where to Zwift Today</span>
+      </a>
+      <div class="segmented" role="radiogroup" aria-label="Units">
+        <input type="radio" name="units" value="metric" id="units-metric" checked><label for="units-metric">km</label>
+        <input type="radio" name="units" value="imperial" id="units-imperial"><label for="units-imperial">mi</label>
+      </div>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <a href="#spin" role="tab" id="tab-spin" aria-controls="panel-spin" aria-selected="true">Spin</a>
+      <a href="#completed" role="tab" id="tab-completed" aria-controls="panel-completed" aria-selected="false">Completed routes</a>
+    </nav>
+  </header>
 
-  <fieldset>
-    <legend class="muted">Sport</legend>
-    <label><input type="radio" name="sport" value="cycling" checked> Ride</label>
-    <label><input type="radio" name="sport" value="running"> Run</label>
-  </fieldset>
+  <main>
+    <section id="panel-spin" role="tabpanel" aria-labelledby="tab-spin">
+      <div class="today">
+        <p class="eyebrow">Today's worlds</p>
+        <div id="worlds"><p class="muted">Loading today's worlds...</p></div>
+        <p class="muted small">Worlds change at midnight US Eastern.</p>
+      </div>
 
-  <fieldset>
-    <legend class="muted">Units</legend>
-    <label><input type="radio" name="units" value="metric" checked> km / m</label>
-    <label><input type="radio" name="units" value="imperial"> mi / ft</label>
-  </fieldset>
+      <div class="card">
+        <div class="control-row">
+          <span class="eyebrow">Sport</span>
+          <div class="segmented" role="radiogroup" aria-label="Sport">
+            <input type="radio" name="sport" value="cycling" id="sport-cycling" checked><label for="sport-cycling">Ride</label>
+            <input type="radio" name="sport" value="running" id="sport-running"><label for="sport-running">Run</label>
+          </div>
+        </div>
+        <div class="control-row">
+          <span class="eyebrow">Route badges</span>
+          <div class="segmented" role="radiogroup" aria-label="Route badges">
+            <input type="radio" name="badges" value="any" id="badges-any" checked><label for="badges-any">Any route</label>
+            <input type="radio" name="badges" value="undone" id="badges-undone"><label for="badges-undone">Not done yet</label>
+          </div>
+        </div>
 
-  <fieldset>
-    <legend class="muted">Route badges</legend>
-    <label><input type="radio" name="badges" value="any" checked> Any route</label>
-    <label><input type="radio" name="badges" value="undone"> Only routes I haven't done</label>
-  </fieldset>
+        <div id="filters">
+          <span></span><span class="head">Min</span><span class="head">Max</span>
+          <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
+          <input id="min-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any">
+          <input id="max-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" placeholder="Any" aria-label="Maximum distance">
+          <label for="min-climbing">Climbing (<span class="unit-climbing">m</span>)</label>
+          <input id="min-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any">
+          <input id="max-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" placeholder="Any" aria-label="Maximum climbing">
+        </div>
+        <div class="filters-foot">
+          <span class="muted small">Filters use route plus lead-in.</span>
+          <button id="clear" class="btn" type="button">Clear filters</button>
+        </div>
+      </div>
 
-  <details id="progress">
-    <summary>My completed routes (<span id="progress-summary">0 of 0</span>)</summary>
-    <p class="muted">Showing <span class="sport-name">Ride</span> routes. Tick each route you have the badge for. This is saved on this device only; use the progress link to move it to another device or keep a backup.</p>
-    <div id="checklist"></div>
-    <p>
-      <button id="copy-progress" type="button">Copy my progress link</button>
-      <button id="clear-progress" type="button">Clear my <span class="sport-name">Ride</span> progress</button>
-    </p>
-    <p id="progress-message" class="muted" aria-live="polite"></p>
-    <input id="progress-link" type="text" readonly hidden aria-label="Progress link">
-  </details>
+      <div class="spin-area">
+        <button id="pick" class="btn-primary btn-big" type="button" disabled>Pick a route</button>
+        <p id="count" class="muted small"></p>
+      </div>
 
-  <p class="muted">Filters use the total you ride, route plus lead-in. Leave a box empty for no limit.</p>
-  <div id="filters">
-    <span></span><span class="head">Min</span><span class="head">Max</span>
-    <label for="min-distance">Distance (<span class="unit-distance">km</span>)</label>
-    <input id="min-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance">
-    <input id="max-distance" type="number" min="0" step="any" inputmode="decimal" data-kind="distance" aria-label="Maximum distance">
-    <label for="min-climbing">Climbing (<span class="unit-climbing">m</span>)</label>
-    <input id="min-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing">
-    <input id="max-climbing" type="number" min="0" step="any" inputmode="decimal" data-kind="climbing" aria-label="Maximum climbing">
-  </div>
-  <p><button id="clear" type="button">Clear filters</button></p>
+      <section id="result" class="card" hidden aria-live="polite"></section>
+    </section>
 
-  <button id="pick" type="button" disabled>Pick a route</button>
-  <p id="count" class="muted"></p>
+    <section id="panel-completed" role="tabpanel" aria-labelledby="tab-completed" hidden>
+      <h1 class="page-title">Completed routes</h1>
+      <p class="page-intro muted">Tick the routes you have the badge for, then set Route badges to "Not done yet" on the Spin tab to skip them. Ride and Run are tracked separately; this shows <span class="sport-name">Ride</span> routes. Progress is saved on this device only.</p>
 
-  <section id="result" hidden aria-live="polite"></section>
+      <div id="progress" class="card">
+        <p id="progress-summary">0 of 0</p>
+        <div id="checklist"></div>
+        <div class="progress-actions">
+          <button id="copy-progress" class="btn" type="button">Copy my progress link</button>
+          <button id="clear-progress" class="btn" type="button">Clear my <span class="sport-name">Ride</span> progress</button>
+        </div>
+        <p id="progress-message" class="muted small" aria-live="polite"></p>
+        <input id="progress-link" type="text" readonly hidden aria-label="Progress link">
+        <p class="muted small">The progress link moves your ticks to another device, or keeps a backup if you bookmark it.</p>
+      </div>
+    </section>
+  </main>
 
-  <!-- Bump ?v= whenever app.js changes so browsers never pair this page with a cached old script. -->
-  <script src="app.js?v=4"></script>
+  <footer class="site-footer">
+    <p>Not affiliated with Zwift. World schedule and route data from Zwift; route pages from <a href="https://zwiftinsider.com/" target="_blank" rel="noopener">Zwift Insider</a>.</p>
+  </footer>
+
+  <script src="app.js?v=5"></script>
 </body>
 </html>

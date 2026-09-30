@@ -26,6 +26,7 @@ const FILTER_IDS = ["min-distance", "max-distance", "min-climbing", "max-climbin
 const SPORT_NAMES = { cycling: "Ride", running: "Run" };
 const PROGRESS_HASH = "progress";
 const PROGRESS_VERSION = "v1";
+const TABS = ["spin", "completed"];
 
 const els = {
   worlds: document.getElementById("worlds"),
@@ -40,7 +41,7 @@ const els = {
   clearProgress: document.getElementById("clear-progress"),
   progressMessage: document.getElementById("progress-message"),
   progressLink: document.getElementById("progress-link"),
-  progress: document.getElementById("progress"),
+  themeToggle: document.getElementById("theme-toggle"),
 };
 
 let routes = [];
@@ -266,11 +267,58 @@ function renderRoute(route, today) {
   const mark = document.createElement("button");
   mark.type = "button";
   mark.id = "mark-done";
+  mark.className = "btn";
   mark.textContent = isDone ? "Marked as done (undo)" : "Mark as done";
   mark.addEventListener("click", () => setDone(sport, [route.id], !isDone));
   els.result.append(mark);
   els.result.hidden = false;
   shownRoute = route;
+}
+
+// ---- Tabs ----
+// Tabs live in the URL hash (#spin, #completed) so back and bookmarks work.
+// Progress links also use the hash (#progress=...); those open Completed.
+
+function showTab(name) {
+  const tab = TABS.includes(name) ? name : "spin";
+  for (const t of TABS) {
+    const selected = t === tab;
+    document.getElementById(`tab-${t}`).setAttribute("aria-selected", String(selected));
+    document.getElementById(`panel-${t}`).hidden = !selected;
+  }
+}
+
+function handleHash() {
+  // A progress link can only be decoded once the route list has loaded.
+  if (location.hash.startsWith(`#${PROGRESS_HASH}=`) && routes.length) {
+    loadProgressFromLink();
+    renderChecklist();
+    updateCount();
+    showTab("completed");
+  } else {
+    showTab(location.hash.slice(1));
+  }
+}
+
+// ---- Light and dark theme ----
+// No saved choice means "follow the device". The toggle saves an explicit choice.
+
+function currentTheme() {
+  const saved = document.documentElement.dataset.theme;
+  if (saved) return saved;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function updateThemeButton() {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  els.themeToggle.setAttribute("aria-label", `Switch to ${next} mode`);
+}
+
+function toggleTheme() {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
+  updateThemeButton();
 }
 
 // ---- Completed routes ----
@@ -389,14 +437,13 @@ function progressLink() {
 function loadProgressFromLink() {
   const match = location.hash.match(new RegExp(`^#${PROGRESS_HASH}=([^&]*)`));
   if (!match) return;
-  history.replaceState(null, "", location.pathname + location.search);
+  history.replaceState(null, "", `${location.pathname}${location.search}#completed`);
   let incoming;
   try {
     const [version, ride, run] = match[1].split(".");
     if (version !== PROGRESS_VERSION) throw new Error("unknown version");
     incoming = { cycling: decodeDone(ride || ""), running: decodeDone(run || "") };
   } catch (e) {
-    els.progress.open = true;
     els.progressMessage.textContent = "That progress link looks damaged, so nothing was loaded.";
     return;
   }
@@ -406,7 +453,6 @@ function loadProgressFromLink() {
   if (hasExisting && !window.confirm(question)) return;
   done = incoming;
   saveDone();
-  els.progress.open = true;
   els.progressMessage.textContent = `Progress loaded: ${done.cycling.size} Ride and ${done.running.size} Run routes.`;
 }
 
@@ -463,6 +509,28 @@ function updateUnitLabels() {
   document.querySelector(".unit-climbing").textContent = metric ? "m" : "ft";
 }
 
+function renderWorlds(active, alwaysActive) {
+  if (!active.known) {
+    const notice = document.createElement("p");
+    notice.className = "notice";
+    notice.textContent = `Zwift hasn't published today's guest worlds yet, so picks come from ${active.worlds.map(worldName).join(", ")} only.`;
+    els.worlds.replaceChildren(notice);
+    return;
+  }
+  const list = document.createElement("ul");
+  list.className = "world-chips";
+  for (const world of active.worlds) {
+    const li = document.createElement("li");
+    li.textContent = worldName(world);
+    if (alwaysActive.includes(world)) {
+      li.className = "always";
+      li.title = "Always available";
+    }
+    list.append(li);
+  }
+  els.worlds.replaceChildren(list);
+}
+
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-cache" });
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
@@ -470,6 +538,12 @@ async function loadJson(path) {
 }
 
 async function init() {
+  updateThemeButton();
+  els.themeToggle.addEventListener("click", toggleTheme);
+  // Tab links and pasted progress links only change the hash, which doesn't
+  // reload the page.
+  window.addEventListener("hashchange", handleHash);
+  showTab(location.hash.startsWith(`#${PROGRESS_HASH}=`) ? "completed" : location.hash.slice(1));
   restoreSettings();
   loadDone();
   try {
@@ -478,21 +552,17 @@ async function init() {
       loadJson("data/routes.json"),
     ]);
     routes = routeData.routes;
-    loadProgressFromLink();
     const active = findActiveWorlds(schedule, getNow());
     activeWorlds = active.worlds;
-    const names = activeWorlds.map(worldName).join(", ");
-    if (active.known) {
-      els.worlds.textContent = `Today's worlds: ${names}`;
-    } else {
-      els.worlds.className = "notice";
-      els.worlds.textContent = `Zwift hasn't published today's guest worlds yet, so picks come from ${names} only.`;
-    }
+    renderWorlds(active, schedule.alwaysActive);
     renderChecklist();
     updateCount();
+    handleHash();
   } catch (error) {
-    els.worlds.className = "notice";
-    els.worlds.textContent = "Couldn't load route data. Please try again later.";
+    const notice = document.createElement("p");
+    notice.className = "notice";
+    notice.textContent = "Couldn't load route data. Please try again later.";
+    els.worlds.replaceChildren(notice);
     console.error(error);
     return;
   }
@@ -516,13 +586,6 @@ async function init() {
     })
   );
 
-  // Pasting a progress link into a tab already on the site only changes the
-  // hash, which doesn't reload the page.
-  window.addEventListener("hashchange", () => {
-    loadProgressFromLink();
-    renderChecklist();
-    updateCount();
-  });
 
   els.copyProgress.addEventListener("click", copyProgressLink);
   els.clearProgress.addEventListener("click", clearProgress);
