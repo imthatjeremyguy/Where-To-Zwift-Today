@@ -74,6 +74,21 @@ let fails = 0; const check = (ok, m) => { console.log((ok ? 'PASS ' : 'FAIL ') +
     check(tg[0] === t && tg[1] === loop && await p2.evaluate(() => document.querySelectorAll('#reel-strip li')[1].textContent) === n, `${n}: ${tg.join(', ')} (reduced motion lands instantly)`);
     await p2.close();
   }
+  // Route of the Week tag: Beach Island Loop is the route for the week of Sep 28.
+  for (const [now, expected] of [['2026-09-30T15:00Z', 'Route of the Week +250 XP'], ['2026-10-05T17:00Z', null]]) {
+    const p3 = await b.newPage({ reducedMotion: 'reduce' });
+    await p3.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: [byName['Beach Island Loop']] } }));
+    await p3.goto(BASE + '/?now=' + now); await p3.waitForSelector('.world-chip'); await p3.click('#pick');
+    const tg = await p3.$$eval('#result .tag', t => t.map(x => x.textContent));
+    check(expected ? tg[0] === expected : !tg.some(t => t.startsWith('Route of the Week')), `Beach Island Loop on ${now}: ${tg.join(', ')}`);
+    await p3.close();
+  }
+  const other = await b.newPage({ reducedMotion: 'reduce' });
+  await other.route('**/data/routes.json', rt => rt.fulfill({ json: { routes: [byName['Tempus Fugit']] } }));
+  await other.goto(B); await other.waitForSelector('.world-chip'); await other.click('#pick');
+  check(!(await other.$$eval('#result .tag', t => t.map(x => x.textContent))).some(t => t.startsWith('Route of the Week')), 'other routes get no Route of the Week tag');
+  await other.close();
+
   await page.evaluate(() => localStorage.clear());
   check(errors.length === 0, 'no page errors ' + errors.join('; '));
   await b.close(); console.log(fails ? fails + ' FAILED' : 'ALL PASSED'); process.exitCode = fails ? 1 : 0;

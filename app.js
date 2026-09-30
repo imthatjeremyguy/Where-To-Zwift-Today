@@ -380,6 +380,11 @@ function renderRoute(route, today) {
   const isDone = done[sport].has(route.id);
   const kind = terrain(route);
   const tags = [[kind, `tag-${kind.toLowerCase()}`], [route.loop ? "Loop" : "Point to point", "tag-type"]];
+  // This week's Route of the Week (calendar.js knows the Monday-noon switch).
+  const week = cal.weekly ? currentWeek(getNow()) : null;
+  if (week && week.route && week.route.routeId === route.id) {
+    tags.unshift([`Route of the Week${week.route.reward ? ` +${week.route.reward}` : ""}`, "tag-rotw"]);
+  }
   if (route.publishedOn && daysBetween(route.publishedOn, today) <= NEW_ROUTE_DAYS) tags.push(["New", "tag-new"]);
   if (route.levelLocked) tags.push(["Level locked", ""]);
   if (isDone) tags.push(["Done", "tag-done"]);
