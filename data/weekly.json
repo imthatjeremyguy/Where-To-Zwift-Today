@@ -2,76 +2,6 @@
   "switchesAt": "Mondays 12:00 US Eastern",
   "weeks": [
     {
-      "start": "2026-07-27",
-      "climb": {
-        "name": "Cheddar Gorge",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/portal/cheddar-gorge/"
-      },
-      "route": {
-        "name": "Triple Flat Loops",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/route/triple-flat-loops/",
-        "routeId": "3453194200"
-      }
-    },
-    {
-      "start": "2026-08-03",
-      "climb": {
-        "name": "Col du Platzerwasel",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/portal/col-du-platzerwasel/"
-      },
-      "route": {
-        "name": "Whole Lotta Lava",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/route/whole-lotta-lava/",
-        "routeId": "982239385"
-      }
-    },
-    {
-      "start": "2026-08-10",
-      "climb": {
-        "name": "Poggio",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/portal/poggio/"
-      },
-      "route": {
-        "name": "Tair Dringfa Fechan",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/route/tair-dringfa-fechan/",
-        "routeId": "2062126722"
-      }
-    },
-    {
-      "start": "2026-08-17",
-      "climb": {
-        "name": "La Super Planche des Belles Filles",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/portal/la-super-planche-des-belles-filles/"
-      },
-      "route": {
-        "name": "Flat Route",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/route/flat-route/",
-        "routeId": "3395698268"
-      }
-    },
-    {
-      "start": "2026-08-24",
-      "climb": {
-        "name": "Cote de Domancy",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/portal/cote-de-domancy/"
-      },
-      "route": {
-        "name": "Ocean Lava Cliffside Loop",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/route/ocean-lava-cliffside-loop/",
-        "routeId": "1386460176"
-      }
-    },
-    {
       "start": "2026-08-31",
       "climb": {
         "name": "Col de Peyresourde (Avajan)",
@@ -195,6 +125,76 @@
         "reward": "250 XP",
         "link": "https://zwiftinsider.com/route/mountain-mash/",
         "routeId": "2953010285"
+      }
+    },
+    {
+      "start": "2026-11-02",
+      "climb": {
+        "name": "Hardknott Pass",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/portal/hardknott-pass/"
+      },
+      "route": {
+        "name": "Jarvis Seaside Sprint",
+        "reward": "15k Drops",
+        "link": "https://zwiftinsider.com/route/jarvis-seaside-sprint/",
+        "routeId": "2661047295"
+      }
+    },
+    {
+      "start": "2026-11-09",
+      "climb": {
+        "name": "Old La Honda",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/old-la-honda/"
+      },
+      "route": {
+        "name": "Tempus Fugit",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/tempus-fugit/",
+        "routeId": "2128890027"
+      }
+    },
+    {
+      "start": "2026-11-16",
+      "climb": {
+        "name": "Côte de La Redoute",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cote-de-la-redoute/"
+      },
+      "route": {
+        "name": "Downtown Eruption",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/downtown-eruption/",
+        "routeId": "1675611962"
+      }
+    },
+    {
+      "start": "2026-11-23",
+      "climb": {
+        "name": "Pas de Peyrol/Puy Mary",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/pas-de-peyrol-puy-mary/"
+      },
+      "route": {
+        "name": "Loopin Lava",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/loopin-lava/",
+        "routeId": "1092181131"
+      }
+    },
+    {
+      "start": "2026-11-30",
+      "climb": {
+        "name": "Col de Aravis",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/col-des-aravis/"
+      },
+      "route": {
+        "name": "Figure 8",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/figure-8/",
+        "routeId": "3382019812"
       }
     }
   ]
