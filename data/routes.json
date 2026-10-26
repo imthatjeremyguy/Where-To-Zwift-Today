@@ -3862,13 +3862,13 @@
       "leadinAscentMeters": 0.8,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 80,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 367,
-      "link": null
+      "link": "https://zwiftinsider.com/route/caldera-coaster/"
     },
     {
       "id": "966890401",
@@ -3880,13 +3880,13 @@
       "leadinAscentMeters": 4.1,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 380,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 361,
-      "link": null
+      "link": "https://zwiftinsider.com/route/california-dreamin/"
     },
     {
       "id": "2076673816",
@@ -3898,13 +3898,13 @@
       "leadinAscentMeters": 16.0,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 665,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 366,
-      "link": null
+      "link": "https://zwiftinsider.com/route/california-roll/"
     },
     {
       "id": "2595459121",
@@ -4067,6 +4067,24 @@
       "publishedOn": null,
       "index": 213,
       "link": "https://zwiftinsider.com/route/coastal-crown-loop/"
+    },
+    {
+      "id": "3464446734",
+      "name": "Crit Cross",
+      "map": "WATOPIA",
+      "distanceMeters": 13487.5,
+      "ascentMeters": 35.1,
+      "leadinDistanceMeters": 1852.4,
+      "leadinAscentMeters": 0.8,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 270,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 374,
+      "link": null
     },
     {
       "id": "2888820995",
@@ -4276,13 +4294,13 @@
       "leadinAscentMeters": 5.8,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 1360,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 362,
-      "link": null
+      "link": "https://zwiftinsider.com/route/four-foalsmen/"
     },
     {
       "id": "2878180967",
@@ -4672,13 +4690,13 @@
       "leadinAscentMeters": 16.0,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 515,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 368,
-      "link": null
+      "link": "https://zwiftinsider.com/route/laps-camera-traction/"
     },
     {
       "id": "1998473375",
@@ -4690,7 +4708,7 @@
       "leadinAscentMeters": 4.1,
       "cycling": false,
       "running": true,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 160,
       "loop": true,
@@ -4726,7 +4744,7 @@
       "leadinAscentMeters": 0.1,
       "cycling": false,
       "running": true,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 100,
       "loop": true,
@@ -4879,6 +4897,24 @@
       "link": "https://zwiftinsider.com/route/mayan-san-remo/"
     },
     {
+      "id": "121619062",
+      "name": "Molten Momentum",
+      "map": "WATOPIA",
+      "distanceMeters": 20679.4,
+      "ascentMeters": 209.4,
+      "leadinDistanceMeters": 2088.6,
+      "leadinAscentMeters": 4.1,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 415,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 372,
+      "link": null
+    },
+    {
       "id": "2953010285",
       "name": "Mountain Mash",
       "map": "WATOPIA",
@@ -5005,6 +5041,24 @@
       "link": "https://zwiftinsider.com/route/oh-hill-no/"
     },
     {
+      "id": "458819181",
+      "name": "One Ride to Rule Them All",
+      "map": "WATOPIA",
+      "distanceMeters": 38587.2,
+      "ascentMeters": 461.2,
+      "leadinDistanceMeters": 1837.6,
+      "leadinAscentMeters": 0.1,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 770,
+      "loop": false,
+      "publishedOn": "2026-10-20",
+      "index": 373,
+      "link": null
+    },
+    {
       "id": "2748657713",
       "name": "Out And Back Again",
       "map": "WATOPIA",
@@ -5032,13 +5086,13 @@
       "leadinAscentMeters": 0.1,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 1080,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 364,
-      "link": null
+      "link": "https://zwiftinsider.com/route/pacific-pursuit/"
     },
     {
       "id": "3558689342",
@@ -5284,13 +5338,13 @@
       "leadinAscentMeters": 16.0,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 70,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 370,
-      "link": null
+      "link": "https://zwiftinsider.com/route/seafoam-circuit/"
     },
     {
       "id": "3649244236",
@@ -5302,7 +5356,7 @@
       "leadinAscentMeters": 16.0,
       "cycling": false,
       "running": true,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 140,
       "loop": true,
@@ -5734,13 +5788,13 @@
       "leadinAscentMeters": 0.1,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 3000,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 360,
-      "link": null
+      "link": "https://zwiftinsider.com/route/the-watopia-150/"
     },
     {
       "id": "2627606248",
@@ -6328,13 +6382,13 @@
       "leadinAscentMeters": 0.8,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 1215,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 363,
-      "link": null
+      "link": "https://zwiftinsider.com/route/watt-goes-up-must-come-down/"
     },
     {
       "id": "979250573",
