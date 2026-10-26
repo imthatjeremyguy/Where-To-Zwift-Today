@@ -4,6 +4,8 @@ on:
   schedule:
     # Daily at 04:23 UTC, shortly after the midnight US Eastern world changeover.
     - cron: "23 4 * * *"
+    # And at 17:23 UTC, to pick up routes Zwift releases the same afternoon.
+    - cron: "23 17 * * *"
   workflow_dispatch:
     inputs:
       test_alert:
