@@ -2,62 +2,6 @@
   "switchesAt": "Mondays 12:00 US Eastern",
   "weeks": [
     {
-      "start": "2026-08-31",
-      "climb": {
-        "name": "Col de Peyresourde (Avajan)",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/portal/col-de-peyresourde-avajan/"
-      },
-      "route": {
-        "name": "Hilly Route",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/route/hilly-route/",
-        "routeId": "2737483381"
-      }
-    },
-    {
-      "start": "2026-09-07",
-      "climb": {
-        "name": "Cote de Trebiac",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/portal/cote-de-trebiac/"
-      },
-      "route": {
-        "name": "Sand and Sequoias",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/route/sand-and-sequoias/",
-        "routeId": "604330868"
-      }
-    },
-    {
-      "start": "2026-09-14",
-      "climb": {
-        "name": "Col du Galibier (Lautaret)",
-        "reward": "500 XP",
-        "link": "https://zwiftinsider.com/portal/col-du-galibier-lautaret/"
-      },
-      "route": {
-        "name": "Volcano Flat",
-        "reward": "250 XP",
-        "link": "https://zwiftinsider.com/route/volcano-flat/",
-        "routeId": "3994934674"
-      }
-    },
-    {
-      "start": "2026-09-21",
-      "climb": {
-        "name": "Crow Road",
-        "reward": "15k Drops",
-        "link": "https://zwiftinsider.com/portal/crow-road/"
-      },
-      "route": {
-        "name": "Flat Out Fast",
-        "reward": "15k Drops",
-        "link": "https://zwiftinsider.com/route/flat-out-fast/",
-        "routeId": "1258526800"
-      }
-    },
-    {
       "start": "2026-09-28",
       "climb": {
         "name": "Col du Rosier",
@@ -195,6 +139,48 @@
         "reward": "500 XP",
         "link": "https://zwiftinsider.com/route/figure-8/",
         "routeId": "3382019812"
+      }
+    },
+    {
+      "start": "2026-12-07",
+      "climb": {
+        "name": "Col du Platzerwasel",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/col-du-platzerwasel/"
+      },
+      "route": {
+        "name": "Whole Lotta Lava",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/whole-lotta-lava/",
+        "routeId": "982239385"
+      }
+    },
+    {
+      "start": "2026-12-14",
+      "climb": {
+        "name": "Cheddar Gorge",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/portal/cheddar-gorge/"
+      },
+      "route": {
+        "name": "Triple Flat Loops",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/route/triple-flat-loops/",
+        "routeId": "3453194200"
+      }
+    },
+    {
+      "start": "2026-12-21",
+      "climb": {
+        "name": "La Super Planche des Belles Filles",
+        "reward": "500 XP",
+        "link": "https://zwiftinsider.com/portal/la-super-planche-des-belles-filles/"
+      },
+      "route": {
+        "name": "Volcano Flat",
+        "reward": "250 XP",
+        "link": "https://zwiftinsider.com/route/volcano-flat/",
+        "routeId": "3994934674"
       }
     }
   ]
