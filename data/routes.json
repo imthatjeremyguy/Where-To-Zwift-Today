@@ -3763,6 +3763,24 @@
       "link": "https://zwiftinsider.com/route/beach-island-loop/"
     },
     {
+      "id": "4123597378",
+      "name": "Better Lap Than Never",
+      "map": "WATOPIA",
+      "distanceMeters": 15073.7,
+      "ascentMeters": 185.2,
+      "leadinDistanceMeters": 35339.7,
+      "leadinAscentMeters": 315.5,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 300,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 377,
+      "link": null
+    },
+    {
       "id": "1917017591",
       "name": "Big Flat 8",
       "map": "WATOPIA",
@@ -4078,13 +4096,13 @@
       "leadinAscentMeters": 0.8,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 270,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 374,
-      "link": null
+      "link": "https://zwiftinsider.com/route/crit-cross/"
     },
     {
       "id": "2888820995",
@@ -4501,6 +4519,24 @@
       "link": null
     },
     {
+      "id": "2155564554",
+      "name": "Island Interlude",
+      "map": "WATOPIA",
+      "distanceMeters": 49231.1,
+      "ascentMeters": 253.5,
+      "leadinDistanceMeters": 949.4,
+      "leadinAscentMeters": 3.2,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 985,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 375,
+      "link": null
+    },
+    {
       "id": "3573087582",
       "name": "Italian Villas Circuit",
       "map": "WATOPIA",
@@ -4807,6 +4843,24 @@
       "link": "https://zwiftinsider.com/route/loopin-lava/"
     },
     {
+      "id": "4236593520",
+      "name": "Loopipelago",
+      "map": "WATOPIA",
+      "distanceMeters": 18487.0,
+      "ascentMeters": 35.1,
+      "leadinDistanceMeters": 2088.5,
+      "leadinAscentMeters": 4.1,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 370,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 378,
+      "link": null
+    },
+    {
       "id": "3012588561",
       "name": "May Field",
       "map": "WATOPIA",
@@ -4897,6 +4951,24 @@
       "link": "https://zwiftinsider.com/route/mayan-san-remo/"
     },
     {
+      "id": "3306391797",
+      "name": "Miles of Isles",
+      "map": "WATOPIA",
+      "distanceMeters": 27212.2,
+      "ascentMeters": 161.3,
+      "leadinDistanceMeters": 1837.6,
+      "leadinAscentMeters": 0.1,
+      "cycling": true,
+      "running": false,
+      "eventOnly": true,
+      "levelLocked": false,
+      "badgeXp": 545,
+      "loop": true,
+      "publishedOn": "2026-10-20",
+      "index": 376,
+      "link": null
+    },
+    {
       "id": "121619062",
       "name": "Molten Momentum",
       "map": "WATOPIA",
@@ -4906,13 +4978,13 @@
       "leadinAscentMeters": 4.1,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 415,
       "loop": true,
       "publishedOn": "2026-10-20",
       "index": 372,
-      "link": null
+      "link": "https://zwiftinsider.com/route/molten-momentum/"
     },
     {
       "id": "2953010285",
@@ -5050,13 +5122,13 @@
       "leadinAscentMeters": 0.1,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 770,
       "loop": false,
       "publishedOn": "2026-10-20",
       "index": 373,
-      "link": null
+      "link": "https://zwiftinsider.com/route/one-ride-to-rule-them-all/"
     },
     {
       "id": "2748657713",
