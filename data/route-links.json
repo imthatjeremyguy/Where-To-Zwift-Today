@@ -3,6 +3,10 @@
     "url": "https://zwiftinsider.com/route/ocean-blvd/",
     "checked": "2026-09-30"
   },
+  "2015 Worlds Course": {
+    "url": "https://zwiftinsider.com/route/2015-worlds-course/",
+    "checked": "2026-11-05"
+  },
   "2018 Worlds Short Lap": {
     "url": "https://zwiftinsider.com/route/2018-worlds-short-lap/",
     "checked": "2026-09-30"
@@ -267,6 +271,14 @@
     "url": "https://zwiftinsider.com/route/farmland-loop/",
     "checked": "2026-09-30"
   },
+  "Figure 8": {
+    "url": "https://zwiftinsider.com/route/figure-8/",
+    "checked": "2026-11-05"
+  },
+  "Figure 8 Reverse": {
+    "url": "https://zwiftinsider.com/route/figure-8-reverse/",
+    "checked": "2026-11-05"
+  },
   "Fine and Sandy": {
     "url": "https://zwiftinsider.com/route/fine-and-sandy/",
     "checked": "2026-09-30"
@@ -278,6 +290,10 @@
   "Flat Out Fast": {
     "url": "https://zwiftinsider.com/route/flat-out-fast/",
     "checked": "2026-09-30"
+  },
+  "Flat Route": {
+    "url": "https://zwiftinsider.com/route/flat-route/",
+    "checked": "2026-11-05"
   },
   "Flat Route Run": {
     "url": "https://zwiftinsider.com/route/flat-route/",
@@ -374,6 +390,10 @@
   "Hilltop Hustle Run": {
     "url": "https://zwiftinsider.com/route/hilltop-hustle/",
     "checked": "2026-09-30"
+  },
+  "Hilly Route": {
+    "url": "https://zwiftinsider.com/route/hilly-route/",
+    "checked": "2026-11-05"
   },
   "Hilly Route Reverse Run": {
     "url": "https://zwiftinsider.com/route/hilly-route-reverse/",
@@ -615,6 +635,10 @@
     "url": "https://zwiftinsider.com/route/montmartre-mixer/",
     "checked": "2026-09-30"
   },
+  "Mountain 8": {
+    "url": "https://zwiftinsider.com/route/mountain-8/",
+    "checked": "2026-11-05"
+  },
   "Mountain Mash": {
     "url": "https://zwiftinsider.com/route/mountain-mash/",
     "checked": "2026-09-30"
@@ -622,6 +646,10 @@
   "Mountain Mash Run": {
     "url": "https://zwiftinsider.com/route/mountain-mash/",
     "checked": "2026-09-30"
+  },
+  "Mountain Route": {
+    "url": "https://zwiftinsider.com/route/mountain-route/",
+    "checked": "2026-11-05"
   },
   "Muir And The Mountain": {
     "url": "https://zwiftinsider.com/route/muir-and-the-mountain/",
@@ -998,6 +1026,18 @@
   "The Muckle Yin": {
     "url": "https://zwiftinsider.com/route/the-muckle-yin/",
     "checked": "2026-09-30"
+  },
+  "The PRL Full": {
+    "url": "https://zwiftinsider.com/route/the-prl-full/",
+    "checked": "2026-11-05"
+  },
+  "The PRL Half": {
+    "url": "https://zwiftinsider.com/route/the-prl-half/",
+    "checked": "2026-11-05"
+  },
+  "The Pretzel": {
+    "url": "https://zwiftinsider.com/route/the-pretzel/",
+    "checked": "2026-11-05"
   },
   "The Uber Pretzel": {
     "url": "https://zwiftinsider.com/route/the-uber-pretzel/",
