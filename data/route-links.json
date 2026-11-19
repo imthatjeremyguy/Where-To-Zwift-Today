@@ -411,6 +411,10 @@
     "url": "https://zwiftinsider.com/route/innsbruck-kom-after-party/",
     "checked": "2026-09-30"
   },
+  "Innsbruck Short Lap": {
+    "url": null,
+    "checked": "2026-11-19"
+  },
   "Innsbruckring": {
     "url": "https://zwiftinsider.com/route/innsbruckring/",
     "checked": "2026-09-30"
@@ -794,6 +798,14 @@
   "Richmond 2015 Worlds Reverse": {
     "url": "https://zwiftinsider.com/route/richmond-2015-worlds-reverse/",
     "checked": "2026-09-30"
+  },
+  "Richmond Circuit": {
+    "url": null,
+    "checked": "2026-11-19"
+  },
+  "Richmond Circuit Reverse": {
+    "url": null,
+    "checked": "2026-11-19"
   },
   "Richmond Loop Around": {
     "url": "https://zwiftinsider.com/route/richmond-loop-around/",
@@ -1262,6 +1274,10 @@
   "Whole Lotta Lava Run": {
     "url": "https://zwiftinsider.com/route/whole-lotta-lava/",
     "checked": "2026-09-30"
+  },
+  "Yorkshire Circuit": {
+    "url": null,
+    "checked": "2026-11-19"
   },
   "Yorkshire Double Loop": {
     "url": "https://zwiftinsider.com/route/yorkshire-double-loop/",
