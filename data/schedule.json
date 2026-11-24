@@ -4,142 +4,6 @@
   ],
   "appointments": [
     {
-      "start": "2026-10-01T04:01:00Z",
-      "map": "SCOTLAND",
-      "worlds": [
-        "SCOTLAND",
-        "MAKURIISLANDS"
-      ]
-    },
-    {
-      "start": "2026-10-03T04:01:00Z",
-      "map": "MAKURIISLANDS",
-      "worlds": [
-        "MAKURIISLANDS",
-        "NEWYORK"
-      ]
-    },
-    {
-      "start": "2026-10-05T04:01:00Z",
-      "map": "FRANCE",
-      "worlds": [
-        "FRANCE",
-        "PARIS"
-      ]
-    },
-    {
-      "start": "2026-10-07T04:01:00Z",
-      "map": "INNSBRUCK",
-      "worlds": [
-        "INNSBRUCK",
-        "RICHMOND"
-      ]
-    },
-    {
-      "start": "2026-10-08T04:01:00Z",
-      "map": "RICHMOND",
-      "worlds": [
-        "RICHMOND",
-        "LONDON"
-      ]
-    },
-    {
-      "start": "2026-10-10T04:01:00Z",
-      "map": "LONDON",
-      "worlds": [
-        "LONDON",
-        "YORKSHIRE"
-      ]
-    },
-    {
-      "start": "2026-10-12T04:01:00Z",
-      "map": "MAKURIISLANDS",
-      "worlds": [
-        "MAKURIISLANDS",
-        "NEWYORK"
-      ]
-    },
-    {
-      "start": "2026-10-14T04:01:00Z",
-      "map": "SCOTLAND",
-      "worlds": [
-        "SCOTLAND",
-        "MAKURIISLANDS"
-      ]
-    },
-    {
-      "start": "2026-10-16T04:01:00Z",
-      "map": "FRANCE",
-      "worlds": [
-        "FRANCE",
-        "PARIS"
-      ]
-    },
-    {
-      "start": "2026-10-18T04:01:00Z",
-      "map": "LONDON",
-      "worlds": [
-        "LONDON",
-        "YORKSHIRE"
-      ]
-    },
-    {
-      "start": "2026-10-20T04:01:00Z",
-      "map": "RICHMOND",
-      "worlds": [
-        "RICHMOND",
-        "LONDON"
-      ]
-    },
-    {
-      "start": "2026-10-22T04:01:00Z",
-      "map": "INNSBRUCK",
-      "worlds": [
-        "INNSBRUCK",
-        "RICHMOND"
-      ]
-    },
-    {
-      "start": "2026-10-23T04:01:00Z",
-      "map": "SCOTLAND",
-      "worlds": [
-        "SCOTLAND",
-        "MAKURIISLANDS"
-      ]
-    },
-    {
-      "start": "2026-10-25T04:01:00Z",
-      "map": "MAKURIISLANDS",
-      "worlds": [
-        "MAKURIISLANDS",
-        "NEWYORK"
-      ]
-    },
-    {
-      "start": "2026-10-27T04:01:00Z",
-      "map": "FRANCE",
-      "worlds": [
-        "FRANCE",
-        "PARIS"
-      ]
-    },
-    {
-      "start": "2026-10-29T04:01:00Z",
-      "map": "LONDON",
-      "worlds": [
-        "LONDON",
-        "YORKSHIRE"
-      ]
-    },
-    {
-      "start": "2026-10-31T04:01:00Z",
-      "map": "INNSBRUCK",
-      "worlds": [
-        "INNSBRUCK",
-        "RICHMOND"
-      ]
-    },
-    {
       "start": "2026-11-01T04:01:00Z",
       "map": "INNSBRUCK",
       "worlds": [
@@ -249,6 +113,230 @@
       "worlds": [
         "LONDON",
         "YORKSHIRE"
+      ]
+    },
+    {
+      "start": "2026-12-01T04:01:00Z",
+      "map": "LONDON",
+      "worlds": [
+        "LONDON",
+        "YORKSHIRE"
+      ]
+    },
+    {
+      "start": "2026-12-03T04:01:00Z",
+      "map": "RICHMOND",
+      "worlds": [
+        "RICHMOND",
+        "LONDON"
+      ]
+    },
+    {
+      "start": "2026-12-05T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2026-12-07T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2026-12-10T04:01:00Z",
+      "map": "INNSBRUCK",
+      "worlds": [
+        "INNSBRUCK",
+        "RICHMOND"
+      ]
+    },
+    {
+      "start": "2026-12-12T04:01:00Z",
+      "map": "RICHMOND",
+      "worlds": [
+        "RICHMOND",
+        "LONDON"
+      ]
+    },
+    {
+      "start": "2026-12-14T04:01:00Z",
+      "map": "MAKURIISLANDS",
+      "worlds": [
+        "MAKURIISLANDS",
+        "NEWYORK"
+      ]
+    },
+    {
+      "start": "2026-12-17T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2026-12-19T04:01:00Z",
+      "map": "LONDON",
+      "worlds": [
+        "LONDON",
+        "YORKSHIRE"
+      ]
+    },
+    {
+      "start": "2026-12-21T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2026-12-24T04:01:00Z",
+      "map": "MAKURIISLANDS",
+      "worlds": [
+        "MAKURIISLANDS",
+        "NEWYORK"
+      ]
+    },
+    {
+      "start": "2026-12-26T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2026-12-28T04:01:00Z",
+      "map": "RICHMOND",
+      "worlds": [
+        "RICHMOND",
+        "LONDON"
+      ]
+    },
+    {
+      "start": "2026-12-31T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2027-01-01T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2027-01-02T04:01:00Z",
+      "map": "INNSBRUCK",
+      "worlds": [
+        "INNSBRUCK",
+        "RICHMOND"
+      ]
+    },
+    {
+      "start": "2027-01-04T04:01:00Z",
+      "map": "LONDON",
+      "worlds": [
+        "LONDON",
+        "YORKSHIRE"
+      ]
+    },
+    {
+      "start": "2027-01-07T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2027-01-09T04:01:00Z",
+      "map": "MAKURIISLANDS",
+      "worlds": [
+        "MAKURIISLANDS",
+        "NEWYORK"
+      ]
+    },
+    {
+      "start": "2027-01-11T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2027-01-14T04:01:00Z",
+      "map": "INNSBRUCK",
+      "worlds": [
+        "INNSBRUCK",
+        "RICHMOND"
+      ]
+    },
+    {
+      "start": "2027-01-16T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2027-01-18T04:01:00Z",
+      "map": "MAKURIISLANDS",
+      "worlds": [
+        "MAKURIISLANDS",
+        "NEWYORK"
+      ]
+    },
+    {
+      "start": "2027-01-21T04:01:00Z",
+      "map": "RICHMOND",
+      "worlds": [
+        "RICHMOND",
+        "LONDON"
+      ]
+    },
+    {
+      "start": "2027-01-23T04:01:00Z",
+      "map": "FRANCE",
+      "worlds": [
+        "FRANCE",
+        "PARIS"
+      ]
+    },
+    {
+      "start": "2027-01-25T04:01:00Z",
+      "map": "SCOTLAND",
+      "worlds": [
+        "SCOTLAND",
+        "MAKURIISLANDS"
+      ]
+    },
+    {
+      "start": "2027-01-28T04:01:00Z",
+      "map": "LONDON",
+      "worlds": [
+        "LONDON",
+        "YORKSHIRE"
+      ]
+    },
+    {
+      "start": "2027-01-30T04:01:00Z",
+      "map": "MAKURIISLANDS",
+      "worlds": [
+        "MAKURIISLANDS",
+        "NEWYORK"
       ]
     }
   ]

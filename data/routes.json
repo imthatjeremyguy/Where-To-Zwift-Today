@@ -3214,13 +3214,13 @@
       "leadinAscentMeters": 10.5,
       "cycling": true,
       "running": false,
-      "eventOnly": true,
+      "eventOnly": false,
       "levelLocked": false,
       "badgeXp": 485,
       "loop": true,
       "publishedOn": null,
       "index": 380,
-      "link": null
+      "link": "https://zwiftinsider.com/route/sacre-trois/"
     },
     {
       "id": "1545087483",
