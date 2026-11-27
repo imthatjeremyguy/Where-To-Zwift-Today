@@ -413,7 +413,7 @@
   },
   "Innsbruck Short Lap": {
     "url": null,
-    "checked": "2026-11-19"
+    "checked": "2026-11-27"
   },
   "Innsbruckring": {
     "url": "https://zwiftinsider.com/route/innsbruckring/",
@@ -800,12 +800,12 @@
     "checked": "2026-09-30"
   },
   "Richmond Circuit": {
-    "url": null,
-    "checked": "2026-11-19"
+    "url": "https://zwiftinsider.com/route/richmond-circuit/",
+    "checked": "2026-11-27"
   },
   "Richmond Circuit Reverse": {
-    "url": null,
-    "checked": "2026-11-19"
+    "url": "https://zwiftinsider.com/route/richmond-circuit-reverse/",
+    "checked": "2026-11-27"
   },
   "Richmond Loop Around": {
     "url": "https://zwiftinsider.com/route/richmond-loop-around/",
@@ -1281,7 +1281,7 @@
   },
   "Yorkshire Circuit": {
     "url": null,
-    "checked": "2026-11-19"
+    "checked": "2026-11-27"
   },
   "Yorkshire Double Loop": {
     "url": "https://zwiftinsider.com/route/yorkshire-double-loop/",
